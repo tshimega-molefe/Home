@@ -17,20 +17,20 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute flex md:max-w-fit w-full flex-col items-start md:gap-6 gap-4 bottom-[17rem] lg:bottom-[27rem] max-md:pr-10 z-40"
+      className="absolute flex md:max-w-fit w-full flex-col items-start md:gap-6 gap-4 bottom-[20rem] lg:bottom-[28rem] max-md:pr-10 z-40"
     >
       <Link
-        href="/kelvin"
-        className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4"
+        href="/sea-point"
+        className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4 truncate"
       >
-        <div className="flex items-center py-3 px-8">
-          <Icons.snowflake className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-[#f8fafc] max-md:w-6 max-md:h-6 md:h-8 md:w-8" />
+        <div className="flex items-center py-2 px-10">
+          <Icons.waves className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-[#f8fafc] max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
           <div className="md:pr-5 pr-3 md:mr-2 md:pl-2">
             <div className="font-medium text-[#f8fafc] text-base max-md:text-sm leading-5">
-              Introducing Kelvin&trade;
+              Introducing SeaPoint&trade;
             </div>
-            <div className="text-[#f8fafc]/40 max-md:text-sm text-base">
-              An AI Trading Algorithm
+            <div className="text-[#f8fafc]/40 max-md:text-xs text-base">
+              Purchase Real Estate with Crypto
             </div>
           </div>
           <div className="ml-auto">
@@ -39,11 +39,11 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
         </div>
       </Link>
       <h1 className="text-3xl md:text-4xl lg:text-7xl font-extrabold leading-tight tracking-tighter lg:leading-[1.2em] transition-all duration-500 text-[#f8fafc] max-md:mr-4">
-        Advanced software solutions
-        <br /> Built by Forge.
+        Enterprise Software Solutions
+        <br /> Built by Swift.
       </h1>
       <span className="text-base font-normal text-[#f8fafc]/60 transition-all duration-500">
-        Bold, Brilliant, Bespoke
+        Think Differently.
       </span>
 
       <div className="max-md:w-full flex md:flex-row max-md:flex-col max-md:gap-4">

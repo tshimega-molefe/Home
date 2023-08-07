@@ -6,6 +6,7 @@ import {
   Snowflake,
   SunMedium,
   Twitter,
+  Waves,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -17,6 +18,7 @@ export const Icons = {
   sun: SunMedium,
   menu: Menu,
   moon: Moon,
+  waves: Waves,
   twitter: Twitter,
   logo: (props: LucideProps) => (
     <svg
