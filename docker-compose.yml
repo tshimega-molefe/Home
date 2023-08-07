@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+
+  next:
+    build: 
+      context: frontend
+      target: runner
+    volumes:
+      - ./frontend:/app
+    command: npm run dev
+    ports:
+      - 3000:3000
+    networks:
+      - backend
+    environment: 
+      NODE_ENV: development
+
+  django:
+    container_name: landing-django
+    restart: always
+    build: ./backend
+    command: python3 manage.py runserver 0.0.0.0:8000
+    # entrypoint: /app/docker/backend/wsgi-entrypoint.sh
+    volumes:
+        - static_volume:/app/django_static
+    expose:
+        - 8000:8000
+
+volumes:
+    static_volume: {}
+  
+networks:
+  backend:
+    driver: bridge
