@@ -32,8 +32,8 @@ const MainNav: FC<MainNavProps> = ({}) => {
           <ul
             className={`flex overflow-y-auto font-light tracking-wider max-lg:h-auto max-lg:flex-col max-lg:space-y-6 max-lg:text-base max-lg:text-muted-foreground lg:items-center lg:space-x-6`}
           >
-            <ProductNav />
             <SolutionsNav />
+            <ProductNav />
             <DevelopersNav />
             <Link
               href="/pricing"
@@ -46,7 +46,7 @@ const MainNav: FC<MainNavProps> = ({}) => {
         <div className="mb-3 items-center px-3 text-left max-lg:flex-col lg:mb-0 lg:flex lg:space-x-4 lg:px-0">
           <div className="relative mb-2 max-lg:mr-4 max-lg:ml-2 lg:mb-0 lg:flex">
             <Input
-              placeholder="Search Forge"
+              placeholder="Search Swift Stack"
               className="glass border-primary bg-primary/20 max-lg:h-10 lg:pr-8 text-background placeholder:text-background/30 placeholder:dark:text-primary/50 max-lg:bg-background max-lg:placeholder:text-muted-foreground max-lg:text-primary"
             />
             <svg

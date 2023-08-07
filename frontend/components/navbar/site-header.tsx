@@ -1,12 +1,9 @@
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { fontMono } from "@/lib/fonts"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 import Hamburger from "../hamburger"
-import { ThemeToggle } from "../theme-toggle"
 import MainNav from "./main-nav"
 
 export function SiteHeader() {
@@ -34,12 +31,8 @@ export function SiteHeader() {
             href="/"
             className="flex items-center space-x-2 active:scale-95"
           >
-            <Icons.logo className="h-8 w-8 transition-all max-lg:h-10 max-lg:w-10 max-md:active:scale-95" />
-            <span
-              className={`${fontMono.className} inline-block font-light uppercase tracking-[.4em] transition-colors max-lg:hidden`}
-            >
-              {siteConfig.logo}
-            </span>
+            <Icons.logo className="h-10 w-40 transition-all max-lg:h-10 max-lg:w-28 max-md:active:scale-95 max-lg:hidden" />
+            <Icons.icon className="h-10 w-10 transition-all max-md:active:scale-95 lg:hidden" />
           </Link>
           <Hamburger />
         </div>

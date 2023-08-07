@@ -1,10 +1,10 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Forge | Software Company",
-  logo: "Forge",
+  name: "Swift Stack",
+  logo: "Swift",
   description:
-    "Forge is a bespoke research and development software company that provides enterprise software solutions, application modernization, cloud migration services, and conducts R&D in leading technologies. Our team of experts is committed to delivering scalable and inventive software products that exceed our partners' and clients' expectations. Contact us today to learn how we can help you succeed in your industry.",
+    "Swift Stack: Software Solutions for Enterprises, and Application Modernization. Partner with us today.",
   mainNav: [
     {
       title: "Product",
@@ -13,7 +13,6 @@ export const siteConfig = {
     {
       title: "Solutions",
       href: "/solutions",
-      // disabled: true,
     },
     {
       title: "Documentation",
@@ -22,7 +21,6 @@ export const siteConfig = {
     {
       title: "Pricing",
       href: "/pricing",
-      // disabled: true,
     },
   ],
   mainFooter: [
@@ -110,7 +108,7 @@ export const siteConfig = {
   ],
   links: {
     twitter: "https://twitter.com/usurpa_africa",
-    github: "https://github.com/Forge-Software-Dev",
+    github: "https://github.com/Swift-Stack-Solutions",
     docs: "https://www.notion.so/7dd91ce19d644d3c8e9ea56185185cbd?v=b66cee32d295480dbff3cef40517c440",
     youtube: "https://youtube.com",
   },
