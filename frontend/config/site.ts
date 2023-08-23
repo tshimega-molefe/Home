@@ -107,9 +107,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/usurpa_africa",
+    instagram: "https://www.instagram.com/swiftstack/",
+    // twitter: "https://twitter.com/usurpa_africa",
     github: "https://github.com/Swift-Stack-Solutions",
-    docs: "https://www.notion.so/7dd91ce19d644d3c8e9ea56185185cbd?v=b66cee32d295480dbff3cef40517c440",
-    youtube: "https://youtube.com",
+    // docs: "https://www.notion.so/7dd91ce19d644d3c8e9ea56185185cbd?v=b66cee32d295480dbff3cef40517c440",
+    // youtube: "https://youtube.com",
   },
 }

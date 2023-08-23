@@ -19,7 +19,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       transition={{ duration: 1.5, delay: 0.0 }}
       className="absolute flex md:max-w-fit w-full flex-col items-start md:gap-6 gap-4 bottom-[20rem] lg:bottom-[28rem] max-md:pr-10 z-40"
     >
-      <Link
+      {/* <Link
         href="/sea-point"
         className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4 truncate"
       >
@@ -37,7 +37,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
             <Icons.chevronRight className="text-[#f8fafc]" />
           </div>
         </div>
-      </Link>
+      </Link> */}
       <h1 className="text-3xl md:text-4xl lg:text-7xl font-extrabold leading-tight tracking-tighter lg:leading-[1.2em] transition-all duration-500 text-[#f8fafc] max-md:mr-4">
         Enterprise Software Solutions
         <br /> Built by Swift.
