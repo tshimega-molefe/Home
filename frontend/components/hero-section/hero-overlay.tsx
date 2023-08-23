@@ -43,7 +43,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
         <br /> Built by Swift.
       </h1>
       <span className="text-base font-normal text-[#f8fafc]/60 transition-all duration-500">
-        Think Differently.
+        Think Fast.
       </span>
 
       <div className="max-md:w-full flex md:flex-row max-md:flex-col max-md:gap-4">

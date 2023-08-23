@@ -3,6 +3,8 @@
 import { FC, useState } from "react"
 import { motion } from "framer-motion"
 
+import CodeEditor from "./code-editor"
+
 interface ProductSectionProps {}
 
 const ProductSection: FC<ProductSectionProps> = ({}) => {
@@ -44,18 +46,30 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             className="h-full w-[3px] max-md:w-[2px] mt-7 rounded-md bg-gradient-to-b from-[#733787]"
           ></motion.div>
         </div>
-        <div className="md:w-10/12 mb-24">
+        <div className="md:w-8/12 mb-24">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: false }}
-            className="text-[2px] md:text-2xl mb-7 font-medium"
+            className="text-[20px] md:text-2xl mb-7 font-medium"
           >
             The Swift Stack
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+            viewport={{ once: false }}
+            className="text-[28px] md:text-[40px] max-md:leading-8 max-lg:leading-10 lg:text-5xl mb-7 font-medium"
+          >
+            <span className="text-[#763791]">Execute your vision.&nbsp;</span>
+            Our team utilizes industry standard practices, with quality and
+            scalable tooling.
+          </motion.div>
         </div>
       </div>
+      <CodeEditor />
     </section>
   )
 }
