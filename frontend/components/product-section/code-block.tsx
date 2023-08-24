@@ -6,158 +6,88 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
   return (
     <div className="flex-1 overflow-x-auto text-[16px]">
       <pre className="text-white">
-        <span>
-          <span className="pl-e">From</span>&nbsp;django.db&nbsp;
-          <span className="pl-e">import</span>&nbsp;models
-          <br />
-          <br />
-          <span className="pl-e">class</span>&nbsp;
-          <span className="text-yellow-500">Consultation</span>&nbsp;
-          <span className="text-yellow-500">(</span>
-          <span className="pl-ent">
-            models<span className="text-white">.</span>Model
-          </span>
-          <span className="text-yellow-500">)</span>
-          <span className="pl-e">style</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>
-            <span className="pl-s1">
-              <span className="pl-c1">
-                <span className="pl-c1">bottom</span>
-              </span>
-              :{" "}
-              <span className="pl-c1">
-                -4<span className="pl-k">rem</span>
-              </span>
-              ;
+        <pre className="text-white">
+          <code>
+            <span className="pl-e">class</span>&nbsp;
+            <span className="text-yellow-500">Administration</span>&nbsp;
+            <span className="text-yellow-500">(</span>
+            <span className="text-green-400">models.Model</span>
+            <span className="text-yellow-500">)</span>:
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>full_name</span>
+            &nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">CharField</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-blue-500">max_length</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="pl-k">64</span>
+            <span className="text-yellow-500">)</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>email</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">EmailField</span>
+            <span className="text-yellow-500">()</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>mobile_number</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">CharField</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-blue-500">max_length</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="pl-k">12</span>
+            <span className="text-yellow-500">)</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>company_size</span>
+            &nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">CharField</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-blue-500">max_length</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="pl-k">12</span>
+            <span className="text-yellow-500">)</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>services</span>
+            &nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">CharField</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-blue-500">max_length</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="pl-k">32</span>
+            <span className="text-yellow-500">)</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>other</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">TextField</span>
+            <span className="text-yellow-500">()</span>
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className="pl-e">def</span>
+            &nbsp;<span className="pl-ent">__str__</span>(
+            <span className="text-green-200">self</span>):
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="pl-e">return</span>&nbsp;
+            <span className="text-blue-500">f</span>'
+            <span>
+              <span className="text-yellow-500">&#123;</span>
+              <span className="text-blue-300">self</span>.full_name
+              <span className="text-yellow-500">&#125;</span>&nbsp;
+              <span className="text-yellow-500">-</span>&nbsp;
+              <span className="text-blue-300">self</span>.services
+              <span className="text-yellow-500">&#125;</span>'
             </span>
-            <span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">div</span>{" "}
-          <span className="pl-e">className</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>container-xl p-responsive
-            <span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">div</span>{" "}
-          <span className="pl-e">className</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>d-flex flex-justify-center
-            flex-lg-justify-end color-bg-default
-            <span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">div</span>{" "}
-          <span className="pl-e">className</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>col-8 col-sm-7 col-md-6
-            col-lg-5 position-relative z-2 right-lg-n12 events-none
-            <span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">picture</span>&gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">source</span>{" "}
-          <span className="pl-e">srcset</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>astro-mona.webp
-            <span className="pl-pds">&quot;</span>
-          </span>{" "}
-          <span className="pl-e">type</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>image/webp
-            <span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;<span className="pl-ent">Image</span>{" "}
-          <span className="pl-e">src</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>astro-mona.svg
-            <span className="pl-pds">&quot;</span>
-          </span>{" "}
-          <span className="pl-e">width</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>960
-            <span className="pl-pds">&quot;</span>
-          </span>{" "}
-          <span className="pl-e">height</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>967
-            <span className="pl-pds">&quot;</span>
-          </span>{" "}
-          <span className="pl-e">className</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>home-astro-mona width-full
-            position-absolute bottom-0 height-auto
-            <span className="pl-pds">&quot;</span>
-          </span>{" "}
-          <span className="pl-e">alt</span>=
-          <span className="pl-s">
-            <span className="pl-pds">&quot;</span>Mona looking at GitHub
-            activity across the globe<span className="pl-pds">&quot;</span>
-          </span>
-          &gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;/<span className="pl-ent">picture</span>&gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;/<span className="pl-ent">div</span>&gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;/<span className="pl-ent">div</span>&gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          {" "}
-          &lt;/<span className="pl-ent">div</span>&gt;
-        </span>
-      </pre>
-      <pre className="text-white">
-        <span>
-          &lt;/<span className="pl-ent">div</span>&gt;
-        </span>
+          </code>
+        </pre>
       </pre>
     </div>
   )

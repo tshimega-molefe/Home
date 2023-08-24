@@ -1,3 +1,4 @@
-import forge from "./forge.svg"
+import swift from "./swift.png"
+import swiftSvg from "./swift.svg"
 
-export { forge }
+export { swiftSvg, swift }

@@ -1,6 +1,7 @@
 "use client"
 
 import { FC } from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 import { Icons } from "../icons"
@@ -291,15 +292,16 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
             </div>
           </div>
           <div className="px-6 flex items-center justify-between h-full bg-[#040d21]">
-            <img
+            {/* <Image
               className="w-full h-auto md:block"
               width="1238"
               height="1404"
               loading="lazy"
               decoding="async"
               alt="Planet earth with visualization of GitHub activity crossing the globe"
-              src="https://github.githubassets.com/images/modules/site/home/globe.jpg"
-            />
+              src="/frontend/assets/swift-stack.svg"
+            /> */}
+            <h1 className="text-4xl">Understand your company's codebase</h1>
           </div>
         </div>
       </div>
