@@ -11,7 +11,7 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
             <span className="pl-e">class</span>&nbsp;
             <span className="text-yellow-500">Administration</span>&nbsp;
             <span className="text-yellow-500">(</span>
-            <span className="text-green-400">models.Model</span>
+            <span className="pl-ent">models.Model</span>
             <span className="text-yellow-500">)</span>:
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;<span>full_name</span>
