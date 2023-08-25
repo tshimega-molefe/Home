@@ -293,7 +293,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="px-10 flex flex-col pb-24 items-center justify-center h-full dark:bg-[#040d21]">
+          <div className="px-10 flex flex-col pb-24 items-center justify-center h-full dark:bg-[#040d21] bg-muted/50">
             {/* add a particle container to this section to add more life */}
             <Icons.understand className="w-[22rem]" />
             <Button

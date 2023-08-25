@@ -9,12 +9,12 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
         <pre className="text-white">
           <code>
             <span className="pl-e">class</span>&nbsp;
-            <span className="text-yellow-500">Administration</span>&nbsp;
+            <span className="text-yellow-500">SentimentAnalyser</span>&nbsp;
             <span className="text-yellow-500">(</span>
             <span className="pl-ent">models.Model</span>
             <span className="text-yellow-500">)</span>:
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>full_name</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>name</span>
             &nbsp;
             <span className="pl-e">=</span>&nbsp;
             <span className="text-white">models.</span>
@@ -25,68 +25,68 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
             <span className="pl-k">64</span>
             <span className="text-yellow-500">)</span>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>email</span>&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;<span>trained_model</span>&nbsp;
             <span className="pl-e">=</span>&nbsp;
             <span className="text-white">models.</span>
-            <span className="text-green-200">EmailField</span>
+            <span className="text-green-200">BinaryField</span>
             <span className="text-yellow-500">()</span>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>mobile_number</span>&nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="text-white">models.</span>
-            <span className="text-green-200">CharField</span>
-            <span className="text-yellow-500">(</span>
-            <span className="text-blue-500">max_length</span>&nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="pl-k">12</span>
-            <span className="text-yellow-500">)</span>
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>company_size</span>
-            &nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="text-white">models.</span>
-            <span className="text-green-200">CharField</span>
-            <span className="text-yellow-500">(</span>
-            <span className="text-blue-500">max_length</span>&nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="pl-k">12</span>
-            <span className="text-yellow-500">)</span>
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>services</span>
-            &nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="text-white">models.</span>
-            <span className="text-green-200">CharField</span>
-            <span className="text-yellow-500">(</span>
-            <span className="text-blue-500">max_length</span>&nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="pl-k">32</span>
-            <span className="text-yellow-500">)</span>
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span>other</span>&nbsp;
-            <span className="pl-e">=</span>&nbsp;
-            <span className="text-white">models.</span>
-            <span className="text-green-200">TextField</span>
-            <span className="text-yellow-500">()</span>
-            <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;<span className="pl-e">def</span>
-            &nbsp;<span className="pl-ent">__str__</span>(
-            <span className="text-green-200">self</span>):
+            &nbsp;<span className="pl-ent">predict_sentiment</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-green-200">self, text</span>
+            <span className="text-yellow-500">)</span>:
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span className="pl-e">return</span>&nbsp;
-            <span className="text-blue-500">f</span>'
+            <span className="pl-e">if not</span>&nbsp;
             <span>
-              <span className="text-yellow-500">&#123;</span>
-              <span className="text-blue-300">self</span>.full_name
-              <span className="text-yellow-500">&#125;</span>&nbsp;
-              <span className="text-yellow-500">-</span>&nbsp;
-              <span className="text-blue-300">self</span>.services
-              <span className="text-yellow-500">&#125;</span>'
+              <span className="text-blue-300">self</span>.trained_model:
             </span>
-            &nbsp;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="pl-e">raise</span>&nbsp;
+            <span>ValueError</span>
+            <span className="text-yellow-500">(</span>"
+            <span className="text-yellow-600">Model not trained yet</span>"
+            <span className="text-yellow-500">)</span>
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>model</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">pickle.</span>
+            <span className="text-green-200">loads</span>
+            <span className="text-yellow-500">(</span>
+            <span className="text-blue-300">self</span>.trained_model
+            <span className="text-yellow-500">)</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>sentiment</span>&nbsp;
+            <span className="pl-e">=</span>&nbsp;
+            <span className="text-white">models.</span>
+            <span className="text-green-200">predict</span>
+            <span className="text-yellow-500">(</span>
+            <span className="pl-e">[</span>
+            <span className="text-blue-300">text</span>
+            <span className="pl-e">]</span>
+            <span className="text-yellow-500">)</span>
+            <span className="text-yellow-500">[</span>
+            <span className="text-orange-700">0</span>
+            <span className="text-yellow-500">]</span>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span className="pl-e">return</span>&nbsp;"
+            <span className="text-yellow-600">Positive</span>"&nbsp;
+            <span className="pl-e">if</span>&nbsp;sentiment&nbsp;
+            <span className="pl-e">==</span>&nbsp;
+            <span className="text-orange-700">1</span>&nbsp;
+            <span className="pl-e">else</span>&nbsp;"
+            <span className="text-yellow-600">Negative</span>"&nbsp;
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span className="dark:text-muted-foreground/40 text-muted-foreground/80">
               #Complicated? We do the complicated stuff so you don't have to.
               Maybe you don't know how to bring your vision to life, or maybe
