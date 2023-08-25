@@ -2,9 +2,11 @@
 
 import { FC } from "react"
 import Image from "next/image"
+import { icon } from "@/assets"
 import { motion } from "framer-motion"
 
 import { Icons } from "../icons"
+import { Button } from "../ui/button"
 import CodeBlock from "./code-block"
 
 interface CodeEditorProps {}
@@ -68,7 +70,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
             <path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"></path>
           </svg>
           <div className="md:px-8 px-2 text-white whitespace-nowrap overflow-hidden text-[14px] text-ellipsis">
-            swiftstack.net/yourcompany/repository
+            swiftstack.net/yourcompany/codebase
           </div>
           <svg
             aria-hidden="true"
@@ -137,7 +139,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
           </div>
           <div className="p-4 text-[#7d8590]">
             <ul className="flex mb-3">
-              <li className="pr-3 text-gray-200">Terminal</li>
+              <li className="pr-3 text-muted-foreground">Terminal</li>
               <li className="pr-3">Output</li>
               <li className="pr-3">Problems</li>
               <li className="pr-3">Debug Console</li>
@@ -173,7 +175,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
                   clean-extension:typescript-language-features
                 </span>
                 &apos; after
-                <span className="color-fg-done">248 ms</span>
+                <span className="color-fg-done"> 248 ms</span>
               </motion.div>
               <motion.div
                 variants={item}
@@ -198,7 +200,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
                   clean-extension:php-language-features
                 </span>
                 &apos; after
-                <span className="color-fg-done">384 ms</span>
+                <span className="color-fg-done"> 384 ms</span>
               </motion.div>
               <motion.div
                 variants={item}
@@ -223,7 +225,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
                   clean-extension:html-language-features-server
                 </span>
                 &apos; after
-                <span className="color-fg-done">4.66 s</span>
+                <span className="color-fg-done"> 4.66 s</span>
               </motion.div>
               <motion.div
                 variants={item}
@@ -245,7 +247,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
                 <span> Finished </span>
                 &apos;<span className="color-fg-accent">clean-client</span>
                 &apos; after
-                <span className="color-fg-done">7.33 s</span>
+                <span className="color-fg-done"> 7.33 s</span>
               </motion.div>
               <motion.div
                 variants={item}
@@ -275,7 +277,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
                 <path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path>
               </svg>
             </div>
-            <Icons.icon className="w-6 h-6" />
+            <Image src={icon} height={24} width={24} alt="swift-stack icon" />
             <div>
               <svg
                 aria-hidden="true"
@@ -291,17 +293,16 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="px-6 flex items-center justify-between h-full bg-[#040d21]">
-            {/* <Image
-              className="w-full h-auto md:block"
-              width="1238"
-              height="1404"
-              loading="lazy"
-              decoding="async"
-              alt="Planet earth with visualization of GitHub activity crossing the globe"
-              src="/frontend/assets/swift-stack.svg"
-            /> */}
-            <h1 className="text-4xl">Understand your company's codebase</h1>
+          <div className="px-10 flex flex-col pb-24 items-center justify-center h-full dark:bg-[#040d21]">
+            {/* add a particle container to this section to add more life */}
+            <Icons.understand className="w-[22rem]" />
+            <Button
+              variant="default"
+              size="lg"
+              className="active:scale-95 transition-transform duration-75"
+            >
+              Create Account
+            </Button>
           </div>
         </div>
       </div>

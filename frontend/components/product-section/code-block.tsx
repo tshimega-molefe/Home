@@ -86,6 +86,12 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
               <span className="text-blue-300">self</span>.services
               <span className="text-yellow-500">&#125;</span>'
             </span>
+            &nbsp;
+            <span className="dark:text-muted-foreground/40 text-muted-foreground/80">
+              #Complicated? We do the complicated stuff so you don't have to.
+              Maybe you don't know how to bring your vision to life, or maybe
+              you do! Work with us to make it a reality.
+            </span>
           </code>
         </pre>
       </pre>
