@@ -85,13 +85,14 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
             <span className="pl-e">else</span>&nbsp;"
             <span className="text-yellow-600">Negative</span>"&nbsp;
             <br />
-            <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span className="dark:text-muted-foreground/40 text-muted-foreground/80">
               #Complicated? We do the complicated stuff so you don't have to.
               Maybe you don't know how to bring your vision to life, or maybe
               you do! Work with us to make it a reality.
             </span>
+            <br />
+            <br />
           </code>
         </pre>
       </pre>
