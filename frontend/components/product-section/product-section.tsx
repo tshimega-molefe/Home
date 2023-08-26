@@ -4,6 +4,7 @@ import { FC, useState } from "react"
 import { motion } from "framer-motion"
 
 import CodeEditor from "./code-editor"
+import CodeSpace from "./code-space"
 
 interface ProductSectionProps {}
 
@@ -70,6 +71,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
         </div>
       </div>
       <CodeEditor />
+      <CodeSpace />
     </section>
   )
 }
