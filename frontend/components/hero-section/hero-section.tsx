@@ -10,7 +10,7 @@ const HeroSection: FC<HeroSectionProps> = ({}) => {
   return (
     <section
       id="hero-section"
-      className="relative h-[150vh] w-full hero-fade -mb-[18rem]"
+      className="relative h-[150vh] w-full hero-fade -mb-[20rem]"
     >
       <Image
         src={swiftSvg}
