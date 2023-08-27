@@ -3,7 +3,6 @@
 import { FC, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { astro } from "@/assets"
 import { motion } from "framer-motion"
 
 interface CodeSpaceProps {}
@@ -179,7 +178,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             </h3>
             <p className="mb-3 md:text-xl text-base font-medium text-primary">
               We balance acceleration,
-              <br /> With consistency, scalability, and maintainability.
+              <br /> with interactivity, maintainability, and scalability,
             </p>
           </div>
         </motion.div>
