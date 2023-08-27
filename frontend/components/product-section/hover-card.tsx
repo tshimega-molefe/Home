@@ -80,7 +80,7 @@ const HoverCard: FC<HoverCardProps> = ({
       style={{ transform: springProps.xys.to(trans) }}
     >
       <div
-        className={`z-[1] relative bg-[#161b22] h-full border-[#30363d] border-[0.5px] rounded-xl shadow-xl md:flex ${direction} justify-between`}
+        className={`z-[1] relative dark:bg-card bg-card/80 h-full border-[#30363d] border-[0.5px] rounded-xl shadow-xl md:flex ${direction} justify-between`}
       >
         {children}
         <div

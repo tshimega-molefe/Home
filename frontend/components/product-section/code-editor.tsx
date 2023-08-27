@@ -28,7 +28,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
     show: { opacity: 1, y: 0, transition: { type: "keyframe" } },
   }
   return (
-    <div className="tab rounded-xl border-[0.5px] border-[#30363d] overflow-hidden relative shadow-2xl dark:bg-[#161b22]">
+    <div className="tab rounded-xl border-[0.5px] border-[#30363d] overflow-hidden relative shadow-2xl bg-card">
       <div className="flex items-center justify-between border-b-[0.5px] border-[#30363d] p-4">
         <div className="pre-next max-md:hidden flex text-[#7d8590] font-medium">
           <svg
@@ -118,13 +118,13 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
         <div className="min-w-0 w-full">
           <div className="border-b-[0.5px] border-[#30363d] text-[#7d8590]">
             <ul className="flex px-3 pt-4">
-              <li className="px-3 py-2 rounded-t-md bg-[#0d1117] text-gray-300">
+              <li className="px-3 py-2 rounded-t-md border-[0.5px] border-b-0 border-[#30363d] bg-[#0d1117] text-gray-300">
                 models.py
               </li>
               <li className="px-3 py-2">utils.ts</li>
               <li className="px-3 py-2 ">page.tsx</li>
             </ul>
-            <div className="bg-[#0d1117] p-4 ">
+            <div className="bg-[#0d1117] p-4 border-t-[0.5px] border-[#30363d]">
               <div className="flex">
                 <div className="">
                   {Array.from({ length: 12 }, (_, index) => (
@@ -293,7 +293,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="px-10 flex flex-col items-center justify-between pt-20 h-full dark:bg-[#040d21] bg-muted/50">
+          <div className="px-10 flex flex-col items-center justify-between pt-20 h-full dark:bg-[#040d213a] bg-muted/50">
             {/* add a particle container to this section to add more life */}
             <Button
               variant="default"
