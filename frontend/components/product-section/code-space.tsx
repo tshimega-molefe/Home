@@ -112,7 +112,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ type: "tween" }}
-                  className="sm:absolute z-[1] top-[-110px] right-28 shadow-2xl"
+                  className="sm:absolute z-[1] top-[-540px] right-[7.4rem] shadow-2xl"
                 >
                   <img
                     src="/picq.png"

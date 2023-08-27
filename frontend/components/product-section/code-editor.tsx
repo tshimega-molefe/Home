@@ -293,16 +293,24 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="px-10 flex flex-col pb-24 items-center justify-center h-full dark:bg-[#040d21] bg-muted/50">
+          <div className="px-10 flex flex-col items-center justify-between pt-20 h-full dark:bg-[#040d21] bg-muted/50">
             {/* add a particle container to this section to add more life */}
-            <Icons.understand className="w-[22rem]" />
             <Button
               variant="default"
               size="lg"
-              className="active:scale-95 transition-transform duration-75"
+              className="active:scale-95 transition-transform duration-75 "
             >
-              Create Account
+              Get Started
             </Button>
+            <Image
+              className="w-96 h-auto md:block"
+              width="1238"
+              height="1350"
+              loading="lazy"
+              decoding="async"
+              alt="Lead engineer character at Swift Stack, visualization of woman conducting a presentation."
+              src="/woman.png"
+            />
           </div>
         </div>
       </div>
