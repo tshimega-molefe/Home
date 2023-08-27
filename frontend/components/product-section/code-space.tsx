@@ -1,6 +1,9 @@
 "use client"
 
 import { FC, useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { astro } from "@/assets"
 import { motion } from "framer-motion"
 
 interface CodeSpaceProps {}
@@ -15,7 +18,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
   return (
     <div className="flex relative md:pl-10">
       <img
-        alt=""
+        alt="The Universe"
         aria-hidden="true"
         width="2712"
         height="2712"
@@ -61,18 +64,17 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             >
               <h2 className="mb-4 text-2xl max-lg:text-[20px] max-md:w-10/12 lg:w-full w-full text-[#7d8590]">
                 <span className="font-semibold text-primary">
-                  The Swift Team
+                  Build, Test, and Deploy
                 </span>{" "}
-                offers a complete dev environment in seconds, so you can code,
-                build, test, and open pull requests from any repo anywhere.
+                your company's codebase. Create anything, anywhere.
               </h2>
-              <a
+              <Link
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                href=""
+                href="/"
                 className="py-1 inline-block text-xl text-primary font-semibold"
               >
-                Check out our blog
+                Learn more
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={` mb-[2px] text-primary transition inline-block ml-3 ease-in duration-300  ${
@@ -102,7 +104,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                     hovered ? "w-11/12 scale-100" : "w-0 scale-0"
                   } origin-left  transition ease-in duration-300 h-[2.5px] bg-primary rounded-full`}
                 ></div>
-              </a>
+              </Link>
             </motion.div>
           </div>
           <div className="py-4 px-6 w-full">
@@ -143,11 +145,11 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                   transition={{ type: "tween", delay: 0.1 }}
                   className=" overflow-hidden max-w-[373px] bottom-0 rounded-md relative hidden sm:block build-in-animate"
                 >
-                  <img
-                    src="https://github.githubassets.com/images/modules/site/codespaces/illo-ports.png"
+                  <Image
+                    src="/world.png"
                     loading="lazy"
-                    width="746"
-                    height="368"
+                    width={746}
+                    height={368}
                     alt=""
                     decoding="async"
                     className="width-full d-block h-auto"
@@ -163,16 +165,21 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
           transition={{ type: "tween", delay: 0.1 }}
           className="mb-10 md:mb-32 pb-4 "
         >
-          <div className="py-4 text-left">
-            <div className="z-[1] inline-block rounded-full px-2 border-2 border-[#7ee787] relative font-medium bg-gradient-to-r from-[#7ee787] to-[#aff5b4] bg-clip-text text-transparent">
-              <span className="font-semibold text-[12px]">Did you know?</span>
-            </div>
+          <div className="lg:-mt-36 md:-mt-28">
+            <Image
+              src="/rocket.png"
+              alt="world"
+              width={300}
+              height={300}
+              className="max-md:hidden"
+            />
+
             <h3 className="text-[#3ba244] mb-2 mt-3 lg:text-6xl md:text-5xl text-3xl font-medium">
-              22% increase
+              Sustainabile Development
             </h3>
             <p className="mb-3 md:text-xl text-base font-medium text-primary">
-              in developer productivity <br /> after three years with GitHub
-              <sup>1</sup>
+              We balance acceleration,
+              <br /> With consistency, scalability, and maintainability.
             </p>
           </div>
         </motion.div>
