@@ -46,7 +46,7 @@ export function HeroForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-md:w-full grid max-md:grid-rows-2 md:grid-cols-2 max-md:gap-4 max-md:pr-6"
+        className="grid max-md:w-full max-md:grid-rows-2 max-md:gap-4 max-md:pr-6 md:grid-cols-2"
       >
         <FormField
           control={form.control}
@@ -57,7 +57,7 @@ export function HeroForm() {
                 <Input
                   placeholder="Email"
                   {...field}
-                  className="glass border-primary bg-primary/20 max-md:bg-primary/60 dark:max-md:bg-primary/20 h-9 text-[#f8fafc] placeholder:text-background/50 placeholder:dark:text-primary/50 md:rounded-r-none"
+                  className="glass h-9 border-primary bg-primary/20 text-[#f8fafc] placeholder:text-background/50 placeholder:dark:text-primary/50 max-md:bg-primary/60 dark:max-md:bg-primary/20 md:rounded-r-none"
                 />
               </FormControl>
               <FormMessage className="text-[#f8fafc]" />
@@ -68,7 +68,7 @@ export function HeroForm() {
           variant="default"
           type="submit"
           size="sm"
-          className="md:rounded-l-none active:scale-95"
+          className="active:scale-95 md:rounded-l-none"
         >
           Join our newsletter
         </Button>

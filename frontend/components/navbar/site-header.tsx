@@ -17,7 +17,7 @@ export function SiteHeader() {
           id="mobile-nav"
           className="flex items-center justify-between max-lg:w-full"
         >
-          <div className="lg:hidden flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 lg:hidden">
             <Link
               href="/sign-up"
               target="_blank"
@@ -31,7 +31,7 @@ export function SiteHeader() {
             href="/"
             className="flex items-center space-x-2 active:scale-95"
           >
-            <Icons.logo className="h-10 w-40 transition-all max-lg:h-10 max-lg:w-28 max-md:active:scale-95 max-lg:hidden" />
+            <Icons.logo className="h-10 w-40 transition-all max-lg:hidden max-lg:h-10 max-lg:w-28 max-md:active:scale-95" />
             <Icons.icon className="h-10 w-10 transition-all max-md:active:scale-95 lg:hidden" />
           </Link>
           <Hamburger />

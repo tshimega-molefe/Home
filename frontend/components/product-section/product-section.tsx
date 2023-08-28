@@ -16,7 +16,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
   const [hovered1, setHovered1] = useState<boolean>(false)
   return (
     <section id="product-section" className="container">
-      <div className="flex md:pl-10 space-x-3 md:space-x-10">
+      <div className="flex space-x-3 md:space-x-10 md:pl-10">
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -41,22 +41,22 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               <polyline points="2 17 12 22 22 17" />
               <polyline points="2 12 12 17 22 12" />
             </svg>
-            <span className="absolute left-0 top-0 h-full w-full home-campaign-glowing-icon-glow-1 z-[3]"></span>
+            <span className="home-campaign-glowing-icon-glow-1 absolute left-0 top-0 z-[3] h-full w-full"></span>
           </motion.div>
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             transition={{ duration: 0.4, delay: 0.6 }}
-            className="h-full w-[3px] max-md:w-[2px] mt-7 rounded-md bg-gradient-to-b from-[#733787]"
+            className="mt-7 h-full w-[3px] rounded-md bg-gradient-to-b from-[#733787] max-md:w-[2px]"
           ></motion.div>
         </div>
-        <div className="md:w-8/12 mb-24">
+        <div className="mb-24 md:w-8/12">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: false }}
-            className="text-[20px] md:text-2xl mb-7 font-medium"
+            className="mb-7 text-[20px] font-medium md:text-2xl"
           >
             The Swift Stack
           </motion.div>
@@ -65,7 +65,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.5 }}
             viewport={{ once: false }}
-            className="text-[28px] md:text-[40px] max-md:leading-8 max-lg:leading-10 lg:text-5xl mb-7 font-medium"
+            className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
             <span className="text-[#763791]">Execute your vision.&nbsp;</span>
             Our team utilizes industry standard practices, with quality and
@@ -78,12 +78,12 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
       <div className="relative z-[1] ">
         <CodeDemo />
       </div>
-      <div className="flex justify-between items-center">
-        <div className="flex justify-between md:space-x-10 max-md:flex-col">
+      <div className="flex items-center justify-between">
+        <div className="flex justify-between max-md:flex-col md:space-x-10">
           <HoverCard backgroundColor="#763791" direction="flex-col" left="0">
-            <div className="md:flex flex-col flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 ">
-              <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-                <span className="text-primary font-semibold">
+            <div className="flex-1 flex-col p-8 sm:p-10 md:flex lg:py-16 lg:pl-16 lg:pr-32 ">
+              <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
+                <span className="font-semibold text-primary">
                   Join Our Team.
                 </span>{" "}
                 Change it, influence it, build your own things that other people
@@ -94,12 +94,12 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                   href=""
-                  className=" md:text-xl text-primary font-semibold inline-block"
+                  className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Explore Careers
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${
+                    className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${
                       hovered ? "translate-x-0 " : "-translate-x-1"
                     }`}
                     width="20"
@@ -112,7 +112,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                       d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
                     ></path>
                     <path
-                      className={` text-primary transition ease-in duration-150 ${
+                      className={` text-primary transition duration-150 ease-in ${
                         hovered ? " opacity-100" : "opacity-0 "
                       }`}
                       stroke="currentColor"
@@ -124,14 +124,14 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   <div
                     className={` ${
                       hovered ? "w-11/12 scale-100" : "w-0 scale-0"
-                    } origin-left  transition ease-in duration-300 h-[2.5px] bg-primary rounded-full`}
+                    } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
                   ></div>
                 </a>
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
               <Image
-                className="w-full h-auto js-build-in-item build-in-scale-fade build-in-animate"
+                className="js-build-in-item build-in-scale-fade build-in-animate h-auto w-full"
                 width="500"
                 height="890"
                 loading="lazy"
@@ -147,9 +147,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             direction="flex-col"
             left="-400px"
           >
-            <div className="md:flex flex-col  flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 ">
-              <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-                <span className="text-primary font-semibold">Swift Air</span>
+            <div className="flex-1 flex-col  p-8 sm:p-10 md:flex lg:py-16 lg:pl-16 lg:pr-32 ">
+              <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
+                <span className="font-semibold text-primary">Swift Air</span>
                 <br />
                 Private air travel, any airport, at anytime.
               </p>
@@ -158,12 +158,12 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   onMouseEnter={() => setHovered1(true)}
                   onMouseLeave={() => setHovered1(false)}
                   href=""
-                  className=" md:text-xl text-primary font-semibold inline-block"
+                  className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Try Swift Air
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${
+                    className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${
                       hovered1 ? "translate-x-0 " : "-translate-x-1"
                     }`}
                     width="20"
@@ -176,7 +176,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                       d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
                     ></path>
                     <path
-                      className={` text-primary transition ease-in duration-150 ${
+                      className={` text-primary transition duration-150 ease-in ${
                         hovered1 ? " opacity-100" : "opacity-0 "
                       }`}
                       stroke="currentColor"
@@ -188,14 +188,14 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   <div
                     className={` ${
                       hovered1 ? "w-11/12 scale-100" : "w-0 scale-0"
-                    } origin-left  transition ease-in duration-300 h-[2.5px] bg-primary rounded-full`}
+                    } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
                   ></div>
                 </a>
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
               <img
-                className="w-full  h-auto"
+                className="h-auto  w-full"
                 width="1208"
                 height="764"
                 loading="lazy"

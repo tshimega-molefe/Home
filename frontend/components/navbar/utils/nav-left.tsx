@@ -40,7 +40,7 @@ const NavLeft: FC<NavLeftProps> = ({ main, submain, path, path2 }) => {
         } text-[14px] transition duration-100 ease-in`}
       >
         <div
-          className={`font-semibold transition duration-100 ease-in capitalize  ${
+          className={`font-semibold capitalize transition duration-100 ease-in  ${
             focus ? "text-blue-600" : "text-primary"
           } text-base leading-5`}
         >

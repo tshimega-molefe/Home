@@ -32,9 +32,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
 
   return (
     <HoverCard backgroundColor="#763791" direction="" left="0">
-      <div className="md:flex flex-col md:space-y-20 flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 justify-between ">
-        <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-          <span className="text-primary font-medium">Script.Ed</span>
+      <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
+        <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
+          <span className="font-medium text-primary">Script.Ed</span>
           <br />
           Masters of the written word use it. Filmmakers, Youtubers, Writers,
           Journalists, Authors, Poets.
@@ -46,12 +46,12 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             href=""
-            className=" md:text-xl text-primary font-semibold inline-block"
+            className=" inline-block font-semibold text-primary md:text-xl"
           >
             Try Script.Ed
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${
+              className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${
                 hovered ? "translate-x-0 " : "-translate-x-1"
               }`}
               width="20"
@@ -64,7 +64,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
               ></path>
               <path
-                className={` text-primary transition ease-in duration-150 ${
+                className={` text-primary transition duration-150 ease-in ${
                   hovered ? " opacity-100" : "opacity-0 "
                 }`}
                 stroke="currentColor"
@@ -76,16 +76,16 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
             <div
               className={` ${
                 hovered ? "w-11/12 scale-100" : "w-0 scale-0"
-              } origin-left  transition ease-in duration-300 h-[2.5px] bg-primary rounded-full`}
+              } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
             ></div>
           </a>
         </div>
       </div>
-      <div className="overflow-hidden rounded-s-lg z-[1] flex-1 shadow-3xl">
-        <div className="text-left border-[0.5px] bg-[#161b22] border-[#30363d] rounded-lg text-[#161b22] box-shadow-card-mktg md:mt-10 md:ml-0 sm:ml-10 sm:mr-10 mb-16 ml-3 mr-3 ">
+      <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
+        <div className="box-shadow-card-mktg mx-3 mb-16 rounded-lg border-[0.5px] border-[#30363d] bg-[#161b22] text-left text-[#161b22] sm:mx-10 md:ml-0 md:mt-10">
           <div className="">
-            <div className="overflow-x-auto pt-2 px-2 mb-0 border-b-[0.5px] border-[#30363d] ">
-              <div className="flex items-center bg-[#161b22] text-[#7d8590] tab-nav">
+            <div className="mb-0 overflow-x-auto border-b-[0.5px] border-[#30363d] px-2 pt-2 ">
+              <div className="tab-nav flex items-center bg-[#161b22] text-[#7d8590]">
                 <button
                   onClick={() => {
                     setShowPy(true)
@@ -93,9 +93,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     setShowJs(false)
                   }}
                   type="button"
-                  className={`flex items-center  py-2 px-4 ${
+                  className={`flex items-center  px-4 py-2 ${
                     showPy
-                      ? "border-[0.5px] rounded-t-md border-b-[0] text-white border-[#30363d] bg-[#0d1117]"
+                      ? "rounded-t-md border-[0.5px] border-b-[0] border-[#30363d] bg-[#0d1117] text-white"
                       : ""
                   }  `}
                 >
@@ -121,9 +121,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     setShowJs(true)
                   }}
                   type="button"
-                  className={`flex items-center py-2 px-4 ${
+                  className={`flex items-center px-4 py-2 ${
                     showJs
-                      ? "border-[0.5px] rounded-t-md border-b-[0] text-white border-[#30363d] bg-[#0d1117]"
+                      ? "rounded-t-md border-[0.5px] border-b-[0] border-[#30363d] bg-[#0d1117] text-white"
                       : ""
                   }`}
                 >
@@ -149,9 +149,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     setShowJs(false)
                   }}
                   type="button"
-                  className={`flex items-center py-2 px-4 ${
+                  className={`flex items-center px-4 py-2 ${
                     showGo
-                      ? "border-[0.5px] rounded-t-md border-b-[0] text-white border-[#30363d] bg-[#0d1117]"
+                      ? "rounded-t-md border-[0.5px] border-b-[0] border-[#30363d] bg-[#0d1117] text-white"
                       : ""
                   } `}
                 >
@@ -174,10 +174,10 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
               </div>
             </div>
             <div
-              className={`p-4 relative bg-[#0d1117] ${showPy ? "" : "hidden"}`}
+              className={`relative bg-[#0d1117] p-4 ${showPy ? "" : "hidden"}`}
             >
               <div className="flex">
-                <div className="text-[#6e7681] text-right">
+                <div className="text-right text-[#6e7681]">
                   {Array.from({ length: 8 }, (_, index) => (
                     <div className="pr-2" key={index + 1}>
                       {index + 1}
@@ -186,7 +186,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 </div>
                 <div
                   key={count}
-                  className="flex-1 overflow-x-auto text-white rounded-b-md "
+                  className="flex-1 overflow-x-auto rounded-b-md text-white "
                 >
                   <pre className="">
                     <span className="code-editor-line-mktg">
@@ -294,7 +294,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         <span className="pl-en">show</span>()
                       </span>
                     </pre>
-                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="color-fg-on-emphasis  js-type-row f5 row-is-visible absolute flex items-center rounded-md rounded-tl-none bg-[#763791] p-2 font-bold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -302,9 +302,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-feather mr-1"
                       >
                         <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
@@ -316,11 +316,11 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                   </motion.div>
                 </div>
               </div>
-              <div className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5">
+              <div className="absolute bottom-[-60px] left-0  z-[1] mb-5 flex w-full items-center justify-center">
                 <button
                   onClick={() => setCount(count + 1)}
                   type="button"
-                  className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
+                  className="group flex items-center justify-between text-primary transition-transform duration-150 active:scale-95"
                 >
                   <svg
                     aria-hidden="true"
@@ -339,10 +339,10 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
               </div>
             </div>
             <div
-              className={`p-4 relative bg-[#0d1117] ${showJs ? "" : "hidden"}`}
+              className={`relative bg-[#0d1117] p-4 ${showJs ? "" : "hidden"}`}
             >
               <div className="flex">
-                <div className="text-[#6e7681] text-right">
+                <div className="text-right text-[#6e7681]">
                   {Array.from({ length: 7 }, (_, index) => (
                     <div className="pr-2" key={index + 1}>
                       {index + 1}
@@ -351,7 +351,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 </div>
                 <div
                   key={count}
-                  className="flex-1 overflow-x-auto text-white rounded-b-md"
+                  className="flex-1 overflow-x-auto rounded-b-md text-white"
                 >
                   <pre className="">
                     <span className="code-editor-line-mktg d-inline-block">
@@ -476,7 +476,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         <span className="pl-c1">12</span>
                       </span>
                     </pre>
-                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="color-fg-on-emphasis  js-type-row f5 row-is-visible absolute flex items-center rounded-md rounded-tl-none bg-[#763791] p-2 font-bold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -484,9 +484,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-feather mr-1"
                       >
                         <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
@@ -498,11 +498,11 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                   </motion.div>
                 </div>
               </div>
-              <div className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5 ">
+              <div className="absolute bottom-[-60px] left-0  z-[1] mb-5 flex w-full items-center justify-center ">
                 <button
                   onClick={() => setCount(count + 1)}
                   type="button"
-                  className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
+                  className="group flex items-center justify-between text-primary transition-transform duration-150 active:scale-95"
                 >
                   <svg
                     aria-hidden="true"
@@ -521,10 +521,10 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
               </div>
             </div>
             <div
-              className={`p-4 relative bg-[#0d1117] ${showGo ? "" : "hidden"}`}
+              className={`relative bg-[#0d1117] p-4 ${showGo ? "" : "hidden"}`}
             >
               <div className="flex">
-                <div className="text-[#6e7681] text-right">
+                <div className="text-right text-[#6e7681]">
                   {Array.from({ length: 11 }, (_, index) => (
                     <div className="pr-2" key={index + 1}>
                       {index + 1}
@@ -533,7 +533,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 </div>
                 <div
                   key={count}
-                  className="flex-1 overflow-x-auto text-white rounded-b-md"
+                  className="flex-1 overflow-x-auto rounded-b-md text-white"
                 >
                   <pre className="">
                     <span className="code-editor-line-mktg d-inline-block">
@@ -706,7 +706,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     <pre className=" bg-[#388bfd1a]">
                       <span> {"}"}</span>
                     </pre>
-                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="color-fg-on-emphasis  js-type-row f5 row-is-visible absolute flex items-center rounded-md rounded-tl-none bg-[#763791] p-2 font-bold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -714,9 +714,9 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="lucide lucide-feather mr-1"
                       >
                         <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
@@ -729,11 +729,11 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 </div>
                 <div
                   onClick={() => setCount(count + 1)}
-                  className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5 "
+                  className="absolute bottom-[-60px] left-0  z-[1] mb-5 flex w-full items-center justify-center "
                 >
                   <button
                     type="button"
-                    className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
+                    className="group flex items-center justify-between text-primary transition-transform duration-150 active:scale-95"
                   >
                     <svg
                       aria-hidden="true"

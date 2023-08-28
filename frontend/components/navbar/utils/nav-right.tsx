@@ -15,7 +15,7 @@ const NavRight: FC<NavRightProps> = ({ main, path }) => {
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
       href={`/${main}`}
-      className={`flex capitalize  items-center ${
+      className={`flex items-center  capitalize ${
         focus ? "text-blue-600" : "text-primary/50"
       }`}
     >

@@ -74,17 +74,17 @@ const HoverCard: FC<HoverCardProps> = ({
 
   return (
     <animated.div
-      className="  overflow-hidden  mb-3 md:mb-8 rounded-xl"
+      className="  mb-3  overflow-hidden rounded-xl md:mb-8"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: springProps.xys.to(trans) }}
     >
       <div
-        className={`z-[1] relative dark:bg-card bg-card/80 h-full border-[#30363d] border-[0.5px] rounded-xl shadow-xl md:flex ${direction} justify-between`}
+        className={`relative z-[1] h-full rounded-xl border-[0.5px] border-[#30363d] bg-card/80 shadow-xl dark:bg-card md:flex ${direction} justify-between`}
       >
         {children}
         <div
-          className={`absolute w-[500px] border-none  bottom-[50px] h-[1000px] z-[-1] back ${
+          className={`back absolute bottom-[50px]  z-[-1] h-[1000px] w-[500px] border-none ${
             hovered ? "opacity-95" : "opacity-0"
           } `}
           style={{

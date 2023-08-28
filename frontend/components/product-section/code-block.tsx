@@ -48,8 +48,8 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span className="pl-e">raise</span>&nbsp;
             <span>ValueError</span>
-            <span className="text-yellow-500">(</span>"
-            <span className="text-yellow-600">Model not trained yet</span>"
+            <span className="text-yellow-500">(</span>&quot;
+            <span className="text-yellow-600">Model not trained yet</span>&quot;
             <span className="text-yellow-500">)</span>
             <br />
             <br />
@@ -77,19 +77,19 @@ const CodeBlock: FC<CodeBlockProps> = ({}) => {
             <span className="text-yellow-500">]</span>
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span className="pl-e">return</span>&nbsp;"
-            <span className="text-yellow-600">Positive</span>"&nbsp;
+            <span className="pl-e">return</span>&nbsp;&quot;
+            <span className="text-yellow-600">Positive</span>&quot;&nbsp;
             <span className="pl-e">if</span>&nbsp;sentiment&nbsp;
             <span className="pl-e">==</span>&nbsp;
             <span className="text-orange-700">1</span>&nbsp;
-            <span className="pl-e">else</span>&nbsp;"
-            <span className="text-yellow-600">Negative</span>"&nbsp;
+            <span className="pl-e">else</span>&nbsp;&quot;
+            <span className="text-yellow-600">Negative</span>&quot;&nbsp;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span className="dark:text-muted-foreground/40 text-muted-foreground/80">
-              #Complicated? We do the complicated stuff so you don't have to.
-              Maybe you don't know how to bring your vision to life, or maybe
-              you do! Work with us to make it a reality.
+            <span className="text-muted-foreground/80 dark:text-muted-foreground/40">
+              #Complicated? We do the complicated stuff so you don&apos;t have
+              to. Maybe you don&apos;t know how to bring your vision to life, or
+              maybe you do! Work with us to make it a reality.
             </span>
             <br />
             <br />

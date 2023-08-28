@@ -9,17 +9,17 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
   return (
     <section
       id="our-Partners"
-      className="container relative w-full md:mb-96 mb-52 max-lg:mt-40"
+      className="container relative mb-52 w-full max-lg:mt-40 md:mb-96"
     >
-      <p className="text-base leading-6 lg:text-[#f8fafc]/60 max-lg:text-muted-foreground">
+      <p className="text-base leading-6 max-lg:text-muted-foreground lg:text-[#f8fafc]/60">
         A reliable partner for the world&apos;s foremost companies ↘︎
       </p>
-      <div className="flex flex-wrap justify-between items-center gap-4 pt-2">
+      <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
         <Link
           href="https://athena-io.com/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
           <Icons.athena className="my-3 h-7 w-20" />
         </Link>
@@ -27,15 +27,15 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
           href="https://www.lsavi.com/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
-          <Icons.aviation className="my-3 h-12 w-26" />
+          <Icons.aviation className="w-26 my-3 h-12" />
         </Link>
         <Link
           href="https://nextjs.org/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
           <Icons.nextjs className="my-3 h-20 w-auto" />
         </Link>
@@ -43,7 +43,7 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
           href="http://103.125.218.26/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
           <Icons.scout className="my-3 h-8 w-auto" />
         </Link>
@@ -51,7 +51,7 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
           href="https://stripe.com/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
           <Icons.stripe className="my-3 h-16 w-auto" />
         </Link>
@@ -60,15 +60,15 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
           href="https://usurpa.africa/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
-          <Icons.usurpa className="my-3 w-28 h-fit" />
+          <Icons.usurpa className="my-3 h-fit w-28" />
         </Link>
         <Link
           href="https://vercel.com/"
           target="_blank"
           passHref
-          className="active:scale-90 transition-all duration-75"
+          className="transition-all duration-75 active:scale-90"
         >
           <Icons.vercel className="my-3 h-9 w-24" />
         </Link>

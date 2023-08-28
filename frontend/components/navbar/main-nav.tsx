@@ -27,7 +27,7 @@ const MainNav: FC<MainNavProps> = ({}) => {
           : "max-lg:max-h-0 max-lg:translate-y-1/4 max-lg:scale-y-50"
       }`}
     >
-      <div className="flex overflow-y-auto max-lg:max-h-[500px] max-lg:w-[320px] max-lg:flex-col max-lg:rounded-lg max-lg:bg-background max-sm:mx-auto max-sm:w-8/12 sm:ml-auto lg:mb-0 lg:w-full lg:items-center lg:justify-between max-md:transition-all">
+      <div className="flex overflow-y-auto max-lg:max-h-[500px] max-lg:w-[320px] max-lg:flex-col max-lg:rounded-lg max-lg:bg-background max-md:transition-all max-sm:mx-auto max-sm:w-8/12 sm:ml-auto lg:mb-0 lg:w-full lg:items-center lg:justify-between">
         <nav className="my-0 px-3 text-[15.5px] max-lg:px-5 max-lg:py-10 lg:px-6">
           <ul
             className={`flex overflow-y-auto font-light tracking-wider max-lg:h-auto max-lg:flex-col max-lg:space-y-6 max-lg:text-base max-lg:text-muted-foreground lg:items-center lg:space-x-6`}
@@ -44,10 +44,10 @@ const MainNav: FC<MainNavProps> = ({}) => {
           </ul>
         </nav>
         <div className="mb-3 items-center px-3 text-left max-lg:flex-col lg:mb-0 lg:flex lg:space-x-4 lg:px-0">
-          <div className="relative mb-2 max-lg:mr-4 max-lg:ml-2 lg:mb-0 lg:flex">
+          <div className="relative mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:flex">
             <Input
               placeholder="Search Swift Stack"
-              className="glass border-primary bg-primary/20 max-lg:h-10 lg:pr-8 text-background placeholder:text-background/30 placeholder:dark:text-primary/50 max-lg:bg-background max-lg:placeholder:text-muted-foreground max-lg:text-primary"
+              className="glass border-primary bg-primary/20 text-background placeholder:text-background/30 placeholder:dark:text-primary/50 max-lg:h-10 max-lg:bg-background max-lg:text-primary max-lg:placeholder:text-muted-foreground lg:pr-8"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,16 +65,16 @@ const MainNav: FC<MainNavProps> = ({}) => {
               <path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path>
             </svg>
           </div>
-          <div className="mb-2 max-lg:mr-4 max-lg:ml-2 lg:mb-0 lg:flex">
+          <div className="mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:flex">
             <Link
               href="/sign-in"
               rel="noreferrer"
-              className={`inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md px-3 text-sm font-medium text-primary ring-offset-background transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-lg:bg-primary max-lg:text-background max-lg:hover:bg-primary/90 max-lg:h-10 max-lg:w-full`}
+              className={`inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md px-3 text-sm font-medium text-primary ring-offset-background transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-lg:h-10 max-lg:w-full max-lg:bg-primary max-lg:text-background max-lg:hover:bg-primary/90`}
             >
               Sign In
             </Link>
           </div>
-          <div className="mb-2 max-lg:mr-4 max-lg:ml-2 lg:mb-0 lg:hidden relative ">
+          <div className="relative mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:hidden ">
             <ThemeToggle />
           </div>
 
@@ -88,7 +88,7 @@ const MainNav: FC<MainNavProps> = ({}) => {
           >
             Sign Up
           </Link>
-          <div className=" max-lg:hidden relative">
+          <div className=" relative max-lg:hidden">
             <ThemeToggle />
           </div>
         </div>
