@@ -522,7 +522,8 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     <pre className=" bg-[#388bfd1a]">
                       <span>
                         <span className="pl-s1">
-                          Now, I've never been there before, I'm not sure
+                          Now, I&apos;ve never been there before, I&apos;m not
+                          sure
                         </span>
                       </span>
                     </pre>
