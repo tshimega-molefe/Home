@@ -149,11 +149,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
           >
             <div className="md:flex flex-col  flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 ">
               <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-                <span className="text-primary font-semibold">
-                  GitHub Mobile
-                </span>{" "}
-                fits your projects in your pocket, so you never miss a beat
-                while on the go.
+                <span className="text-primary font-semibold">Swift Air</span>
+                <br />
+                Private air travel, any airport, at anytime.
               </p>
               <div>
                 <a
@@ -162,7 +160,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   href=""
                   className=" md:text-xl text-primary font-semibold inline-block"
                 >
-                  Get GitHub Mobile
+                  Try Swift Air
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${

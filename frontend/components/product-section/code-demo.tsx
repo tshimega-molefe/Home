@@ -34,12 +34,12 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
     <HoverCard backgroundColor="#763791" direction="" left="0">
       <div className="md:flex flex-col md:space-y-20 flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 justify-between ">
         <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-          <span className="text-primary font-medium">Script.Ed.</span>
+          <span className="text-primary font-medium">Script.Ed</span>
           <br />
           Masters of the written word use it. Filmmakers, Youtubers, Writers,
           Journalists, Authors, Poets.
           <br />
-          Use AI to bring your ideas to life 3X faster.
+          Use AI to bring your story to life 10X faster.
         </p>
         <div>
           <a
@@ -294,24 +294,24 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         <span className="pl-en">show</span>()
                       </span>
                     </pre>
-                    <div className="rounded-tl-none  bg-[#1f6feb] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
                       <svg
-                        width="16"
-                        height="15"
-                        viewBox="0 0 16 15"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="mr-1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-feather mr-1"
                       >
-                        <path d="M5.5 8.75282C5.5 8.33863 5.83569 8.00282 6.25 8.00282C6.66415 8.00282 7 8.33861 7 8.75282V10.2489C7 10.6631 6.66431 10.9989 6.25 10.9989C5.83569 10.9989 5.5 10.6631 5.5 10.2489V8.75282Z"></path>
-                        <path d="M10.5 8.75282C10.5 8.33863 10.1643 8.00282 9.75 8.00282C9.33551 8.00282 9 8.33881 9 8.75282V10.2489C9 10.6631 9.33569 10.9989 9.75 10.9989C10.1643 10.9989 10.5 10.6631 10.5 10.2489V8.75282Z"></path>
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.04443 0.0297942C6.05371 -0.0606599 7.3667 0.00708908 8 0.919809C8.6333 0.00708908 9.94629 -0.0606599 10.9556 0.0297942C12.1118 0.145761 13.0854 0.543222 13.6328 1.12708C14.5825 2.1648 14.6267 4.34144 14.1685 5.5398C14.2146 5.74464 14.2585 5.95216 14.29 6.17176C15.1366 6.39482 16 7.59408 16 8.45167V10.0717C16 10.5215 15.79 10.9314 15.4199 11.2114C13.3044 12.7835 10.6672 14.0012 8 14.0012C5.33276 14.0012 2.69556 12.7835 0.580078 11.2114C0.209961 10.9314 0 10.5215 0 10.0717V8.45167C0 7.59408 0.863428 6.39482 1.70996 6.17176C1.7416 5.95216 1.7855 5.74461 1.83154 5.5398C1.37329 4.34144 1.41748 2.1648 2.36719 1.12708C2.91455 0.543222 3.88818 0.145761 5.04443 0.0297942ZM8 12.5014C9.93994 12.5014 11.8501 11.6426 13 11.0028V6.65907C11.1445 7.37782 9.00928 7.00721 8.00146 5.34229H7.99854C6.99072 7.00721 4.85547 7.37782 3 6.65907V11.0028C4.1499 11.6426 6.06006 12.5014 8 12.5014ZM5 5.49879C6.64062 5.49879 7 4.20582 7 3.01832C7 1.91517 6.8125 1.50392 5.53125 1.50392C3.31396 1.50392 3.04688 2.25282 3.04688 4.00282C3.04688 5.10597 3.35938 5.49879 5 5.49879ZM11 5.49879C9.35938 5.49879 9 4.20582 9 3.01832C9 1.91517 9.1875 1.50392 10.4688 1.50392C12.686 1.50392 12.9531 2.25282 12.9531 4.00282C12.9531 5.10597 12.6406 5.49879 11 5.49879Z"
-                        ></path>
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                        <line x1="16" x2="2" y1="8" y2="22" />
+                        <line x1="17.5" x2="9" y1="15" y2="15" />
                       </svg>
-                      Copilot
+                      Script.Ed
                     </div>
                   </motion.div>
                 </div>
@@ -476,24 +476,24 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                         <span className="pl-c1">12</span>
                       </span>
                     </pre>
-                    <div className="rounded-tl-none shadow-xl bg-[#1f6feb] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
                       <svg
-                        width="16"
-                        height="15"
-                        viewBox="0 0 16 15"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="mr-1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-feather mr-1"
                       >
-                        <path d="M5.5 8.75282C5.5 8.33863 5.83569 8.00282 6.25 8.00282C6.66415 8.00282 7 8.33861 7 8.75282V10.2489C7 10.6631 6.66431 10.9989 6.25 10.9989C5.83569 10.9989 5.5 10.6631 5.5 10.2489V8.75282Z"></path>
-                        <path d="M10.5 8.75282C10.5 8.33863 10.1643 8.00282 9.75 8.00282C9.33551 8.00282 9 8.33881 9 8.75282V10.2489C9 10.6631 9.33569 10.9989 9.75 10.9989C10.1643 10.9989 10.5 10.6631 10.5 10.2489V8.75282Z"></path>
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.04443 0.0297942C6.05371 -0.0606599 7.3667 0.00708908 8 0.919809C8.6333 0.00708908 9.94629 -0.0606599 10.9556 0.0297942C12.1118 0.145761 13.0854 0.543222 13.6328 1.12708C14.5825 2.1648 14.6267 4.34144 14.1685 5.5398C14.2146 5.74464 14.2585 5.95216 14.29 6.17176C15.1366 6.39482 16 7.59408 16 8.45167V10.0717C16 10.5215 15.79 10.9314 15.4199 11.2114C13.3044 12.7835 10.6672 14.0012 8 14.0012C5.33276 14.0012 2.69556 12.7835 0.580078 11.2114C0.209961 10.9314 0 10.5215 0 10.0717V8.45167C0 7.59408 0.863428 6.39482 1.70996 6.17176C1.7416 5.95216 1.7855 5.74461 1.83154 5.5398C1.37329 4.34144 1.41748 2.1648 2.36719 1.12708C2.91455 0.543222 3.88818 0.145761 5.04443 0.0297942ZM8 12.5014C9.93994 12.5014 11.8501 11.6426 13 11.0028V6.65907C11.1445 7.37782 9.00928 7.00721 8.00146 5.34229H7.99854C6.99072 7.00721 4.85547 7.37782 3 6.65907V11.0028C4.1499 11.6426 6.06006 12.5014 8 12.5014ZM5 5.49879C6.64062 5.49879 7 4.20582 7 3.01832C7 1.91517 6.8125 1.50392 5.53125 1.50392C3.31396 1.50392 3.04688 2.25282 3.04688 4.00282C3.04688 5.10597 3.35938 5.49879 5 5.49879ZM11 5.49879C9.35938 5.49879 9 4.20582 9 3.01832C9 1.91517 9.1875 1.50392 10.4688 1.50392C12.686 1.50392 12.9531 2.25282 12.9531 4.00282C12.9531 5.10597 12.6406 5.49879 11 5.49879Z"
-                        ></path>
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                        <line x1="16" x2="2" y1="8" y2="22" />
+                        <line x1="17.5" x2="9" y1="15" y2="15" />
                       </svg>
-                      Copilot
+                      Script.Ed
                     </div>
                   </motion.div>
                 </div>
@@ -706,24 +706,24 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     <pre className=" bg-[#388bfd1a]">
                       <span> {"}"}</span>
                     </pre>
-                    <div className="rounded-tl-none shadow-xl bg-[#1f6feb] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
+                    <div className="rounded-tl-none  bg-[#763791] absolute color-fg-on-emphasis rounded-md font-bold flex items-center js-type-row p-2 f5 row-is-visible">
                       <svg
-                        width="16"
-                        height="15"
-                        viewBox="0 0 16 15"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="mr-1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        className="lucide lucide-feather mr-1"
                       >
-                        <path d="M5.5 8.75282C5.5 8.33863 5.83569 8.00282 6.25 8.00282C6.66415 8.00282 7 8.33861 7 8.75282V10.2489C7 10.6631 6.66431 10.9989 6.25 10.9989C5.83569 10.9989 5.5 10.6631 5.5 10.2489V8.75282Z"></path>
-                        <path d="M10.5 8.75282C10.5 8.33863 10.1643 8.00282 9.75 8.00282C9.33551 8.00282 9 8.33881 9 8.75282V10.2489C9 10.6631 9.33569 10.9989 9.75 10.9989C10.1643 10.9989 10.5 10.6631 10.5 10.2489V8.75282Z"></path>
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.04443 0.0297942C6.05371 -0.0606599 7.3667 0.00708908 8 0.919809C8.6333 0.00708908 9.94629 -0.0606599 10.9556 0.0297942C12.1118 0.145761 13.0854 0.543222 13.6328 1.12708C14.5825 2.1648 14.6267 4.34144 14.1685 5.5398C14.2146 5.74464 14.2585 5.95216 14.29 6.17176C15.1366 6.39482 16 7.59408 16 8.45167V10.0717C16 10.5215 15.79 10.9314 15.4199 11.2114C13.3044 12.7835 10.6672 14.0012 8 14.0012C5.33276 14.0012 2.69556 12.7835 0.580078 11.2114C0.209961 10.9314 0 10.5215 0 10.0717V8.45167C0 7.59408 0.863428 6.39482 1.70996 6.17176C1.7416 5.95216 1.7855 5.74461 1.83154 5.5398C1.37329 4.34144 1.41748 2.1648 2.36719 1.12708C2.91455 0.543222 3.88818 0.145761 5.04443 0.0297942ZM8 12.5014C9.93994 12.5014 11.8501 11.6426 13 11.0028V6.65907C11.1445 7.37782 9.00928 7.00721 8.00146 5.34229H7.99854C6.99072 7.00721 4.85547 7.37782 3 6.65907V11.0028C4.1499 11.6426 6.06006 12.5014 8 12.5014ZM5 5.49879C6.64062 5.49879 7 4.20582 7 3.01832C7 1.91517 6.8125 1.50392 5.53125 1.50392C3.31396 1.50392 3.04688 2.25282 3.04688 4.00282C3.04688 5.10597 3.35938 5.49879 5 5.49879ZM11 5.49879C9.35938 5.49879 9 4.20582 9 3.01832C9 1.91517 9.1875 1.50392 10.4688 1.50392C12.686 1.50392 12.9531 2.25282 12.9531 4.00282C12.9531 5.10597 12.6406 5.49879 11 5.49879Z"
-                        ></path>
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                        <line x1="16" x2="2" y1="8" y2="22" />
+                        <line x1="17.5" x2="9" y1="15" y2="15" />
                       </svg>
-                      Copilot
+                      Script.Ed
                     </div>
                   </motion.div>
                 </div>
