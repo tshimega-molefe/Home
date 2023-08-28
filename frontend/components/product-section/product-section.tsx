@@ -194,15 +194,15 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
-              <img
+              <Image
                 className="h-auto  w-full"
-                width="1208"
-                height="764"
+                width="900"
+                height="800"
                 loading="lazy"
                 decoding="async"
                 alt=""
                 aria-hidden="true"
-                src="https://github.githubassets.com/images/modules/site/home-campaign/illu-mobile.png"
+                src="/yt-man.png"
               />
             </div>
           </HoverCard>
