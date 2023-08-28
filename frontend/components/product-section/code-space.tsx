@@ -120,7 +120,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                     alt=""
                     loading="lazy"
                     decoding="async"
-                    className=" h-auto w-[300px] rounded-md"
+                    className=" h-auto w-[300px] rounded-md max-md:hidden"
                   />
                   <img
                     src="https://github.githubassets.com/images/modules/site/codespaces/illo-cursor.png"
@@ -151,7 +151,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                     height={368}
                     alt=""
                     decoding="async"
-                    className="width-full d-block h-auto max-md:hidden"
+                    className="width-full d-block h-auto"
                   />
                 </motion.div>
               </div>
