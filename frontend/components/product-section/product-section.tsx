@@ -1,6 +1,7 @@
 "use client"
 
 import { FC, useState } from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 import CodeDemo from "./code-demo"
@@ -83,10 +84,10 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             <div className="md:flex flex-col flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 ">
               <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
                 <span className="text-primary font-semibold">
-                  GitHub Actions
+                  Join Our Team.
                 </span>{" "}
-                automates your build, test, and deployment workflow with simple
-                and secure CI/CD.
+                Change it, influence it, build your own things that other people
+                can use.
               </p>
               <div>
                 <a
@@ -95,7 +96,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   href=""
                   className=" md:text-xl text-primary font-semibold inline-block"
                 >
-                  Discover GitHub Actions
+                  Explore Careers
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${
@@ -129,15 +130,15 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
-              <img
+              <Image
                 className="w-full h-auto js-build-in-item build-in-scale-fade build-in-animate"
-                width="1209"
+                width="500"
                 height="890"
                 loading="lazy"
                 decoding="async"
                 alt=""
                 aria-hidden="true"
-                src="https://github.githubassets.com/images/modules/site/home-campaign/illu-actions.png"
+                src="/afro.png"
               />
             </div>
           </HoverCard>

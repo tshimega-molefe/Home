@@ -34,9 +34,12 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
     <HoverCard backgroundColor="#763791" direction="" left="0">
       <div className="md:flex flex-col md:space-y-20 flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 justify-between ">
         <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]">
-          <span className="text-primary font-medium">GitHub Copilot</span> is
-          your AI pair programmer that empowers you to complete tasks 55% faster
-          by turning natural language prompts into coding suggestions.
+          <span className="text-primary font-medium">Script.Ed.</span>
+          <br />
+          Masters of the written word use it. Filmmakers, Youtubers, Writers,
+          Journalists, Authors, Poets.
+          <br />
+          Use AI to bring your ideas to life 3X faster.
         </p>
         <div>
           <a
@@ -45,7 +48,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
             href=""
             className=" md:text-xl text-primary font-semibold inline-block"
           >
-            Meet GitHub Copilot
+            Try Script.Ed
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={` text-primary transition inline-block ml-3 ease-in duration-300 mb-[3px] ${
@@ -317,7 +320,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 <button
                   onClick={() => setCount(count + 1)}
                   type="button"
-                  className="flex items-center text-primary justify-between"
+                  className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
                 >
                   <svg
                     aria-hidden="true"
@@ -327,7 +330,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     fill="currentColor"
                     width="16"
                     data-view-component="true"
-                    className="octicon octicon-sync mr-2"
+                    className="octicon octicon-sync mr-2 group-hover:animate-spin"
                   >
                     <path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"></path>
                   </svg>
@@ -495,11 +498,11 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                   </motion.div>
                 </div>
               </div>
-              <div className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5">
+              <div className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5 ">
                 <button
                   onClick={() => setCount(count + 1)}
                   type="button"
-                  className="flex items-center text-white justify-between"
+                  className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
                 >
                   <svg
                     aria-hidden="true"
@@ -509,7 +512,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                     fill="currentColor"
                     width="16"
                     data-view-component="true"
-                    className="octicon octicon-sync mr-2"
+                    className="octicon octicon-sync mr-2 group-hover:animate-spin"
                   >
                     <path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"></path>
                   </svg>
@@ -726,11 +729,11 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 </div>
                 <div
                   onClick={() => setCount(count + 1)}
-                  className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5"
+                  className="absolute w-full z-[1]  bottom-[-60px] left-0 flex items-center justify-center mb-5 "
                 >
                   <button
                     type="button"
-                    className="flex items-center text-white justify-between"
+                    className="flex items-center text-primary justify-between active:scale-95 transition-transform duration-150 group"
                   >
                     <svg
                       aria-hidden="true"
@@ -740,7 +743,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                       fill="currentColor"
                       width="16"
                       data-view-component="true"
-                      className="octicon octicon-sync mr-2"
+                      className="octicon octicon-sync mr-2 group-hover:animate-spin"
                     >
                       <path d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"></path>
                     </svg>
