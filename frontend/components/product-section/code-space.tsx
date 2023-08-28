@@ -151,7 +151,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                     height={368}
                     alt=""
                     decoding="async"
-                    className="width-full d-block h-auto"
+                    className="width-full d-block h-auto max-md:hidden"
                   />
                 </motion.div>
               </div>

@@ -151,7 +151,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
                 <span className="font-semibold text-primary">Swift Air</span>
                 <br />
-                Private air travel, any airport, at anytime.
+                Request private air travel, from any airport, at anytime.
               </p>
               <div>
                 <a
