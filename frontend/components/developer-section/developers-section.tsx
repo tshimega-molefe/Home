@@ -69,6 +69,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
             style={{ transitionDelay: "300ms" }}
           >
             <span className="text-[#ffa28b]">Latest&nbsp;</span>
+            blog posts.
           </h3>
         </motion.div>
       </div>
