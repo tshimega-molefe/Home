@@ -15,7 +15,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
   const [hovered, setHovered] = useState<boolean>(false)
   const [hovered1, setHovered1] = useState<boolean>(false)
   return (
-    <section id="product-section" className="container">
+    <section id="products" className="container">
       <div className="flex space-x-3 md:space-x-10 md:pl-10">
         <div className="flex flex-col items-center">
           <motion.div
@@ -208,6 +208,13 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
           </HoverCard>
         </div>
       </div>
+      <motion.div
+        initial={{ height: 0 }}
+        whileInView={{ height: "160px" }}
+        transition={{ delay: 0.3 }}
+        viewport={{ once: false }}
+        className=" md:ml-10 ml-3 h-[160px] mt-[-20px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b]"
+      ></motion.div>
     </section>
   )
 }
