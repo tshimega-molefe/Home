@@ -15,8 +15,11 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
   const [hovered, setHovered] = useState<boolean>(false)
   const [hovered1, setHovered1] = useState<boolean>(false)
   return (
-    <section id="products" className="container">
-      <div className="flex space-x-3 md:space-x-10 md:pl-10">
+    <section
+      id="products"
+      className="container pt-8 home-campaign-productivity px-4 overflow-hidden"
+    >
+      <div className="flex space-x-3 md:space-x-10 md:pl-8">
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -68,8 +71,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
             <span className="text-[#763791]">Execute your vision.&nbsp;</span>
-            Our team utilizes industry standard practices, with quality and
-            scalable tooling.
+            We employ industry standard practices to ensure quality, and
+            scalable production.
           </motion.div>
         </div>
       </div>

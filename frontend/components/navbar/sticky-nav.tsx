@@ -79,7 +79,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
       <div
         className={`w-screen ${
           isFixed ? "fixed" : "sticky"
-        }  py-2 dark:bg-[#0d1117] bg-secondary dark:shadow-slate-950 shadow-slate-300 shadow-md top-0 `}
+        }  py-2 dark:bg-[#0d1117] bg-secondary dark:shadow-black shadow-slate-300 shadow-md top-0 `}
       >
         <div className="max-w-[1280px] mx-auto pb-2 lg:pb-3 pt-1 flex lg:px-3 px-12 items-center max-lg:flex-col relative">
           <button

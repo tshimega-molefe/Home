@@ -6,6 +6,7 @@ import {
   Snowflake,
   SunMedium,
   Twitter,
+  Users,
   Waves,
   type Icon as LucideIcon,
 } from "lucide-react"
@@ -14,6 +15,7 @@ export type Icon = LucideIcon
 
 export const Icons = {
   chevronRight: ChevronsRight,
+  developers: Users,
   snowflake: Snowflake,
   sun: SunMedium,
   menu: Menu,
