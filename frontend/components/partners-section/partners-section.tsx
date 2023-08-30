@@ -56,14 +56,14 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
           <Icons.stripe className="my-3 h-16 w-auto" />
         </Link>
 
-        <Link
+        {/* <Link
           href="https://usurpa.africa/"
           target="_blank"
           passHref
           className="transition-all duration-75 active:scale-90"
         >
           <Icons.usurpa className="my-3 h-fit w-28" />
-        </Link>
+        </Link> */}
         <Link
           href="https://vercel.com/"
           target="_blank"
