@@ -58,8 +58,8 @@ const Portals: FC<PortalsProps> = ({}) => {
                 </span>
                 <br />
                 <br />
-                Reshape the way people aross the world interact with each other,
-                their environment, and most importantly, themselves.
+                Reshape the way people across the world interact with each
+                other, their environment, and most importantly, themselves.
               </h2>
               <a
                 onMouseEnter={() => setHovered(true)}
