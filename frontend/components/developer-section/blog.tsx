@@ -3,7 +3,7 @@
 import { FC, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { business } from "@/assets"
+import { ai, business, team } from "@/assets"
 import { motion } from "framer-motion"
 
 import HoverCard from "@/components/product-section/hover-card"
@@ -20,20 +20,20 @@ const Blog: FC<BlogProps> = ({}) => {
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
           <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
             <span className="font-medium text-primary text-xl md:text-3xl">
-              Why building a scalable business is hard.
+              The principles of scaling a business
             </span>
             <div className="flex flex-row space-x-2 items-center">
-              <Link href="/" className="underline">
+              <Link href="/" className="hover:underline">
                 Chiara Crystal
               </Link>
-              <p>07 September 2023</p>
+              <p>Sep 14, 2023</p>
             </div>
           </div>
           <div>
             <Link
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
-              href="scripted"
+              href="/"
               className=" inline-block font-semibold text-primary md:text-xl"
             >
               Read More
@@ -70,7 +70,7 @@ const Blog: FC<BlogProps> = ({}) => {
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-primary sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
@@ -94,27 +94,27 @@ const Blog: FC<BlogProps> = ({}) => {
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
           <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
             <span className="font-medium text-primary text-xl md:text-3xl">
-              Why building a scalable business is hard.
+              A letter from our CEO: The future of Swift
             </span>
             <div className="flex flex-row space-x-2 items-center">
-              <Link href="/" className="underline">
-                Chiara Crystal
+              <Link href="/" className="hover:underline">
+                Tshimega Molefe
               </Link>
-              <p>07 September 2023</p>
+              <p>Sep 30, 2023</p>
             </div>
           </div>
           <div>
             <Link
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              href="scripted"
+              onMouseEnter={() => setHovered1(true)}
+              onMouseLeave={() => setHovered1(false)}
+              href="/"
               className=" inline-block font-semibold text-primary md:text-xl"
             >
               Read More
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${
-                  hovered ? "translate-x-0 " : "-translate-x-1"
+                  hovered1 ? "translate-x-0 " : "-translate-x-1"
                 }`}
                 width="20"
                 height="20"
@@ -127,7 +127,7 @@ const Blog: FC<BlogProps> = ({}) => {
                 ></path>
                 <path
                   className={` text-primary transition duration-150 ease-in ${
-                    hovered ? " opacity-100" : "opacity-0 "
+                    hovered1 ? " opacity-100" : "opacity-0 "
                   }`}
                   stroke="currentColor"
                   d="M1.75 8H11"
@@ -137,14 +137,14 @@ const Blog: FC<BlogProps> = ({}) => {
               </svg>
               <div
                 className={` ${
-                  hovered ? "w-11/12 scale-100" : "w-0 scale-0"
+                  hovered1 ? "w-11/12 scale-100" : "w-0 scale-0"
                 } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
               ></div>
             </Link>
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-primary sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
@@ -153,7 +153,7 @@ const Blog: FC<BlogProps> = ({}) => {
                   className="flex items-center relative max-sm:h-[60vw] sm:h-96 md:h-80 rounded-lg overflow-hidden active:scale-95 transition-transform duration-100"
                 >
                   <Image
-                    src={business}
+                    src={team}
                     alt="blog-image"
                     className="object-cover"
                     fill
@@ -168,20 +168,20 @@ const Blog: FC<BlogProps> = ({}) => {
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
           <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
             <span className="font-medium text-primary text-xl md:text-3xl">
-              Why building a scalable business is hard.
+              The impact of AI, and how we implement it ethically
             </span>
             <div className="flex flex-row space-x-2 items-center">
-              <Link href="/" className="underline">
-                Chiara Crystal
+              <Link href="/" className="hover:underline">
+                Ronny Okello
               </Link>
-              <p>07 September 2023</p>
+              <p>Oct 3, 2023</p>
             </div>
           </div>
           <div>
             <Link
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              href="scripted"
+              onMouseEnter={() => setHovered2(true)}
+              onMouseLeave={() => setHovered2(false)}
+              href="/"
               className=" inline-block font-semibold text-primary md:text-xl"
             >
               Read More
@@ -201,7 +201,7 @@ const Blog: FC<BlogProps> = ({}) => {
                 ></path>
                 <path
                   className={` text-primary transition duration-150 ease-in ${
-                    hovered ? " opacity-100" : "opacity-0 "
+                    hovered2 ? " opacity-100" : "opacity-0 "
                   }`}
                   stroke="currentColor"
                   d="M1.75 8H11"
@@ -211,14 +211,14 @@ const Blog: FC<BlogProps> = ({}) => {
               </svg>
               <div
                 className={` ${
-                  hovered ? "w-11/12 scale-100" : "w-0 scale-0"
+                  hovered2 ? "w-11/12 scale-100" : "w-0 scale-0"
                 } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
               ></div>
             </Link>
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-primary sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
@@ -227,7 +227,7 @@ const Blog: FC<BlogProps> = ({}) => {
                   className="flex items-center relative max-sm:h-[60vw] sm:h-96 md:h-80 rounded-lg overflow-hidden active:scale-95 transition-transform duration-100"
                 >
                   <Image
-                    src={business}
+                    src={ai}
                     alt="blog-image"
                     className="object-cover"
                     fill
