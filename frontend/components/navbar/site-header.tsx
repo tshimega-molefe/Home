@@ -7,7 +7,7 @@ import {
   UserButton,
 } from "@clerk/nextjs"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 import Hamburger from "../hamburger"
@@ -35,14 +35,6 @@ export function SiteHeader() {
                 </Button>
               </SignInButton>
             </SignedOut>
-            {/* <Link
-              href="/sign-up"
-              target="_blank"
-              rel="noreferrer"
-              className={`${buttonVariants({ size: "sm" })} whitespace-nowrap`}
-            >
-              Sign Up
-            </Link> */}
           </div>
           <Link
             href="/"
