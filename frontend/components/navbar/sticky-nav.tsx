@@ -27,8 +27,8 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
       const topCoordinate = element?.getBoundingClientRect().top
       const Product = document.getElementById("products")
       const topProduct = Product?.getBoundingClientRect().top
-      const developers = document.getElementById("developers")
-      const topDevelopers = developers?.getBoundingClientRect().top
+      const Developers = document.getElementById("developers")
+      const topDevelopers = Developers?.getBoundingClientRect().top
       const Security = document.getElementById("security")
       const topSecurity = Security?.getBoundingClientRect().top
       if (topCoordinate && topCoordinate < 0) {
