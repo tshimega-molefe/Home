@@ -15,8 +15,11 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
   const [hovered, setHovered] = useState<boolean>(false)
   const [hovered1, setHovered1] = useState<boolean>(false)
   return (
-    <section id="products" className="container">
-      <div className="flex space-x-3 md:space-x-10 md:pl-10">
+    <section
+      id="products"
+      className="home-campaign-productivity container overflow-hidden px-4 pt-8"
+    >
+      <div className="flex space-x-3 md:space-x-10 md:pl-8">
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -56,9 +59,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: false }}
-            className="mb-7 text-[20px] font-medium md:text-2xl"
+            className="mb-7 text-[20px] font-medium text-primary md:text-2xl"
           >
-            The Swift Stack
+            Swift Stack
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -68,8 +71,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
             <span className="text-[#763791]">Execute your vision.&nbsp;</span>
-            Our team utilizes industry standard practices, with quality and
-            scalable tooling.
+            We employ industry standard practices to ensure quality, and
+            scalable production.
           </motion.div>
         </div>
       </div>
@@ -85,7 +88,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
                 <span className="font-semibold text-primary">
                   Join Our Team.
-                </span>{" "}
+                </span>
+                <br />
+                <br />
                 Change it, influence it, build your own things that other people
                 can use.
               </p>
@@ -132,8 +137,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             <div className="overflow-hidden rounded-s-lg">
               <Image
                 className="js-build-in-item build-in-scale-fade build-in-animate h-auto w-full"
-                width="500"
-                height="890"
+                width="900"
+                height="1000"
                 loading="lazy"
                 decoding="async"
                 alt=""
@@ -149,7 +154,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
           >
             <div className="flex-1 flex-col  p-8 sm:p-10 md:flex lg:py-16 lg:pl-16 lg:pr-32 ">
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
-                <span className="font-semibold text-primary">Swift Air</span>
+                <span className="font-semibold text-primary">Swift Air.</span>
+                <br />
                 <br />
                 Request private air travel, from any airport, at anytime.
               </p>
@@ -213,7 +219,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
         whileInView={{ height: "160px" }}
         transition={{ delay: 0.3 }}
         viewport={{ once: false }}
-        className=" md:ml-10 ml-3 h-[160px] mt-[-20px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b]"
+        className=" ml-3 mt-[-20px] h-[160px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
       ></motion.div>
     </section>
   )
