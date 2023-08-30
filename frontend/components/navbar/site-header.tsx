@@ -1,6 +1,13 @@
 import Link from "next/link"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs"
 
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 import Hamburger from "../hamburger"
@@ -18,14 +25,24 @@ export function SiteHeader() {
           className="flex items-center justify-between max-lg:w-full"
         >
           <div className="flex flex-row items-center gap-2 lg:hidden">
-            <Link
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton afterSignInUrl="/">
+                <Button variant="default" size="sm">
+                  Sign In
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            {/* <Link
               href="/sign-up"
               target="_blank"
               rel="noreferrer"
               className={`${buttonVariants({ size: "sm" })} whitespace-nowrap`}
             >
               Sign Up
-            </Link>
+            </Link> */}
           </div>
           <Link
             href="/"

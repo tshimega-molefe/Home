@@ -219,7 +219,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
         whileInView={{ height: "160px" }}
         transition={{ delay: 0.3 }}
         viewport={{ once: false }}
-        className=" ml-3 mt-[-20px] h-[160px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
+        className=" ml-3 -mt-8 h-[160px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
       ></motion.div>
     </section>
   )
