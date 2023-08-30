@@ -15,7 +15,7 @@ const Portals: FC<PortalsProps> = ({}) => {
         aria-hidden="true"
         width="2712"
         height="2712"
-        className="absolute top-0 right-0 h-auto pointer-events-none"
+        className="absolute top-0 right-0 h-auto pointer-events-none -z-10"
         loading="lazy"
         decoding="async"
         src="https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp"
@@ -54,18 +54,20 @@ const Portals: FC<PortalsProps> = ({}) => {
             >
               <h2 className="mb-4 text-2xl max-lg:text-[20px] max-md:w-10/12 lg:w-full w-full text-[#7d8590]">
                 <span className="font-semibold text-primary">
-                  GitHub Issues and GitHub Projects
-                </span>{" "}
-                supply flexible project management tools that adapt to your team
-                alongside your code.
+                  Break Everything. Learn Everything.
+                </span>
+                <br />
+                <br />
+                Reshape the way people aross the world interact with each other,
+                their environment, and most importantly, themselves.
               </h2>
               <a
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href=""
-                className="py-1 inline-block text-xl text-primary font-semibold"
+                className="py-1 inline-block text-xl text-primary font-semibold z-50"
               >
-                Explore GitHub Issue
+                Explore Careers
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={` mb-[2px] text-primary transition inline-block ml-3 ease-in duration-300  ${
@@ -106,12 +108,12 @@ const Portals: FC<PortalsProps> = ({}) => {
           >
             <div className="relative">
               <div className="relative">
-                <div className="md:absolute z-[1] right-0 shadow-2xl">
+                <div className="md:absolute z-[1] right-2 max-md:top-20 md:-top-24">
                   <Image
-                    src="/rocket.png"
+                    src="/yt-nerd.png"
                     alt="world"
-                    width={300}
-                    height={300}
+                    width={470}
+                    height={470}
                     className="max-md:hidden"
                   />
                 </div>
@@ -126,10 +128,7 @@ const Portals: FC<PortalsProps> = ({}) => {
           className="mb-10 md:mb-32 pb-4 "
         >
           <div className="py-4 text-left">
-            <div className="z-[1] inline-block rounded-full px-2 border-2 border-[#ffc2b2] relative font-medium bg-gradient-to-r from-[#ffa28b] to-[#ffc2b2] bg-clip-text text-transparent">
-              <span className="font-semibold text-[12px]">Did you know?</span>
-            </div>
-            <h3 className="text-[#ffa28b] mb-2 mt-3 lg:text-6xl md:text-5xl text-3xl font-medium">
+            <h3 className="text-[#ffa28b] mb-2 mt-0 lg:text-6xl md:text-5xl text-3xl font-medium">
               80% reduction
             </h3>
             <p className="mb-3 md:text-xl text-base font-medium text-white">
@@ -141,5 +140,6 @@ const Portals: FC<PortalsProps> = ({}) => {
     </div>
   )
 }
+// #ffa28b
 
 export default Portals

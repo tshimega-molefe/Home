@@ -94,7 +94,7 @@ const Blog: FC<BlogProps> = ({}) => {
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
           <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
             <span className="font-medium text-primary text-xl md:text-3xl">
-              A letter from our CEO: The future of Swift
+              A letter from our founder: The future of Swift
             </span>
             <div className="flex flex-row space-x-2 items-center">
               <Link href="/" className="hover:underline">
