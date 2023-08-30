@@ -59,9 +59,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: false }}
-            className="mb-7 text-[20px] font-medium md:text-2xl"
+            className="mb-7 text-[20px] font-medium md:text-2xl text-primary"
           >
-            The Swift Stack
+            Swift Stack
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

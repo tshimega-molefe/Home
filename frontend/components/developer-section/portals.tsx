@@ -129,10 +129,10 @@ const Portals: FC<PortalsProps> = ({}) => {
         >
           <div className="py-4 text-left">
             <h3 className="text-[#ffa28b] mb-2 mt-0 lg:text-6xl md:text-5xl text-3xl font-medium">
-              80% reduction
+              Create amazing things
             </h3>
-            <p className="mb-3 md:text-xl text-base font-medium text-white">
-              in onboarding time with GitHub<sup>1</sup>
+            <p className="mb-3 md:text-xl text-base font-medium text-primary">
+              with Swift Stack.
             </p>
           </div>
         </motion.div>
@@ -140,6 +140,5 @@ const Portals: FC<PortalsProps> = ({}) => {
     </div>
   )
 }
-// #ffa28b
 
 export default Portals
