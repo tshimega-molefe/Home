@@ -112,7 +112,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
             </svg>
           </button>
           <div className="flex flex-auto flex-col justify-start text-[16px] text-primary max-lg:w-full lg:flex-row  lg:space-x-4">
-            <a
+            <Link
               href="#products"
               onClick={() => setSmallNav(false)}
               onMouseEnter={() => setProduct1(true)}
@@ -131,8 +131,8 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                   product1 ? "scale-100 bg-primary" : ""
                 } ${product ? "scale-100 bg-[#733787]" : ""}`}
               ></div>
-            </a>
-            <a
+            </Link>
+            <Link
               href="#developers"
               onClick={() => setSmallNav(false)}
               onMouseEnter={() => setDevelopers1(true)}
@@ -151,8 +151,8 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                   developers1 ? "scale-100 bg-primary" : ""
                 } ${developers ? "scale-100 bg-[#733787]" : ""}`}
               ></div>
-            </a>
-            <a
+            </Link>
+            <Link
               href="#security"
               onClick={() => setSmallNav(false)}
               onMouseEnter={() => setSecurity1(true)}
@@ -169,7 +169,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                   security1 ? "scale-100 bg-primary" : ""
                 } ${security ? "scale-100 bg-[#733787]" : ""}`}
               ></div>
-            </a>
+            </Link>
           </div>
           <div
             className={`flex items-center max-lg:mt-5 max-lg:w-full max-lg:flex-col max-lg:space-y-3 lg:ml-5 lg:space-x-5 ${
