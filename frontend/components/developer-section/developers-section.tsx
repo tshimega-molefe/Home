@@ -73,7 +73,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
           </h3>
         </motion.div>
       </div>
-      <img
+      {/* <img
         className="w-full h-auto d-block rounded-lg border-[1px] border-[#30363d]  "
         width="2500"
         height="1500"
@@ -81,7 +81,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
         decoding="async"
         alt="Illustration of project table view with cards grouped by 'Feature planning' phase."
         src="https://github.githubassets.com/images/modules/site/issues/illo/issues-plan.png"
-      ></img>
+      ></img> */}
       <Blog />
     </div>
   )
