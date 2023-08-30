@@ -88,7 +88,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
                 <span className="font-semibold text-primary">
                   Join Our Team.
-                </span>{" "}
+                </span>
+                <br />
+                <br />
                 Change it, influence it, build your own things that other people
                 can use.
               </p>
@@ -135,8 +137,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             <div className="overflow-hidden rounded-s-lg">
               <Image
                 className="js-build-in-item build-in-scale-fade build-in-animate h-auto w-full"
-                width="500"
-                height="890"
+                width="900"
+                height="1000"
                 loading="lazy"
                 decoding="async"
                 alt=""
@@ -152,7 +154,8 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
           >
             <div className="flex-1 flex-col  p-8 sm:p-10 md:flex lg:py-16 lg:pl-16 lg:pr-32 ">
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
-                <span className="font-semibold text-primary">Swift Air</span>
+                <span className="font-semibold text-primary">Swift Air.</span>
+                <br />
                 <br />
                 Request private air travel, from any airport, at anytime.
               </p>

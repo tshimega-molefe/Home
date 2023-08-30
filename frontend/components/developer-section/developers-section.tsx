@@ -6,9 +6,6 @@ import { motion } from "framer-motion"
 import Blog from "@/components/developer-section/blog"
 import Portals from "@/components/developer-section/portals"
 import { Icons } from "@/components/icons"
-import HoverCard from "@/components/product-section/hover-card"
-
-import CodeSpace from "../product-section/code-space"
 
 interface DevelopersSectionProps {}
 
@@ -78,7 +75,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
       </div>
       <Blog />
       <Portals />
-      {/* <CodeSpace /> */}
+      <div></div>
     </div>
   )
 }
