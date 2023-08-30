@@ -35,9 +35,9 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
   return (
     <div
       id="developers"
-      className="container home-campaign-productivity px-4 pt-8 overflow-hidden"
+      className="home-campaign-productivity container overflow-hidden px-4 pt-8"
     >
-      <div className="flex md:pl-7 space-x-3 md:space-x-10">
+      <div className="flex space-x-3 md:space-x-10 md:pl-7">
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0 }}
@@ -46,29 +46,29 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
             className="relative"
           >
             <Icons.developers className="h-6 w-6" />
-            <span className="absolute left-0 top-0 h-full w-full home-campaign-glowing-icon-glow-2 z-3"></span>
+            <span className="home-campaign-glowing-icon-glow-2 z-3 absolute left-0 top-0 h-full w-full"></span>
           </motion.div>
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
             transition={{ delay: 0.8 }}
-            className=" h-full w-[3px] mt-7 rounded-md bg-gradient-to-b from-[#ffd6cc] via-[#ec6547] to-transparent"
+            className=" mt-7 h-full w-[3px] rounded-md bg-gradient-to-b from-[#ffd6cc] via-[#ec6547] to-transparent"
           ></motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, type: "tween" }}
-          className="md:w-10/12 mb-24"
+          className="mb-24 md:w-10/12"
         >
           <h2
-            className="text-[20px] md:text-2xl mb-7 font-medium text-primary js-build-in-item build-in-slideX-left build-in-animate"
+            className="js-build-in-item build-in-slideX-left build-in-animate mb-7 text-[20px] font-medium text-primary md:text-2xl"
             style={{ transitionDelay: "200ms" }}
           >
             Developers
           </h2>
           <h3
-            className="text-[28px] md:text-[40px] max-md:leading-8 max-lg:leading-10 lg:text-5xl mb-7 font-medium text-primary js-build-in-item build-in-slideX-left build-in-animate"
+            className="js-build-in-item build-in-slideX-left build-in-animate mb-7 text-[28px] font-medium text-primary max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
             style={{ transitionDelay: "300ms" }}
           >
             <span className="text-[#ffa28b]">Latest&nbsp;</span>
@@ -151,7 +151,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
                 <span className="font-semibold text-primary">Developers</span>
                 <br />
                 <br />
-                Let's build something smart together.
+                Let&apos;s build something smart together.
               </p>
               <div>
                 <a

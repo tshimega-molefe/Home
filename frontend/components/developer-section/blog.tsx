@@ -15,14 +15,14 @@ const Blog: FC<BlogProps> = ({}) => {
   const [hovered1, setHovered1] = useState<boolean>(false)
   const [hovered2, setHovered2] = useState<boolean>(false)
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <HoverCard backgroundColor="#ffa28b" direction="" left="0">
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
-          <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
-            <span className="font-medium text-primary text-xl md:text-3xl">
+          <div className=" mb-6 space-y-2 text-sm font-light text-muted-foreground md:text-base">
+            <span className="text-xl font-medium text-primary md:text-3xl">
               The principles of scaling a business
             </span>
-            <div className="flex flex-row space-x-2 items-center">
+            <div className="flex flex-row items-center space-x-2">
               <Link href="/" className="hover:underline">
                 Chiara Crystal
               </Link>
@@ -70,13 +70,13 @@ const Blog: FC<BlogProps> = ({}) => {
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 rounded-lg bg-transparent max-sm:mb-4 sm:mx-10 sm:mb-12 md:mb-8 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
                   href="/"
                   passHref
-                  className="flex items-center relative max-sm:h-[60vw] sm:h-96 md:h-80 rounded-lg overflow-hidden active:scale-95 transition-transform duration-100"
+                  className="relative flex items-center overflow-hidden rounded-lg transition-transform duration-100 active:scale-95 max-sm:h-[60vw] sm:h-96 md:h-80"
                 >
                   <Image
                     src={business}
@@ -92,11 +92,11 @@ const Blog: FC<BlogProps> = ({}) => {
       </HoverCard>
       <HoverCard backgroundColor="#ffa28b" direction="" left="0">
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
-          <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
-            <span className="font-medium text-primary text-xl md:text-3xl">
+          <div className=" mb-6 space-y-2 text-sm font-light text-muted-foreground md:text-base">
+            <span className="text-xl font-medium text-primary md:text-3xl">
               A letter from our founder: The future of Swift
             </span>
-            <div className="flex flex-row space-x-2 items-center">
+            <div className="flex flex-row items-center space-x-2">
               <Link href="/" className="hover:underline">
                 Tshimega Molefe
               </Link>
@@ -144,13 +144,13 @@ const Blog: FC<BlogProps> = ({}) => {
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 rounded-lg bg-transparent max-sm:mb-4 sm:mx-10 sm:mb-12 md:mb-8 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
                   href="/"
                   passHref
-                  className="flex items-center relative max-sm:h-[60vw] sm:h-96 md:h-80 rounded-lg overflow-hidden active:scale-95 transition-transform duration-100"
+                  className="relative flex items-center overflow-hidden rounded-lg transition-transform duration-100 active:scale-95 max-sm:h-[60vw] sm:h-96 md:h-80"
                 >
                   <Image
                     src={team}
@@ -166,11 +166,11 @@ const Blog: FC<BlogProps> = ({}) => {
       </HoverCard>
       <HoverCard backgroundColor="#ffa28b" direction="" left="0">
         <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
-          <div className=" mb-6 text-sm font-light text-muted-foreground md:text-base space-y-2">
-            <span className="font-medium text-primary text-xl md:text-3xl">
+          <div className=" mb-6 space-y-2 text-sm font-light text-muted-foreground md:text-base">
+            <span className="text-xl font-medium text-primary md:text-3xl">
               The impact of AI, and how we implement it ethically
             </span>
-            <div className="flex flex-row space-x-2 items-center">
+            <div className="flex flex-row items-center space-x-2">
               <Link href="/" className="hover:underline">
                 Ronny Okello
               </Link>
@@ -218,13 +218,13 @@ const Blog: FC<BlogProps> = ({}) => {
           </div>
         </div>
         <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">
-          <div className="box-shadow-card-mktg mx-3 max-sm:mb-4 sm:mb-12 md:mb-8 rounded-lg bg-transparent sm:mx-10 md:ml-0 md:mt-10">
+          <div className="box-shadow-card-mktg mx-3 rounded-lg bg-transparent max-sm:mb-4 sm:mx-10 sm:mb-12 md:mb-8 md:ml-0 md:mt-10">
             <div className="">
               <div className="mb-0 overflow-x-auto p-2 ">
                 <Link
                   href="/"
                   passHref
-                  className="flex items-center relative max-sm:h-[60vw] sm:h-96 md:h-80 rounded-lg overflow-hidden active:scale-95 transition-transform duration-100"
+                  className="relative flex items-center overflow-hidden rounded-lg transition-transform duration-100 active:scale-95 max-sm:h-[60vw] sm:h-96 md:h-80"
                 >
                   <Image
                     src={ai}

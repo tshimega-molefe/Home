@@ -17,7 +17,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
   return (
     <section
       id="products"
-      className="container pt-8 home-campaign-productivity px-4 overflow-hidden"
+      className="home-campaign-productivity container overflow-hidden px-4 pt-8"
     >
       <div className="flex space-x-3 md:space-x-10 md:pl-8">
         <div className="flex flex-col items-center">
@@ -59,7 +59,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: false }}
-            className="mb-7 text-[20px] font-medium md:text-2xl text-primary"
+            className="mb-7 text-[20px] font-medium text-primary md:text-2xl"
           >
             Swift Stack
           </motion.div>
@@ -219,7 +219,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
         whileInView={{ height: "160px" }}
         transition={{ delay: 0.3 }}
         viewport={{ once: false }}
-        className=" md:ml-10 ml-3 h-[160px] mt-[-20px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b]"
+        className=" ml-3 mt-[-20px] h-[160px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
       ></motion.div>
     </section>
   )
