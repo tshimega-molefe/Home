@@ -74,7 +74,7 @@ const HoverCard: FC<HoverCardProps> = ({
 
   return (
     <animated.div
-      className="  mb-3  overflow-hidden rounded-xl md:mb-8"
+      className="mb-3 overflow-hidden rounded-xl md:mb-8"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform: springProps.xys.to(trans) }}

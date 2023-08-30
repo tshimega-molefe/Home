@@ -1,6 +1,7 @@
 "use client"
 
 import { FC, useState } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 import HoverCard from "./hover-card"
@@ -41,10 +42,10 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
           Use AI to bring your story to life 50X faster.
         </p>
         <div>
-          <a
+          <Link
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            href=""
+            href="scripted"
             className=" inline-block font-semibold text-primary md:text-xl"
           >
             Try Script.Ed
@@ -77,7 +78,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
                 hovered ? "w-11/12 scale-100" : "w-0 scale-0"
               } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
             ></div>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="shadow-3xl z-[1] flex-1 overflow-hidden rounded-s-lg">

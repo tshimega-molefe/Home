@@ -177,8 +177,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
               Sustainabile Development
             </h3>
             <p className="mb-3 text-base font-medium text-primary md:text-xl">
-              We balance acceleration,
-              <br /> with interactivity, maintainability, and scalability,
+              We balance speed, with scalability, and execution.
             </p>
           </div>
         </motion.div>
