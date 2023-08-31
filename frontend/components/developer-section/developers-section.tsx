@@ -63,7 +63,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
       <Portals />
       <div className="flex items-center justify-between">
         <div className="flex justify-between max-md:flex-col md:space-x-10">
-          <HoverCard backgroundColor="#ffa28b" direction="flex-col" left="0">
+          <HoverCard backgroundColor="#939aff" direction="flex-col" left="0">
             <div className="flex-1 flex-col p-8 sm:p-10 md:flex lg:py-16 lg:pl-16 lg:pr-32 ">
               <p className=" mb-6 text-xl font-medium text-[#7d8590] md:text-2xl">
                 <span className="font-semibold text-primary">Investors</span>
@@ -191,6 +191,12 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
           </HoverCard>
         </div>
       </div>
+      <motion.div
+        initial={{ height: 0 }}
+        whileInView={{ height: "240px" }}
+        transition={{ delay: 0.2 }}
+        className=" ml-3 mt-[-20px] h-[240px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#797ef9] to-[#abb4ff] md:ml-10"
+      ></motion.div>
     </div>
   )
 }
