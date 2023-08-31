@@ -23,14 +23,17 @@ import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
-  fullName: z.string().min(3, {
-    message: "Full name must be at least 3 characters.",
+  name: z.string().min(3, {
+    message: "Name must be at least 3 characters.",
+  }),
+  company: z.string().min(3, {
+    message: "Company must be at least 3 characters.",
   }),
   email: z.string().email({
     message: "Invalid email address.",
   }),
-  subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
+  number: z.string().regex(/^(\+?\d{1,3})?[-.\s]?\d{3,4}[-.\s]?\d{3,4}$/, {
+    message: "Please enter a valid phone number.",
   }),
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
@@ -56,8 +59,8 @@ export function ContactForm() {
     try {
       await sendEmail(data)
       toast({
-        title: `Hey ${data.fullName}.`,
-        description: `Please check your ${data.email} inbox for your consultation details.`,
+        title: `Thank you ${data.name}.`,
+        description: `You will receive your consultation details shortly at ${data.email}.`,
       })
     } catch (error) {
       toast({
@@ -91,7 +94,25 @@ export function ContactForm() {
           >
             <FormField
               control={form.control}
-              name="fullName"
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Full name</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="border-primary bg-transparent"
+                      placeholder="Name Surname"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="company"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Who do you represent?</FormLabel>
@@ -126,7 +147,7 @@ export function ContactForm() {
             />
             <FormField
               control={form.control}
-              name="subject"
+              name="number"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Where can we reach you?</FormLabel>
