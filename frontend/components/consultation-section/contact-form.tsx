@@ -8,13 +8,7 @@ import * as z from "zod"
 
 import { getErrorMessage } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Form,
   FormControl,
@@ -82,9 +76,9 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="bg-transparent border-0 shadow-none">
+    <Card className="border-0 bg-transparent shadow-none">
       <CardHeader>
-        <CardTitle className="text-2xl md:text-[40px] max-md:leading-8 max-lg:leading-10 lg:text-4xl mb-7 font-medium text-primary">
+        <CardTitle className="mb-7 text-2xl font-medium text-primary max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-4xl">
           Start something&nbsp;
           <span className="text-[#939aff]">special</span>.
         </CardTitle>
@@ -93,7 +87,7 @@ export function ContactForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="xl:space-y-4 space-y-2"
+            className="space-y-2 xl:space-y-4"
           >
             <FormField
               control={form.control}
@@ -103,7 +97,7 @@ export function ContactForm() {
                   <FormLabel>Who do you represent?</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-transparent border-primary"
+                      className="border-primary bg-transparent"
                       placeholder="Company Name"
                       {...field}
                     />
@@ -121,7 +115,7 @@ export function ContactForm() {
                   <FormLabel>What is your email?</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-transparent border-primary"
+                      className="border-primary bg-transparent"
                       placeholder="you@company.com"
                       {...field}
                     />
@@ -135,11 +129,11 @@ export function ContactForm() {
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Subject</FormLabel>
+                  <FormLabel>Where can we reach you?</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-transparent border-primary"
-                      placeholder="e.g. 'Enquiry'"
+                      className="border-primary bg-transparent text-primary"
+                      placeholder="(+...) 555 1234 "
                       {...field}
                     />
                   </FormControl>
@@ -155,8 +149,8 @@ export function ContactForm() {
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      className="bg-transparent border-primary min-h-[150px]"
-                      placeholder="Enter your message here"
+                      className="min-h-[150px] border-primary bg-transparent"
+                      placeholder="Tell us a bit more about your project"
                       {...field}
                     />
                   </FormControl>
