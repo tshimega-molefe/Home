@@ -10,10 +10,10 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
   const [isFixed, setIsFixed] = useState<boolean>(false)
   const [product, setProduct] = useState<boolean>(false)
   const [developers, setDevelopers] = useState<boolean>(false)
-  const [security, setSecurity] = useState<boolean>(false)
+  const [consultation, setConsultation] = useState<boolean>(false)
   const [product1, setProduct1] = useState<boolean>(false)
   const [developers1, setDevelopers1] = useState<boolean>(false)
-  const [security1, setSecurity1] = useState<boolean>(false)
+  const [consultation1, setConsultation1] = useState<boolean>(false)
   const [smallNav, setSmallNav] = useState<boolean>(false)
   const [hovered, setHovered] = useState<boolean>(false)
   const [hovered1, setHovered1] = useState<boolean>(false)
@@ -29,8 +29,8 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
       const topProduct = Product?.getBoundingClientRect().top
       const Developers = document.getElementById("developers")
       const topDevelopers = Developers?.getBoundingClientRect().top
-      const Security = document.getElementById("security")
-      const topSecurity = Security?.getBoundingClientRect().top
+      const Consultation = document.getElementById("consultation")
+      const topConsultation = Consultation?.getBoundingClientRect().top
       if (topCoordinate && topCoordinate < 0) {
         setIsSticky(true)
       }
@@ -46,17 +46,17 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
       if (topProduct && topProduct < 10) {
         setProduct(true)
         setDevelopers(false)
-        setSecurity(false)
+        setConsultation(false)
       }
       if (topDevelopers && topDevelopers < 10) {
         setProduct(false)
         setDevelopers(true)
-        setSecurity(false)
+        setConsultation(false)
       }
-      if (topSecurity && topSecurity < 10) {
+      if (topConsultation && topConsultation < 10) {
         setProduct(false)
         setDevelopers(false)
-        setSecurity(true)
+        setConsultation(true)
       }
       // console.log(topCoordinate);
     }
@@ -153,21 +153,23 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               ></div>
             </Link>
             <Link
-              href="#security"
+              href="#consultation"
               onClick={() => setSmallNav(false)}
-              onMouseEnter={() => setSecurity1(true)}
-              onMouseLeave={() => setSecurity1(false)}
+              onMouseEnter={() => setConsultation1(true)}
+              onMouseLeave={() => setConsultation1(false)}
               className={` max-lg:pt-2 ${
-                security1 ? "lg:text-[#733787]" : ""
+                consultation1 ? "lg:text-[#733787]" : ""
               } ${
-                security || smallNav ? "lg:text-[#733787] " : "max-lg:hidden"
+                consultation || smallNav
+                  ? "lg:text-[#733787] "
+                  : "max-lg:hidden"
               } `}
             >
-              Security
+              Consultation
               <div
                 className={`mx-auto mt-1 h-[1px] w-10/12 scale-0 bg-primary transition duration-100 ease-in max-lg:hidden ${
-                  security1 ? "scale-100 bg-primary" : ""
-                } ${security ? "scale-100 bg-[#733787]" : ""}`}
+                  consultation1 ? "scale-100 bg-primary" : ""
+                } ${consultation ? "scale-100 bg-[#733787]" : ""}`}
               ></div>
             </Link>
           </div>
@@ -179,7 +181,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
             <Link
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
-              href="/consultation"
+              href="#consultation"
               className="flex items-center justify-center space-x-2 rounded-md border-[1px] border-neutral-500 p-3  text-base font-semibold text-primary max-lg:w-full"
             >
               Book a consultation
@@ -215,6 +217,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               className="flex items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-secondary max-lg:w-full"
             >
               Create an account
+              {/* TODO: Conditionally render to say 'view dashboard' if user logged in */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={` ml-2 transition duration-150 ease-in ${

@@ -1,3 +1,4 @@
+import ConsultationSection from "@/components/consultation-section/consultation-section"
 import DevelopersSection from "@/components/developer-section/developers-section"
 import HeroSection from "@/components/hero-section/hero-section"
 import StickyNav from "@/components/navbar/sticky-nav"
@@ -12,6 +13,7 @@ export default function IndexPage() {
       <StickyNav />
       <ProductSection />
       <DevelopersSection />
+      <ConsultationSection />
     </div>
   )
 }
