@@ -1,19 +1,17 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC } from "react"
 import { motion } from "framer-motion"
 
 import ContactForm from "@/components/consultation-section/contact-form"
+import Partners from "@/components/consultation-section/partners"
+import VideoPlayer from "@/components/consultation-section/video-player"
 import { Icons } from "@/components/icons"
 import HoverCard from "@/components/product-section/hover-card"
 
 interface ConsultationSectionProps {}
 
 const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
-  const [hovered, setHovered] = useState<boolean>(false)
-  const [hovered1, setHovered1] = useState<boolean>(false)
-  const [hovered2, setHovered2] = useState<boolean>(false)
-
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -86,7 +84,7 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
         <div className="mx-auto flex w-10/12 flex-col">
           <div className="p-6 text-[#7d8590]">
             <div className="font-medium">Company Details</div>
-            <span className="f6 text-[12px]">Enter:</span>
+            <span className="f6 text-[12px]">[528491]:</span>
           </div>
           <motion.div
             variants={container}
@@ -99,13 +97,15 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
               transition={{ type: "tween" }}
               className="animate w-full"
             >
-              <div className="box-shadow-mktg-sm mb-10 rounded-md p-6 md:mt-8">
+              <div className="box-shadow-mktg-sm mb-10 rounded-md md:mt-8">
                 <ContactForm />
               </div>
             </motion.div>
           </motion.div>
         </div>
       </HoverCard>
+      <Partners />
+      <VideoPlayer />
     </div>
   )
 }

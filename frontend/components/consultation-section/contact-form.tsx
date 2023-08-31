@@ -149,7 +149,7 @@ export function ContactForm() {
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      className="min-h-[150px] border-primary bg-transparent"
+                      className="border-primary bg-transparent max-md:min-h-[90px] md:min-h-[150px]"
                       placeholder="Tell us a bit more about your project"
                       {...field}
                     />

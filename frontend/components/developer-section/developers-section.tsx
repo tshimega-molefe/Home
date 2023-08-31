@@ -191,6 +191,12 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
           </HoverCard>
         </div>
       </div>
+      <motion.div
+        initial={{ height: 0 }}
+        whileInView={{ height: "240px" }}
+        transition={{ delay: 0.2 }}
+        className=" ml-3 mt-[-20px] h-[240px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#797ef9] to-[#abb4ff] md:ml-10"
+      ></motion.div>
     </div>
   )
 }
