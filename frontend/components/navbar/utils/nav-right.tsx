@@ -6,15 +6,16 @@ import Link from "next/link"
 interface NavRightProps {
   main: string
   path: string
+  href: string
 }
 
-const NavRight: FC<NavRightProps> = ({ main, path }) => {
+const NavRight: FC<NavRightProps> = ({ main, path, href }) => {
   const [focus, setFocus] = useState<boolean>(false)
   return (
     <Link
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
-      href={`/${main}`}
+      href={`${href}`}
       className={`flex items-center  capitalize ${
         focus ? "text-blue-600" : "text-primary/50"
       }`}

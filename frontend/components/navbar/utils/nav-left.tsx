@@ -8,13 +8,14 @@ interface NavLeftProps {
   submain: string
   path: string
   path2: string
+  href: string
 }
 
-const NavLeft: FC<NavLeftProps> = ({ main, submain, path, path2 }) => {
+const NavLeft: FC<NavLeftProps> = ({ main, submain, path, path2, href }) => {
   const [focus, setFocus] = useState<boolean>(false)
   return (
     <Link
-      href={`/${main}`}
+      href={`${href}`}
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
       className="flex cursor-pointer items-center space-x-3 py-3"

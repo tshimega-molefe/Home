@@ -1,4 +1,5 @@
 import {
+  AtSign,
   ChevronsRight,
   LucideProps,
   Menu,
@@ -14,6 +15,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+  consultation: AtSign,
   chevronRight: ChevronsRight,
   developers: Users,
   snowflake: Snowflake,
