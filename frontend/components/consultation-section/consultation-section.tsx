@@ -92,17 +92,14 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
             variants={container}
             initial="hidden"
             whileInView="show"
-            className="relative flex text-[17px] flex-col md:flex-row lg:my-10 flex-1 justify-between w-10/12 mx-auto md:gap-10"
+            className="relative flex text-[17px] flex-col md:flex-row lg:my-10 flex-1 justify-between w-full md:w-10/12 mx-auto"
           >
             <motion.div
               variants={item}
               transition={{ type: "tween" }}
               className="animate w-full"
             >
-              <div
-                className="p-6 md:mt-8 mb-10 box-shadow-mktg-xl rounded-md"
-                style={{ background: "rgba(235, 245, 255, 0.2)" }}
-              >
+              <div className="p-6 md:mt-8 mb-10 box-shadow-mktg-sm rounded-md">
                 <ContactForm />
               </div>
             </motion.div>

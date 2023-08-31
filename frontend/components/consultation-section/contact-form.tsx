@@ -82,12 +82,12 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="xl:w-[28rem] md:w-[24rem]">
+    <Card className="bg-transparent border-0 shadow-none">
       <CardHeader>
-        <CardTitle>
-          Send a <span className="text-destructive">message.</span>
+        <CardTitle className="text-2xl md:text-[40px] max-md:leading-8 max-lg:leading-10 lg:text-4xl mb-7 font-medium text-primary">
+          Start something&nbsp;
+          <span className="text-[#939aff]">special</span>.
         </CardTitle>
-        <CardDescription>Get in touch with Mr. Molefe</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -100,9 +100,13 @@ export function ContactForm() {
               name="fullName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full name</FormLabel>
+                  <FormLabel>Who do you represent?</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your full name" {...field} />
+                    <Input
+                      className="bg-transparent border-primary"
+                      placeholder="Company Name"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -114,9 +118,13 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>What is your email?</FormLabel>
                   <FormControl>
-                    <Input placeholder="you@email.com" {...field} />
+                    <Input
+                      className="bg-transparent border-primary"
+                      placeholder="you@company.com"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -129,7 +137,11 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. 'Enquiry'" {...field} />
+                    <Input
+                      className="bg-transparent border-primary"
+                      placeholder="e.g. 'Enquiry'"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -143,6 +155,7 @@ export function ContactForm() {
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
+                      className="bg-transparent border-primary min-h-[150px]"
                       placeholder="Enter your message here"
                       {...field}
                     />
@@ -153,9 +166,9 @@ export function ContactForm() {
             />
             <Button type="submit" disabled={loading}>
               {loading ? (
-                <div className="h-4 w-[16.5px] animate-spin rounded-full border-b-2 border-white"></div>
+                <div className="h-4 w-[16.5px] animate-spin rounded-full border-b-2 border-primary"></div>
               ) : (
-                <p>Submit</p>
+                <p>Launch</p>
               )}
             </Button>
           </form>
