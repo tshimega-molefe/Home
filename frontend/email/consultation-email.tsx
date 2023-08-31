@@ -39,35 +39,41 @@ const ContactEmail: FC<ContactEmailProps> = ({
         <Container style={container}>
           <Section style={logoContainer}>
             <Img
-              src={`${baseUrl}/icon.png`}
+              src={`${baseUrl}/public/icon.png`}
               width="120"
               height="36"
-              alt="Slack"
+              alt="Swift Stack"
             />
           </Section>
           <Heading style={h1}>Consultation Enquiry</Heading>
           <Text style={heroText}>
-            <span className="capitalize">{name}</span> from{" "}
-            <span className="capitalize">{company}</span> would like to have a
-            consultation regarding the following project:
+            Dear Mr Molefe, I trust this message finds you well. My name is{" "}
+            {name}, and I represent {company}.
           </Text>
 
           <Section style={codeBox}>
-            <Text style={confirmationCodeText}>{message}</Text>
+            <Text style={text}>{message}</Text>
           </Section>
 
           <Text style={text}>
-            Please reach {name} at the tel no: {number}
+            Warm regards,
+            <br />
+            <br />
+            {name}
+            <br />
+            {company}
+            <br />
+            {number}
           </Text>
 
           <Section>
             <Row style={footerLogos}>
               <Column style={{ width: "66%" }}>
                 <Img
-                  src={`${baseUrl}/icon.png`}
+                  src={`${baseUrl}/public/icon.png`}
                   width="120"
                   height="36"
-                  alt="Slack"
+                  alt="Swift Stack"
                 />
               </Column>
               <Column>
@@ -75,10 +81,10 @@ const ContactEmail: FC<ContactEmailProps> = ({
                   <Column>
                     <Link href="/">
                       <Img
-                        src={`${baseUrl}/static/slack-twitter.png`}
+                        src={`${baseUrl}/public/icon.png`}
                         width="32"
                         height="32"
-                        alt="Slack"
+                        alt="Swift Instagram"
                         style={socialMediaIcon}
                       />
                     </Link>
@@ -86,10 +92,10 @@ const ContactEmail: FC<ContactEmailProps> = ({
                   <Column>
                     <Link href="/">
                       <Img
-                        src={`${baseUrl}/static/slack-facebook.png`}
+                        src={`${baseUrl}/public/icon.png`}
                         width="32"
                         height="32"
-                        alt="Slack"
+                        alt="Swift GitHub"
                         style={socialMediaIcon}
                       />
                     </Link>
@@ -97,10 +103,10 @@ const ContactEmail: FC<ContactEmailProps> = ({
                   <Column>
                     <Link href="/">
                       <Img
-                        src={`${baseUrl}/static/slack-linkedin.png`}
+                        src={`${baseUrl}/public/icon.png`}
                         width="32"
                         height="32"
-                        alt="Slack"
+                        alt="Swift LinkedIn"
                         style={socialMediaIcon}
                       />
                     </Link>

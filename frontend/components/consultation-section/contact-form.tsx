@@ -59,8 +59,8 @@ export function ContactForm() {
     try {
       await sendEmail(data)
       toast({
-        title: `Hey ${data.name}.`,
-        description: `Please check your ${data.email} inbox for your consultation details.`,
+        title: `Thank you ${data.name}.`,
+        description: `You will receive your consultation details shortly at ${data.email}.`,
       })
     } catch (error) {
       toast({

@@ -13,7 +13,7 @@ export const sendEmail = async (data: ContactFormValues) => {
   const { name, email, message, company, number } = data
   try {
     await resend.emails.send({
-      from: `Swift Stack <support@swiftstack.net>`,
+      from: `Swift Support <support@swiftstack.net>`,
       to: "tshimega@swiftstack.net",
       subject: `${company} Consultation`,
       reply_to: email,
