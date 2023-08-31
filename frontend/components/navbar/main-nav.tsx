@@ -3,10 +3,11 @@
 import { FC } from "react"
 import Link from "next/link"
 import { selectNavState } from "@/features/nav/nav"
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
 import { useAppDispatch, useAppSelector } from "../../lib/hooks"
 import { ThemeToggle } from "../theme-toggle"
-import { buttonVariants } from "../ui/button"
+import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import DevelopersNav from "./developers-nav"
 import ProductNav from "./product-nav"
@@ -65,29 +66,22 @@ const MainNav: FC<MainNavProps> = ({}) => {
               <path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path>
             </svg>
           </div>
-          <div className="mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:flex">
-            <Link
-              href="/sign-in"
-              rel="noreferrer"
-              className={`inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md px-3 text-sm font-medium text-primary ring-offset-background transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-lg:h-10 max-lg:w-full max-lg:bg-primary max-lg:text-background max-lg:hover:bg-primary/90`}
-            >
-              Sign In
-            </Link>
-          </div>
+          <div className="mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:flex"></div>
           <div className="relative mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:hidden ">
             <ThemeToggle />
           </div>
-
-          <Link
-            href="/sign-up"
-            rel="noreferrer"
-            className={`${buttonVariants({
-              variant: "default",
-              size: "sm",
-            })} whitespace-nowrap max-lg:hidden`}
-          >
-            Sign Up
-          </Link>
+          <div className="max-lg:hidden">
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton afterSignInUrl="/">
+                <Button variant="default" size="sm">
+                  Sign In
+                </Button>
+              </SignInButton>
+            </SignedOut>
+          </div>
           <div className=" relative max-lg:hidden">
             <ThemeToggle />
           </div>
