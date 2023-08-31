@@ -10,14 +10,16 @@ import { ContactFormValues } from "@/components/consultation-section/contact-for
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendEmail = async (data: ContactFormValues) => {
-  const { fullName: name, email, message } = data
+  const { name, email, message, company, number } = data
   try {
     await resend.emails.send({
       from: `Swift Stack <support@swiftstack.net>`,
       to: "tshimega@swiftstack.net",
-      subject: "Enquiry for consultation",
+      subject: `${company} Consultation`,
       reply_to: email,
       react: React.createElement(ContactEmail, {
+        number: number,
+        company: company,
         message: message,
         name: name,
       }),
