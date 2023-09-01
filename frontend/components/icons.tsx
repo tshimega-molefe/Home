@@ -1,6 +1,9 @@
 import {
   AtSign,
   ChevronsRight,
+  Facebook,
+  Instagram,
+  Linkedin,
   LucideProps,
   Menu,
   Moon,
@@ -15,6 +18,9 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+  facebook: Facebook,
+  linkedin: Linkedin,
+  instagram: Instagram,
   consultation: AtSign,
   chevronRight: ChevronsRight,
   developers: Users,
