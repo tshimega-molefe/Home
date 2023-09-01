@@ -7,6 +7,7 @@ import {
   LucideProps,
   Menu,
   Moon,
+  Plane,
   Snowflake,
   SunMedium,
   Twitter,
@@ -18,9 +19,11 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+feature-footer
   facebook: Facebook,
   linkedin: Linkedin,
   instagram: Instagram,
+  air: Plane,
   consultation: AtSign,
   chevronRight: ChevronsRight,
   developers: Users,

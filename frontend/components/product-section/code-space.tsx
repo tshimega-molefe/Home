@@ -65,7 +65,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                 <span className="font-semibold text-primary">
                   Build, Test, and Deploy
                 </span>{" "}
-                your company&apos;s codebase. Create anything, anywhere.
+                your company&apos;s product. Create anything, from anywhere.
               </h2>
               <Link
                 onMouseEnter={() => setHovered(true)}
@@ -174,10 +174,10 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             />
 
             <h3 className="mb-2 mt-3 text-3xl font-medium text-[#3ba244] md:text-5xl lg:text-6xl">
-              Sustainabile Development
+              Checkout our latest products
             </h3>
             <p className="mb-3 text-base font-medium text-primary md:text-xl">
-              We balance speed, with scalability, and execution.
+              Give us some feedback
             </p>
           </div>
         </motion.div>

@@ -12,7 +12,7 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
       className="container relative mb-52 w-full max-lg:mt-40 md:mb-96"
     >
       <p className="text-base leading-6 max-lg:text-muted-foreground lg:text-[#f8fafc]/60">
-        A reliable partner for the world&apos;s foremost companies ↘︎
+        Who we build for, and what we build width ↘︎
       </p>
       <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
         <Link
