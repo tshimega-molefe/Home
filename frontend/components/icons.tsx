@@ -4,6 +4,7 @@ import {
   LucideProps,
   Menu,
   Moon,
+  Plane,
   Snowflake,
   SunMedium,
   Twitter,
@@ -15,6 +16,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+  air: Plane,
   consultation: AtSign,
   chevronRight: ChevronsRight,
   developers: Users,
