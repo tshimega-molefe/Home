@@ -2,6 +2,7 @@
 
 import { FC, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 import CodeDemo from "./code-demo"
@@ -95,10 +96,10 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                 can use.
               </p>
               <div>
-                <a
+                <Link
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
-                  href=""
+                  href="/careers"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Explore Careers
@@ -131,7 +132,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                       hovered ? "w-11/12 scale-100" : "w-0 scale-0"
                     } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
                   ></div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
@@ -160,10 +161,10 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                 Request private air travel, from any airport, at anytime.
               </p>
               <div>
-                <a
+                <Link
                   onMouseEnter={() => setHovered1(true)}
                   onMouseLeave={() => setHovered1(false)}
-                  href=""
+                  href="/air"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Try Swift Air
@@ -196,7 +197,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                       hovered1 ? "w-11/12 scale-100" : "w-0 scale-0"
                     } h-[2.5px]  origin-left rounded-full bg-primary transition duration-300 ease-in`}
                   ></div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="overflow-hidden rounded-s-lg">
