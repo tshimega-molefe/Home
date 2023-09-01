@@ -7,6 +7,7 @@ import { fontSans } from "@/lib/fonts"
 import { Providers } from "@/lib/provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
+import Footer from "@/components/footer/footer"
 import { SiteHeader } from "@/components/navbar/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
                 <div className="flex-1">{children}</div>
+                <Footer />
               </div>
             </ThemeProvider>
           </Providers>

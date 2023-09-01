@@ -220,10 +220,9 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
       </div>
       <motion.div
         initial={{ height: 0 }}
-        whileInView={{ height: "160px" }}
-        transition={{ delay: 0.3 }}
-        viewport={{ once: false }}
-        className=" -mt-8 ml-3 h-[160px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
+        whileInView={{ height: "240px" }}
+        transition={{ delay: 0.2 }}
+        className=" ml-3 mt-[-20px] h-[240px] w-[3px] rounded-md bg-gradient-to-b from-transparent via-[#ea6045] to-[#ffa28b] md:ml-10"
       ></motion.div>
     </section>
   )
