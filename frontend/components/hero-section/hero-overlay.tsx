@@ -19,28 +19,28 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       transition={{ duration: 1.5, delay: 0.0 }}
       className="absolute bottom-[20rem] z-40 flex w-full flex-col items-start gap-4 max-md:pr-10 md:max-w-fit md:gap-6 lg:bottom-[28rem]"
     >
-      {/* <Link
-        href="/sea-point"
+      <Link
+        href="/air"
         className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4 truncate"
       >
         <div className="flex items-center py-2 px-10">
-          <Icons.waves className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-[#f8fafc] max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
+          <Icons.air className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-[#f8fafc] max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
           <div className="md:pr-5 pr-3 md:mr-2 md:pl-2">
             <div className="font-medium text-[#f8fafc] text-base max-md:text-sm leading-5">
-              Introducing SeaPoint&trade;
+              Introducing Swift Air&copy;
             </div>
             <div className="text-[#f8fafc]/40 max-md:text-xs text-base">
-              Purchase Real Estate with Crypto
+              Private flying, reimagined
             </div>
           </div>
           <div className="ml-auto">
             <Icons.chevronRight className="text-[#f8fafc]" />
           </div>
         </div>
-      </Link> */}
+      </Link>
       <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-[#f8fafc] transition-all duration-500 max-md:mr-4 md:text-4xl lg:text-7xl lg:leading-[1.2em]">
-        Enterprise Software Solutions
-        <br /> Built by Swift.
+        Multiple software products.
+        <br /> One user account.
       </h1>
       <span className="text-base font-normal text-[#f8fafc]/60 transition-all duration-500">
         Think Fast.
