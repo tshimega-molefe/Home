@@ -75,7 +75,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
                 <Link
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
-                  href=""
+                  href="/investor-relations"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Become a partner
@@ -140,7 +140,7 @@ const DevelopersSection: FC<DevelopersSectionProps> = ({}) => {
                 <a
                   onMouseEnter={() => setHovered1(true)}
                   onMouseLeave={() => setHovered1(false)}
-                  href=""
+                  href="developer-portal"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
                   Developer Portal
