@@ -19,7 +19,6 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-feature-footer
   facebook: Facebook,
   linkedin: Linkedin,
   instagram: Instagram,
