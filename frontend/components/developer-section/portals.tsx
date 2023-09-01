@@ -64,7 +64,7 @@ const Portals: FC<PortalsProps> = ({}) => {
               <a
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                href=""
+                href="/careers"
                 className="z-50 inline-block py-1 text-xl font-semibold text-primary"
               >
                 Explore Careers
