@@ -45,7 +45,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
           <Link
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            href="scripted"
+            href="script-ed"
             className=" inline-block font-semibold text-primary md:text-xl"
           >
             Try Script.Ed
