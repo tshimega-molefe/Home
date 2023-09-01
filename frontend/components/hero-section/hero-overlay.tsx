@@ -52,7 +52,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
         </div>
         <span className="border border-[#f8fafc]/30 max-md:hidden md:mx-4 md:border-l" />
         <Link
-          href="/consultation"
+          href="#consultation"
           rel="noreferrer"
           className={`${buttonVariants({
             variant: "secondary",

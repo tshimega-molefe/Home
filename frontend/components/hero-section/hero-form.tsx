@@ -36,9 +36,8 @@ export function HeroForm() {
 
   function onSubmit(data: HeroFormValues) {
     toast({
-      variant: "default",
-      title: "Successfully submitted your email:",
-      description: `${JSON.stringify(data, null, 2)}`,
+      title: `Thank you!`,
+      description: `You will receive your newsletter at ${data.email}.`,
     })
   }
 
