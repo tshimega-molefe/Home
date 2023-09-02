@@ -83,7 +83,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
       <div
         className={`w-screen ${
           isFixed ? "fixed" : "sticky"
-        }  top-0 bg-secondary py-2 shadow-md shadow-slate-300 dark:bg-[#0d1117] dark:shadow-black `}
+        }  top-0 bg-white py-2 shadow-md shadow-slate-300 dark:bg-[#0d1117] dark:shadow-black `}
       >
         <div className="relative mx-auto flex max-w-[1280px] items-center px-12 pb-2 pt-1 max-lg:flex-col lg:px-3 lg:pb-3">
           <button
@@ -186,7 +186,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
               href="#consultation"
-              className={`${cn(
+              className={`max-lg:w-full space-x-2 ${cn(
                 buttonVariants({ variant: "default", size: "lg" })
               )}`}
             >
@@ -220,7 +220,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               onMouseEnter={() => setHovered1(true)}
               onMouseLeave={() => setHovered1(false)}
               href="/onboarding"
-              className={`${cn(
+              className={`max-lg:w-full space-x-2 py-[1.40rem] ${cn(
                 buttonVariants({ variant: "outline", size: "lg" })
               )}`}
             >
