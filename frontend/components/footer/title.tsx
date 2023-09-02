@@ -31,7 +31,7 @@ const Title: FC<TitleProps> = ({}) => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="#consultation"
-                className={`${cn(
+                className={`flex items-center font-bold px-14 py-3 justify-center rounded-md text-[20px] ${cn(
                   buttonVariants({ variant: "default", size: "lg" })
                 )}`}
               >
@@ -65,7 +65,7 @@ const Title: FC<TitleProps> = ({}) => {
                 onMouseEnter={() => setHovered1(true)}
                 onMouseLeave={() => setHovered1(false)}
                 href="/onboarding"
-                className={`${cn(
+                className={`flex items-center font-bold px-14 py-[1.40rem] justify-center rounded-md text-[20px] ${cn(
                   buttonVariants({ variant: "outline", size: "lg" })
                 )}`}
               >

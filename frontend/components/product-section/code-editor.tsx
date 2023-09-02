@@ -294,14 +294,9 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
             </div>
           </div>
           <div className="flex h-full flex-col items-center justify-between bg-muted/50 px-10 pt-20 dark:bg-[#040d213a]">
-            {/* add a particle container to this section to add more life */}
-            <Button
-              variant="default"
-              size="lg"
-              className="transition-transform duration-75 active:scale-95 "
-            >
-              Get Started
-            </Button>
+            <h1 className="text-xl font-medium text-[#7d8590] md:text-2xl">
+              We build cool things
+            </h1>
             <Image
               className="h-auto w-96 md:block"
               width="1238"
