@@ -11,7 +11,7 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
       id="our-Partners"
       className="container relative mb-52 w-full max-lg:mt-40 md:mb-96"
     >
-      <p className="text-base leading-6 max-lg:text-muted-foreground lg:text-[#f8fafc]/60">
+      <p className="text-base leading-6 text-muted-foreground">
         The technology behind your stack account ↘︎
       </p>
       <div className="flex flex-wrap items-center justify-between gap-4 pt-2">

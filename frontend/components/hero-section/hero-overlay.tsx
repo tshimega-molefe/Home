@@ -17,7 +17,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute bottom-1/2 z-40 flex w-full flex-col items-start gap-4 max-md:pr-10 md:max-w-fit md:gap-6 lg:bottom-1/2"
+      className="absolute md:bottom-1/2 md:left-1/2 md:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-md:items-start gap-4 max-md:pr-10 md:max-w-fit md:gap-20 max-md:bottom-[30rem]"
     >
       <Link
         href="/air"
@@ -30,7 +30,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
               Introducing Swift Shopping&copy;
             </div>
             <div className="text-muted-foreground max-md:text-xs text-base">
-              Sell products from your stack account
+              Sell products with your stack account
             </div>
           </div>
           <div className="ml-auto">
@@ -38,9 +38,9 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
           </div>
         </div>
       </Link>
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-4xl lg:text-7xl lg:leading-[1.2em]">
+      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-4xl lg:text-7xl lg:leading-[1.2em] md:whitespace-nowrap">
         Create one account,
-        <br /> for everything.
+        <br className="md:hidden" /> for everything.
       </h1>
       <span className="text-base font-normal text-primary/60 transition-all duration-500">
         Let your stack do all the work.

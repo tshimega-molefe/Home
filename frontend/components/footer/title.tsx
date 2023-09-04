@@ -23,8 +23,8 @@ const Title: FC<TitleProps> = ({}) => {
             </h2>
             <p className="mb-4 md:text-xl text-[16px] text-[#7d8590] px-4 mx-auto md:w-7/12">
               Swift Stack is a home to people who passionately think about how
-              to make life better for others. Become part of the Stack; whether
-              you use our software, or you just want to build.
+              to make life easier for others. Become part of the Stack; whether
+              you use our software or, you just want to build with us.
             </p>
             <div className="lg:ml-5 flex items-center justify-center lg:space-x-5 max-lg:space-y-3 max-lg:flex-col max-lg:w-full max-lg:mt-5 lg:mt-20">
               <Link
@@ -35,7 +35,7 @@ const Title: FC<TitleProps> = ({}) => {
                   buttonVariants({ variant: "default", size: "lg" })
                 )}`}
               >
-                Book a consultation
+                Book a product demo
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={` ml-2 transition ease-in duration-150 ${

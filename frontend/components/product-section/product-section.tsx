@@ -71,12 +71,12 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             viewport={{ once: false }}
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
-            <span className="text-[#763791]">One account&nbsp;</span>
-            to run your business, sell your products, travel abroad, learn new
-            things, publish a book, or connect with friends.
+            <span className="text-[#763791]">One account&nbsp;</span> for
+            literally everything.
             <br />
             <br />
-            Anything is possible.
+            Want to travel? Sell your old clothes? Write a book? Teach yourself
+            nuclear physics?
           </motion.div>
         </div>
       </div>

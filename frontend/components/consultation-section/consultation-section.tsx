@@ -71,7 +71,7 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
               <span className="text-primary">a product demo.</span>
             </p>
             <span className="text-2xl text-[#7d8590] max-lg:text-[18px]">
-              Learn how to use your stack account.
+              Find out what a stack account can do for you.
               <br />
               <span className="text-xl max-lg:text-sm">
                 Schedule a 30 min call:

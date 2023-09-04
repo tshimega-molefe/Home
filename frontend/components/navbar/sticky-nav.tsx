@@ -190,7 +190,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                 buttonVariants({ variant: "default", size: "lg" })
               )}`}
             >
-              Book a consultation
+              Book a product demo
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={` ml-2 transition ease-in duration-150 ${

@@ -82,8 +82,8 @@ export function ContactForm() {
     <Card className="border-0 bg-transparent shadow-none">
       <CardHeader>
         <CardTitle className="mb-7 text-2xl font-medium text-primary max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-4xl">
-          Start something&nbsp;
-          <span className="text-[#939aff]">special</span>.
+          Make your life&nbsp;
+          <span className="text-[#939aff]">easier</span>.
         </CardTitle>
       </CardHeader>
       <CardContent>

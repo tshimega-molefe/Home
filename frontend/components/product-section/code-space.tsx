@@ -63,9 +63,12 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             >
               <h2 className="mb-4 w-full text-2xl text-[#7d8590] max-lg:text-[20px] max-md:w-10/12 lg:w-full">
                 <span className="font-semibold text-primary">
-                  Build, Test, and Deploy
+                  Don't create another account ever again.
+                  <br />
                 </span>{" "}
-                your company&apos;s product. Create anything, from anywhere.
+                Your stack account enables you to travel, write, connect with
+                friends, buy, sell, make appointments, or literally teach
+                yourself nuclear physics.
               </h2>
               <Link
                 onMouseEnter={() => setHovered(true)}
@@ -174,10 +177,10 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             />
 
             <h3 className="mb-2 mt-3 text-3xl font-medium text-[#3ba244] md:text-5xl lg:text-6xl">
-              Checkout our latest products
+              Upcoming features
             </h3>
             <p className="mb-3 text-base font-medium text-primary md:text-xl">
-              Give us some feedback
+              Look forward to these on your stack account
             </p>
           </div>
         </motion.div>
