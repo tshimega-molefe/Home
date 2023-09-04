@@ -8,6 +8,7 @@ import {
   Menu,
   Moon,
   Plane,
+  ShoppingCart,
   Snowflake,
   SunMedium,
   Twitter,
@@ -19,6 +20,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+  shopping: ShoppingCart,
   facebook: Facebook,
   linkedin: Linkedin,
   instagram: Instagram,

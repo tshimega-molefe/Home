@@ -12,7 +12,7 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
       className="container relative mb-52 w-full max-lg:mt-40 md:mb-96"
     >
       <p className="text-base leading-6 max-lg:text-muted-foreground lg:text-[#f8fafc]/60">
-        Who we build for, and what we build width ↘︎
+        The technology behind your stack account ↘︎
       </p>
       <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
         <Link
@@ -39,14 +39,14 @@ const PartnersSection: FC<PartnersSectionProps> = ({}) => {
         >
           <Icons.nextjs className="my-3 h-20 w-auto" />
         </Link>
-        <Link
+        {/* <Link
           href="http://103.125.218.26/"
           target="_blank"
           passHref
           className="transition-all duration-75 active:scale-90"
         >
           <Icons.scout className="my-3 h-8 w-auto" />
-        </Link>
+        </Link> */}
         <Link
           href="https://stripe.com/"
           target="_blank"

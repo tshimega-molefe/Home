@@ -56,7 +56,7 @@ export function HeroForm() {
                 <Input
                   placeholder="Email"
                   {...field}
-                  className="glass h-9 border-primary bg-primary/20 text-[#f8fafc] placeholder:text-background/50 placeholder:dark:text-primary/50 max-md:bg-primary/60 dark:max-md:bg-primary/20 md:rounded-r-none"
+                  className="glass h-9 border-primary bg-primary/20 text-[#f8fafc] placeholder:text-muted-foreground placeholder:dark:text-primary/50 max-md:bg-primary/60 dark:max-md:bg-primary/20 md:rounded-r-none"
                 />
               </FormControl>
               <FormMessage className="text-[#f8fafc]" />
