@@ -295,7 +295,7 @@ const CodeEditor: FC<CodeEditorProps> = ({}) => {
           </div>
           <div className="flex h-full flex-col items-center justify-between bg-muted/50 px-10 pt-20 dark:bg-[#040d213a]">
             <h1 className="text-xl font-medium text-[#7d8590] md:text-2xl">
-              We built it, so you don't have to.
+              We built it, so you don&apos;t have to.
             </h1>
             <Image
               className="h-auto w-96 md:block"
