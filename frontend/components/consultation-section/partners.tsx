@@ -131,7 +131,7 @@ const Partners: FC<PartnersProps> = ({}) => {
         >
           <div className="py-4 text-left">
             <h3 className="mb-2 mt-3 text-3xl font-medium text-[#939aff] md:text-5xl lg:text-6xl">
-              Scale your business
+              Life reimagined
             </h3>
             <p className="mb-3 text-base font-medium text-primary md:text-xl">
               with Swift Stack.

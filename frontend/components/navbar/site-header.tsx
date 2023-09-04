@@ -21,9 +21,11 @@ export function SiteHeader() {
           <div className="flex flex-row items-center gap-2 lg:hidden">
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
+              {/* Route to landing page */}
             </SignedIn>
             <SignedOut>
               <SignInButton afterSignInUrl="/">
+                {/* Route to feed */}
                 <Button variant="default" size="sm">
                   Sign In
                 </Button>
