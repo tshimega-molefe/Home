@@ -102,7 +102,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   href="/air"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
-                  Try Swift Air
+                  Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${

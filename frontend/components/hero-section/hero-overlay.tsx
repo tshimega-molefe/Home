@@ -17,7 +17,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute md:bottom-1/2 md:left-1/2 md:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-md:items-start gap-4 max-md:pr-10 md:max-w-fit md:gap-20 max-md:bottom-[30rem]"
+      className="absolute lg:bottom-1/2 lg:left-1/2 lg:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-lg:items-start gap-4 max-lg:pr-10 lg:max-w-fit lg:gap-20 max-lg:bottom-[30rem]"
     >
       <Link
         href="/air"
@@ -29,7 +29,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
             <div className="font-medium text-primary text-base max-md:text-sm leading-5">
               Introducing Swift Shopping&copy;
             </div>
-            <div className="text-muted-foreground max-md:text-xs text-base">
+            <div className="text-muted dark:text-muted-foreground max-md:text-xs text-base">
               Sell products with your stack account
             </div>
           </div>
@@ -42,7 +42,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
         Create one account,
         <br className="md:hidden" /> for everything.
       </h1>
-      <span className="text-base font-normal text-primary/60 transition-all duration-500">
+      <span className="text-base font-normal text-muted dark:text-muted-foreground transition-all duration-500">
         Let your stack do all the work.
       </span>
 
