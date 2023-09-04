@@ -9,9 +9,39 @@ interface NavLeftProps {
   path: string
   path2: string
   href: string
+  viewBox?: string
+  stroke?: string
+  strokeWidth?: number
+  strokeLinecap?: "butt" | "round" | "square" | "inherit" | undefined
+  strokeLinejoin?: "round" | "inherit" | "miter" | "bevel" | undefined
+  circleCX?: number
+  circleCY?: number
+  circleR?: number
+  circleCX2?: number
+  circleCY2?: number
+  circleR2?: number
+  fill?: string
 }
 
-const NavLeft: FC<NavLeftProps> = ({ main, submain, path, path2, href }) => {
+const NavLeft: FC<NavLeftProps> = ({
+  main,
+  submain,
+  path,
+  path2,
+  href,
+  viewBox,
+  stroke,
+  strokeWidth,
+  fill,
+  strokeLinecap,
+  strokeLinejoin,
+  circleCX,
+  circleCY,
+  circleR,
+  circleCX2,
+  circleCY2,
+  circleR2,
+}) => {
   const [focus, setFocus] = useState<boolean>(false)
   return (
     <Link
@@ -24,14 +54,25 @@ const NavLeft: FC<NavLeftProps> = ({ main, submain, path, path2, href }) => {
         aria-hidden="true"
         height="24"
         viewBox="0 0 24 24"
-        fill="currentColor"
+        fill={fill}
         version="1.1"
+        viewTarget={viewBox}
         width="24"
         data-view-component="true"
         className={` mr-3 transition duration-100 ease-in  ${
           focus ? "text-blue-600" : "text-primary"
         }`}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        strokeLinecap={strokeLinecap}
+        strokeLinejoin={strokeLinejoin}
       >
+        {circleCX && circleCY && circleR && (
+          <>
+            <circle cx={circleCX} cy={circleCY} r={circleR} />
+            <circle cx={circleCX2} cy={circleCY2} r={circleR2} />
+          </>
+        )}
         <path d={path}></path>
         <path d={path2}></path>
       </svg>

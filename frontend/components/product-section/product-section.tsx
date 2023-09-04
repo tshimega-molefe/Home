@@ -71,7 +71,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             viewport={{ once: false }}
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
-            <span className="text-[#763791]">One account&nbsp;</span> for
+            <span className="text-[#763791]">One account&nbsp;</span>for
             literally everything.
             <br />
             <br />
