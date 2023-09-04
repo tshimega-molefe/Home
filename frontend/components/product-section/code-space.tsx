@@ -63,12 +63,10 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             >
               <h2 className="mb-4 w-full text-2xl text-[#7d8590] max-lg:text-[20px] max-md:w-10/12 lg:w-full">
                 <span className="font-semibold text-primary">
-                  Don't create another account ever again.
-                  <br />
+                  Swift Shopping:
                 </span>{" "}
-                Your stack account enables you to travel, write, connect with
-                friends, buy, sell, make appointments, or literally teach
-                yourself nuclear physics.
+                Allow people to easily shop your own products you list for sale.
+                The easiest e-store to set up in the world.
               </h2>
               <Link
                 onMouseEnter={() => setHovered(true)}
@@ -76,7 +74,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                 href="/"
                 className="inline-block py-1 text-xl font-semibold text-primary"
               >
-                Learn more
+                Create your store
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={` mb-[2px] ml-3 inline-block text-primary transition duration-300 ease-in  ${

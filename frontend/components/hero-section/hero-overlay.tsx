@@ -17,11 +17,11 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute lg:bottom-1/2 lg:left-1/2 lg:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-lg:items-start gap-4 max-lg:pr-10 lg:max-w-fit lg:gap-20 max-lg:bottom-[30rem]"
+      className="absolute lg:bottom-1/2 lg:left-1/2 lg:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-lg:items-start gap-4 md:gap-12 max-lg:pr-10 lg:max-w-fit lg:gap-20 max-lg:bottom-[30rem]"
     >
       <Link
-        href="/air"
-        className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4 truncate"
+        href="/dashboard"
+        className="border-[1px] border-primary dark:border-neutral-500 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4"
       >
         <div className="flex items-center py-2 px-10">
           <Icons.shopping className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-primary max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
@@ -38,7 +38,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
           </div>
         </div>
       </Link>
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-4xl lg:text-7xl lg:leading-[1.2em] md:whitespace-nowrap">
+      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-5xl lg:text-7xl lg:leading-[1.2em] md:whitespace-nowrap">
         Create one account,
         <br className="md:hidden" /> for everything.
       </h1>
