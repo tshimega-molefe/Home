@@ -14,7 +14,7 @@ interface pageProps {
 const page: FC<pageProps> = ({ params }) => {
   return (
     <div className="text-2xl flex flex-col gap-6">
-      <h1>This is one user's account</h1>
+      <h1>This is one user&apos;s account</h1>
       <Link
         href="/s/angel/dashboard"
         passHref

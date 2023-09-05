@@ -17,14 +17,14 @@ const page: FC<pageProps> = ({}) => {
         passHref
         className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
       >
-        Go to timmy's page
+        Go to timmy&apos;s page
       </Link>
       <Link
         href="/s/angel"
         passHref
         className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
       >
-        Go to angelique's page
+        Go to angelique&apos;s page
       </Link>
     </div>
   )
