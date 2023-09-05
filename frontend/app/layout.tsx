@@ -36,15 +36,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          "relative min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <ClerkProvider>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body
+          className={cn(
+            "relative min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased",
+            fontSans.variable
+          )}
+        >
           <Providers>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <div className="relative flex min-h-screen flex-col">
@@ -58,8 +58,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </ThemeProvider>
           </Providers>
           <Toaster />
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
