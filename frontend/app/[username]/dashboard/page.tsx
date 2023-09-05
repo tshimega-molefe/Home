@@ -2,11 +2,11 @@
 
 import { FC } from "react"
 
-import Modal from "@/components/ui/modals/modal"
+import Modal from "@/components/modals/modal"
 
-interface StorePageProps {}
+interface DashboardProps {}
 
-const StorePage: FC<StorePageProps> = ({}) => {
+const Dashboard: FC<DashboardProps> = ({}) => {
   return (
     <div className="p-4">
       <Modal
@@ -21,4 +21,4 @@ const StorePage: FC<StorePageProps> = ({}) => {
   )
 }
 
-export default StorePage
+export default Dashboard

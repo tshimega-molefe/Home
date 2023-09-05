@@ -2,7 +2,7 @@
 
 import { FC } from "react"
 
-import Modal from "@/components/ui/modals/modal"
+import Modal from "@/components/modals/modal"
 
 interface DashboardPageProps {}
 
@@ -15,7 +15,7 @@ const DashboardPage: FC<DashboardPageProps> = ({}) => {
         title="Test Title"
         description="Test Description"
       >
-        Children
+        This is Sabrina's Main Page
       </Modal>
     </div>
   )

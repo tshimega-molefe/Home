@@ -30,7 +30,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
               Introducing Swift Shopping&copy;
             </div>
             <div className="text-muted dark:text-muted-foreground max-md:text-xs text-base">
-              Sell products with your stack account
+              Sell products with your Stack account
             </div>
           </div>
           <div className="ml-auto">
@@ -39,11 +39,11 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
         </div>
       </Link>
       <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-5xl lg:text-7xl lg:leading-[1.2em] md:whitespace-nowrap">
-        Create one account,
+        One account,
         <br className="md:hidden" /> for everything.
       </h1>
       <span className="text-base font-normal text-muted dark:text-muted-foreground transition-all duration-500">
-        Let your stack do all the work.
+        Let Stack do all the work.
       </span>
 
       <div className="flex max-md:w-full max-md:flex-col max-md:gap-4 md:flex-row">
