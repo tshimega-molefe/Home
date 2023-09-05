@@ -11,10 +11,155 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Store {
-  id        String   @id @default(uuid()) 
+enum Role {
+  USER
+  ENTERPRISE
+  ADMIN
+}
+
+enum ProductType {
+  ART_SUPPLIES
+  AUTOMOTIVE_PARTS
+  BEVERAGE
+  BIKE
+  BOATS
+  BOOKS
+  CAR
+  CLOTHING
+  CONSTRUCTION_MATERIALS
+  COSMETICS
+  ELECTRONICS
+  FOOD
+  FURNITURE
+  GAMING_HARDWARE
+  GARDENING_TOOLS
+  HOME_APPLIANCES
+  INDUSTRIAL_EQUIPMENT
+  JEWELRY
+  MOBILE_DEVICES
+  MUSICAL_INSTRUMENTS
+  OFFICE_SUPPLIES
+  PET_SUPPLIES
+  PHARMACEUTICALS
+  PHOTOGRAPHY_EQUIPMENT
+  AVIATION
+  SOFTWARE
+  SPORTS_EQUIPMENT
+  TEXTILES
+  TOYS
+}
+
+enum ServiceType {
+  ACCOUNTING
+  BEAUTY_SERVICES
+  CATERING
+  CLEANING
+  CONSULTING
+  COUNSELING
+  DELIVERY
+  DJ
+  EVENT_PLANNING
+  FINANCIAL_PLANNING
+  GRAPHIC_DESIGN
+  INTERIOR_DESIGN
+  LANDSCAPING
+  LEGAL_ADVICE
+  MARKETING
+  MEDICAL_SERVICES
+  PERSONAL_TRAINING
+  PET_CARE
+  PHOTOGRAPHY
+  REAL_ESTATE
+  REPAIRS
+  SECURITY
+  SOFTWARE_DEVELOPMENT
+  TRANSPORT
+  TRAVEL_PLANNING
+  TUTORING
+  VENUE_RENTAL
+  WEB_DEVELOPMENT
+}
+
+enum BookingType {
+  PRODUCT
+  SERVICE
+}
+
+model User {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  email     String   @unique
+  username  String   @unique
   name      String
-  userId    String
+  role      Role     @default(USER)
+  posts     Post[]
+  stores    Store[]
+  bookings  Booking[]
+  services  Service[]
+}
+
+model Store {
+  id        String    @id @default(uuid())
+  name      String   
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  owner     User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId   String       
+  products  Product[]
+
+  @@index([ownerId])
+}
+
+model Product {
+  id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-}  
+  name      String
+  type      ProductType
+  store     Store    @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  storeId   String
+  bookings  Booking[]
+
+  @@index([storeId])
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  published Boolean  @default(false)
+  title     String   @db.VarChar(100)
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String
+
+  @@index([authorId])
+  @@index([published])
+}
+
+model Booking {
+  id          String   @id @default(uuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  bookingType BookingType @default(PRODUCT)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  serviceId   String
+
+  @@index([userId])
+  @@index([productId])
+  @@index([serviceId])
+}
+
+model Service {
+  id          String    @id @default(uuid())
+  name        String
+  type        ServiceType
+  owner       User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId     String
+  bookings    Booking[]
+
+  @@index([ownerId])
+}

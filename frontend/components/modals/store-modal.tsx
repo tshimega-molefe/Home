@@ -51,9 +51,6 @@ export function StoreModal() {
     const formattedShopName = capitalizeFirstLetter(unformattedShopName)
     try {
       setLoading(true)
-      await new Promise((resolve) => setTimeout(resolve, 2000)) // 2 seconds delay
-      throw new Error("I'm purposefully throwing an error")
-
       const response = await axios.post(`/api/stores`, data)
       console.log(response.data)
       toast({
