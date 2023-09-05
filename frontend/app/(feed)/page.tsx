@@ -9,7 +9,7 @@ interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <div className="text-2xl flex flex-col gap-6">
+    <div className="flex flex-col gap-6 text-2xl">
       <h1>This is a feed containing many accounts</h1>
 
       <Link
