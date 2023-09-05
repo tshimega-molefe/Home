@@ -4,9 +4,13 @@ import { FC, useEffect } from "react"
 
 import { useStoreModal } from "@/hooks/use-store-modal"
 
-interface ShopProps {}
+interface pageProps {
+  params: {
+    storeId: string
+  }
+}
 
-const Shop: FC<ShopProps> = ({}) => {
+const page: FC<pageProps> = ({ params }) => {
   const onOpen = useStoreModal((state) => state.onOpen)
   const isOpen = useStoreModal((state) => state.isOpen)
 
@@ -16,7 +20,9 @@ const Shop: FC<ShopProps> = ({}) => {
     }
   }, [isOpen, onOpen])
 
-  return <div className="p-4">Angel&apos;s Store Shop</div>
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500" />
+  )
 }
 
-export default Shop
+export default page

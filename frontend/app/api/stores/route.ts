@@ -6,12 +6,12 @@ import { getErrorMessage } from "@/lib/utils"
 
 export async function POST(req: Request) {
   try {
-    const { userId } = auth()
+    const { userId: ownerId } = auth()
     const body = await req.json()
 
     const { name } = body
 
-    if (!userId) {
+    if (!ownerId) {
       return new NextResponse("Unauthorized", { status: 401 })
     }
 
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const store = await prismadb.store.create({
       data: {
         name,
-        userId,
+        ownerId,
       },
     })
     return new NextResponse(JSON.stringify({ store }), {

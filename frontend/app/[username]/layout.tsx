@@ -1,4 +1,4 @@
-export default function AccountLayout({
+export default function UserLayout({
   children,
 }: {
   children: React.ReactNode

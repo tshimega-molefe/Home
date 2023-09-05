@@ -7,11 +7,7 @@ interface pageProps {
 }
 
 const page: FC<pageProps> = ({ params }) => {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      this is a blog post from the home page
-    </div>
-  )
+  return <div>This is a post</div>
 }
 
 export default page
