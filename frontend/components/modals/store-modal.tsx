@@ -49,8 +49,8 @@ export function StoreModal() {
     try {
       setloading(true)
       toast({
-        title: `New Store Created`,
-        description: `You can now add products to your ${data.name} shop.`,
+        title: `Created ${data.name} Shop`,
+        description: `Please add products to your ${data.name} shop.`,
       })
     } catch (error) {
       toast({
@@ -86,12 +86,18 @@ export function StoreModal() {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your store name" {...field} />
+                      <Input placeholder="Sneakers" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+              <div className="pt-6 space-x-2 flex items-center justify-end w-full">
+                <Button variant="outline" onClick={storeModal.onClose}>
+                  Cancel
+                </Button>
+                <Button type="submit">Continue</Button>
+              </div>
             </form>
           </Form>
         </div>
