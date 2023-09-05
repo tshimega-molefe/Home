@@ -1,9 +1,11 @@
 "use client"
 
+import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
+import { getErrorMessage } from "@/lib/utils"
 import { useStoreModal } from "@/hooks/use-store-modal"
 import { Button } from "@/components/ui/button"
 import {
@@ -31,19 +33,38 @@ const defaultValues: Partial<StoreFormValues> = {}
 
 export function StoreModal() {
   const storeModal = useStoreModal()
+  const [loading, setloading] = useState<boolean>(false)
 
   const form = useForm<StoreFormValues>({
     resolver: zodResolver(storeFormSchema),
-    defaultValues,
+    defaultValues: {
+      name: "",
+    },
     mode: "onChange",
   })
   const { toast } = useToast()
 
-  function onSubmit(data: StoreFormValues) {
-    toast({
-      title: `New Store Created`,
-      description: `You can now add products to your ${data.name} shop.`,
-    })
+  async function onSubmit(data: StoreFormValues) {
+    try {
+      setloading(true)
+      toast({
+        title: `New Store Created`,
+        description: `You can now add products to your ${data.name} shop.`,
+      })
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: getErrorMessage(error),
+        action: (
+          <ToastAction altText="Try again" onClick={() => onSubmit(data)}>
+            Try again
+          </ToastAction>
+        ),
+      })
+    } finally {
+      setloading(false)
+    }
   }
 
   return (
