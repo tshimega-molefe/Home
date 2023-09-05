@@ -1,22 +1,22 @@
 "use client"
 
-import { FC } from "react"
+import { FC, useEffect } from "react"
 
-import Modal from "@/components/modals/modal"
+import { useStoreModal } from "@/hooks/use-store-modal"
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
-  return (
-    <Modal
-      isOpen
-      onClose={() => {}}
-      title="Test Title"
-      description="Test Description"
-    >
-      Create a shop
-    </Modal>
-  )
+  const onOpen = useStoreModal((state) => state.onOpen)
+  const isOpen = useStoreModal((state) => state.isOpen)
+
+  useEffect(() => {
+    if (!isOpen) {
+      onOpen()
+    }
+  }, [isOpen, onOpen])
+
+  return <div className="p-4">Angel's Store Page</div>
 }
 
 export default page

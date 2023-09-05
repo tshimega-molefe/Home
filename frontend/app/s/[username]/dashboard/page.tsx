@@ -2,7 +2,7 @@
 
 import { FC } from "react"
 
-import Modal from "@/components/modals/modal"
+import Modal from "@/components/ui/modal"
 
 interface DashboardProps {}
 

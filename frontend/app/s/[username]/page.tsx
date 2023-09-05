@@ -5,7 +5,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import Modal from "@/components/modals/modal"
+import Modal from "@/components/ui/modal"
 
 import { store } from "../../../lib/store"
 
