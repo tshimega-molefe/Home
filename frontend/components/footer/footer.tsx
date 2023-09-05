@@ -10,9 +10,9 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <div className="footer relative pt-14 break-words ">
-      <div className="max-w-[1280px] mx-auto relative z-[2] overflow-hidden">
-        <div className="flex flex-col lg:flex-row py-10 mb-8 space-x-6 px-4">
+    <div className="footer relative break-words pt-14 ">
+      <div className="relative z-[2] mx-auto max-w-[1280px] overflow-hidden">
+        <div className="mb-8 flex flex-col space-x-6 px-4 py-10 lg:flex-row">
           <div className="mb-12 px-2">
             <Link
               href="/"
@@ -27,22 +27,22 @@ const Footer: FC<FooterProps> = ({}) => {
               <h2 className="mt-6 font-semibold">
                 Subscribe to our newsletter
               </h2>
-              <p className="text-[14px] text-[#7d8590] mb-6 ">
+              <p className="mb-6 text-[14px] text-[#7d8590] ">
                 Get product updates, company news, and more.
               </p>
               <Link
                 href="/newsletter"
                 className={`${cn(
                   buttonVariants({ variant: "default", size: "lg" })
-                )} active:scale-95 transition-transform duration-75`}
+                )} transition-transform duration-75 active:scale-95`}
               >
                 Subscribe
               </Link>
             </div>
           </div>
-          <div className="lg:flex w-full justify-between grid md:grid-cols-4 grid-cols-2 gap-6">
+          <div className="grid w-full grid-cols-2 justify-between gap-6 md:grid-cols-4 lg:flex">
             <div className="text-muted-foreground">
-              <h2 className="font-medium mb-4 font-mono">Products</h2>
+              <h2 className="mb-4 font-mono font-medium">Products</h2>
               <ul className="text-[14px]">
                 <li className="mb-4">
                   <Link
@@ -117,7 +117,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </ul>
             </div>
             <div className="text-muted-foreground">
-              <h2 className="font-medium mb-4 font-mono">Developers</h2>
+              <h2 className="mb-4 font-mono font-medium">Developers</h2>
               <ul className="text-[14px]">
                 <li className="mb-4">
                   <Link
@@ -182,7 +182,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </ul>
             </div>
             <div className="text-muted-foreground">
-              <h2 className="font-medium mb-4 font-mono">Investor Relations</h2>
+              <h2 className="mb-4 font-mono font-medium">Investor Relations</h2>
               <ul className="text-[14px]">
                 <li className="mb-4">
                   <Link
@@ -217,7 +217,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </ul>
             </div>
             <div className="text-muted-foreground">
-              <h2 className="font-medium mb-4 font-mono">Company</h2>
+              <h2 className="mb-4 font-mono font-medium">Company</h2>
               <ul className="text-[14px]">
                 <li className="mb-4">
                   <Link
@@ -285,7 +285,7 @@ const Footer: FC<FooterProps> = ({}) => {
         </div>
       </div>
       <div className="bg-secondary">
-        <div className="max-w-[1280px] mx-auto text-[12px] md:flex flex-row-reverse py-6 justify-between items-center px-4">
+        <div className="mx-auto max-w-[1280px] flex-row-reverse items-center justify-between px-4 py-6 text-[12px] md:flex">
           <ul className="flex items-center max-md:mb-4">
             <li className="mr-4 text-secondary-foreground">
               <Link href="https://instagram.com/swiftstack">
@@ -308,7 +308,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </Link>
             </li>
           </ul>
-          <ul className="flex items-center mb-4 sm:mb-0 text-[#7d8590] flex-wrap">
+          <ul className="mb-4 flex flex-wrap items-center text-[#7d8590] sm:mb-0">
             <li className="mr-3 ">© 2023 Swift Stack, Inc.</li>
             <li className="mr-3 ">
               <Link href="/terms-and-conditions">Terms</Link>

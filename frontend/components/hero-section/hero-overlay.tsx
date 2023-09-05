@@ -17,19 +17,19 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute lg:bottom-1/2 lg:left-1/2 lg:-translate-x-1/2 z-40 flex w-full flex-col md:items-center max-lg:items-start gap-4 md:gap-12 max-lg:pr-10 lg:max-w-fit lg:gap-20 max-lg:bottom-[30rem]"
+      className="absolute z-40 flex w-full flex-col gap-4 max-lg:bottom-[30rem] max-lg:items-start max-lg:pr-10 md:items-center md:gap-12 lg:bottom-1/2 lg:left-1/2 lg:max-w-fit lg:-translate-x-1/2 lg:gap-20"
     >
       <Link
         href="/dashboard"
-        className="border-[1px] border-primary dark:border-neutral-500 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4"
+        className="copilot inline-block rounded-full border-[1px] border-primary transition-all duration-150 hover:scale-105 active:scale-95 dark:border-neutral-500 max-md:mr-4"
       >
-        <div className="flex items-center py-2 px-10">
-          <Icons.shopping className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-primary max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
-          <div className="md:pr-5 pr-3 md:mr-2 md:pl-2">
-            <div className="font-medium text-primary text-base max-md:text-sm leading-5">
+        <div className="flex items-center px-10 py-2">
+          <Icons.shopping className="mr-4 w-auto shrink-0 grow-0 text-primary max-md:mr-3 max-md:h-4 max-md:w-4 md:h-6 md:w-6" />
+          <div className="pr-3 md:mr-2 md:pl-2 md:pr-5">
+            <div className="text-base font-medium leading-5 text-primary max-md:text-sm">
               Introducing Swift Shopping&copy;
             </div>
-            <div className="text-muted dark:text-muted-foreground max-md:text-xs text-base">
+            <div className="text-base text-muted dark:text-muted-foreground max-md:text-xs">
               Sell products with your Stack account
             </div>
           </div>
@@ -38,11 +38,11 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
           </div>
         </div>
       </Link>
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:text-5xl lg:text-7xl lg:leading-[1.2em] md:whitespace-nowrap">
+      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:whitespace-nowrap md:text-5xl lg:text-7xl lg:leading-[1.2em]">
         One account,
         <br className="md:hidden" /> for everything.
       </h1>
-      <span className="text-base font-normal text-muted dark:text-muted-foreground transition-all duration-500">
+      <span className="text-base font-normal text-muted transition-all duration-500 dark:text-muted-foreground">
         Let Stack do all the work.
       </span>
 
