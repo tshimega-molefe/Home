@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
-import { getErrorMessage } from "@/lib/utils"
+import { capitalizeFirstLetter, getErrorMessage } from "@/lib/utils"
 import { useStoreModal } from "@/hooks/use-store-modal"
 import { Button } from "@/components/ui/button"
 import {
@@ -23,8 +23,8 @@ import { ToastAction } from "../ui/toast"
 import { useToast } from "../ui/use-toast"
 
 const storeFormSchema = z.object({
-  name: z.string().min(5, {
-    message: "Shop name must be at least 5 characters.",
+  name: z.string().min(1, {
+    message: "Shop name must be at least 1 characters.",
   }),
 })
 
@@ -46,11 +46,13 @@ export function StoreModal() {
   const { toast } = useToast()
 
   async function onSubmit(data: StoreFormValues) {
+    const { name: unformattedStoreName } = data
+    const formattedStoreName = capitalizeFirstLetter(unformattedStoreName)
     try {
       setloading(true)
       toast({
-        title: `Created ${data.name} Shop`,
-        description: `Please add products to your ${data.name} shop.`,
+        title: `Store Created Successfully!`,
+        description: `Congratulations, your ${formattedStoreName} Shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
       })
     } catch (error) {
       toast({
