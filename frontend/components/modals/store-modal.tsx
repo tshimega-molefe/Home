@@ -88,7 +88,7 @@ export function StoreModal() {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Sneakers" {...field} />
+                      <Input placeholder="e.g. Sneakers" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

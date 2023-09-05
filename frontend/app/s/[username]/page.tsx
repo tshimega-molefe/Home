@@ -18,7 +18,7 @@ const page: FC<pageProps> = ({ params }) => {
     <div className="flex flex-col gap-6 text-2xl">
       <h1>This is one user&apos;s account</h1>
       <Link
-        href="/s/angel/shop/electronics"
+        href="/s/angel/shop"
         passHref
         className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
       >
