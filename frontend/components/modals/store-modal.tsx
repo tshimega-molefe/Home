@@ -47,13 +47,27 @@ export function StoreModal() {
   const { toast } = useToast()
 
   async function onSubmit(data: StoreFormValues) {
+    const { name: unformattedShopName } = data
+    const formattedShopName = capitalizeFirstLetter(unformattedShopName)
     try {
       setLoading(true)
+      await new Promise((resolve) => setTimeout(resolve, 2000)) // 2 seconds delay
+      throw new Error("I'm purposefully throwing an error")
+
       const response = await axios.post(`/api/stores`, data)
       console.log(response.data)
       toast({
-        title: `Store Created Successfully!`,
-        description: `Congratulations, your ${data.name} Shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        title: "Store Created Successfully!",
+        description: `Congratulations, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        // Optional: Include action buttons or links for immediate next steps
+        // action: (
+        //   <ToastAction
+        //     altText="Go to Dashboard"
+        //     onClick={() => navigateToDashboard()}
+        //   >
+        //     Go to Dashboard
+        //   </ToastAction>
+        // ),
       })
     } catch (error) {
       toast({
@@ -108,7 +122,11 @@ export function StoreModal() {
                   Cancel
                 </Button>
                 <Button disabled={loading} type="submit">
-                  Continue
+                  {loading ? (
+                    <div className="h-4 w-4 mx-[1.40rem] animate-spin rounded-full border-b-2 border-primary-foreground"></div>
+                  ) : (
+                    <p>Continue</p>
+                  )}
                 </Button>
               </div>
             </form>
