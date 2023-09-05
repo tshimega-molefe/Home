@@ -4,9 +4,9 @@ import { FC, useEffect } from "react"
 
 import { useStoreModal } from "@/hooks/use-store-modal"
 
-interface pageProps {}
+interface ShopProps {}
 
-const page: FC<pageProps> = ({}) => {
+const Shop: FC<ShopProps> = ({}) => {
   const onOpen = useStoreModal((state) => state.onOpen)
   const isOpen = useStoreModal((state) => state.isOpen)
 
@@ -16,7 +16,7 @@ const page: FC<pageProps> = ({}) => {
     }
   }, [isOpen, onOpen])
 
-  return <div className="p-4">Angel's Store Page</div>
+  return <div className="p-4">Angel&apos;s Store Shop</div>
 }
 
-export default page
+export default Shop
