@@ -4,21 +4,21 @@ import { FC } from "react"
 
 import Modal from "@/components/modals/modal"
 
-interface DashboardPageProps {}
+interface DashboardProps {}
 
-const DashboardPage: FC<DashboardPageProps> = ({}) => {
+const Dashboard: FC<DashboardProps> = ({}) => {
   return (
-    <div className="p-4 min-h-screen">
+    <div className="p-4">
       <Modal
         isOpen
         onClose={() => {}}
         title="Test Title"
         description="Test Description"
       >
-        This is Sabrina's Main Page
+        This is Sabrina's Store Dashboard
       </Modal>
     </div>
   )
 }
 
-export default DashboardPage
+export default Dashboard
