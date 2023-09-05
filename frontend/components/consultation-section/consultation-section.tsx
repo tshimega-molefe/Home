@@ -67,11 +67,11 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
             style={{ transitionDelay: "300ms" }}
           >
             <p className="text-[#939aff]">
-              Book&nbsp;
-              <span className="text-primary">your free consultation now.</span>
+              Schedule&nbsp;
+              <span className="text-primary">a product demo.</span>
             </p>
             <span className="text-2xl text-[#7d8590] max-lg:text-[18px]">
-              Let&apos;s discuss your business, about us, and your next steps.
+              Find out what a stack account can do for you.
               <br />
               <span className="text-xl max-lg:text-sm">
                 Schedule a 30 min call:
@@ -83,7 +83,7 @@ const ConsultationSection: FC<ConsultationSectionProps> = ({}) => {
       <HoverCard backgroundColor="#939aff" direction="" left="0">
         <div className="mx-auto flex w-10/12 flex-col">
           <div className="p-6 text-[#7d8590]">
-            <div className="font-medium">Company Details</div>
+            <div className="font-medium">Your Details</div>
             <span className="f6 text-[12px]">[528491]:</span>
           </div>
           <motion.div

@@ -17,40 +17,40 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5, delay: 0.0 }}
-      className="absolute bottom-[20rem] z-40 flex w-full flex-col items-start gap-4 max-md:pr-10 md:max-w-fit md:gap-6 lg:bottom-[28rem]"
+      className="absolute z-40 flex w-full flex-col gap-4 max-lg:bottom-[30rem] max-lg:items-start max-lg:pr-10 md:items-center md:gap-12 lg:bottom-1/2 lg:left-1/2 lg:max-w-fit lg:-translate-x-1/2 lg:gap-20"
     >
       <Link
-        href="/air"
-        className="border-[1px] border-neutral-600 copilot rounded-full inline-block active:scale-95 transition-all duration-150 hover:scale-105 max-md:mr-4 truncate"
+        href="/dashboard"
+        className="copilot inline-block rounded-full border-[1px] border-primary transition-all duration-150 hover:scale-105 active:scale-95 dark:border-neutral-500 max-md:mr-4"
       >
-        <div className="flex items-center py-2 px-10">
-          <Icons.air className="w-auto flex-grow-0 flex-shrink-0 mr-4 max-md:mr-3 text-[#f8fafc] max-md:w-4 max-md:h-4 md:h-6 md:w-6" />
-          <div className="md:pr-5 pr-3 md:mr-2 md:pl-2">
-            <div className="font-medium text-[#f8fafc] text-base max-md:text-sm leading-5">
-              Introducing Swift Air&copy;
+        <div className="flex items-center px-10 py-2">
+          <Icons.shopping className="mr-4 w-auto shrink-0 grow-0 text-primary max-md:mr-3 max-md:h-4 max-md:w-4 md:h-6 md:w-6" />
+          <div className="pr-3 md:mr-2 md:pl-2 md:pr-5">
+            <div className="text-base font-medium leading-5 text-primary max-md:text-sm">
+              Introducing Swift Shopping&copy;
             </div>
-            <div className="text-[#f8fafc]/40 max-md:text-xs text-base">
-              Private flying, reimagined
+            <div className="text-base text-muted dark:text-muted-foreground max-md:text-xs">
+              Sell products with your Stack account
             </div>
           </div>
           <div className="ml-auto">
-            <Icons.chevronRight className="text-[#f8fafc]" />
+            <Icons.chevronRight className="text-primary" />
           </div>
         </div>
       </Link>
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-[#f8fafc] transition-all duration-500 max-md:mr-4 md:text-4xl lg:text-7xl lg:leading-[1.2em]">
-        Multiple software products.
-        <br /> One user account.
+      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-primary transition-all duration-500 max-md:mr-4 md:whitespace-nowrap md:text-5xl lg:text-7xl lg:leading-[1.2em]">
+        One account,
+        <br className="md:hidden" /> for everything.
       </h1>
-      <span className="text-base font-normal text-[#f8fafc]/60 transition-all duration-500">
-        Think Fast.
+      <span className="text-base font-normal text-muted transition-all duration-500 dark:text-muted-foreground">
+        Let Stack do all the work.
       </span>
 
       <div className="flex max-md:w-full max-md:flex-col max-md:gap-4 md:flex-row">
         <div className="max-md:w-full">
           <HeroForm />
         </div>
-        <span className="border border-[#f8fafc]/30 max-md:hidden md:mx-4 md:border-l" />
+        <span className="border border-primary/30 max-md:hidden md:mx-4 md:border-l" />
         <Link
           href="#consultation"
           rel="noreferrer"
@@ -59,7 +59,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
             size: "sm",
           })} group text-center active:scale-95 dark:bg-background hover:dark:bg-background/60 max-md:mr-6`}
         >
-          Book a consultation
+          Schedule a product demo
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={` arrow-symbol-mktg ml-3 -translate-x-1 text-primary transition duration-150 ease-in group-hover:translate-x-0`}
