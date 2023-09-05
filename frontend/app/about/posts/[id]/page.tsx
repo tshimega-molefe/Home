@@ -2,7 +2,7 @@ import { FC } from "react"
 
 interface pageProps {
   params: {
-    slug: string
+    id: string
   }
 }
 

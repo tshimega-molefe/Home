@@ -1,8 +1,12 @@
 import { FC } from "react"
 
-interface pageProps {}
+interface pageProps {
+  params: {
+    username: string
+  }
+}
 
-const page: FC<pageProps> = ({}) => {
+const page: FC<pageProps> = ({ params }) => {
   return <div>this is the user page</div>
 }
 
