@@ -48,7 +48,7 @@ const CodeDemo: FC<CodeDemoProps> = ({}) => {
             href="script-ed"
             className=" inline-block font-semibold text-primary md:text-xl"
           >
-            Try Script.Ed
+            Learn More
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${

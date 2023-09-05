@@ -186,14 +186,14 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
               href="#consultation"
-              className={`max-lg:w-full space-x-2 ${cn(
+              className={`space-x-2 max-lg:w-full ${cn(
                 buttonVariants({ variant: "default", size: "lg" })
               )}`}
             >
-              Book a consultation
+              Book a product demo
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={` ml-2 transition ease-in duration-150 ${
+                className={` ml-2 transition duration-150 ease-in ${
                   hovered ? "translate-x-2 " : "-translate-x-0"
                 }`}
                 width="20"
@@ -206,7 +206,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                   d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
                 ></path>
                 <path
-                  className={`  transition ease-in duration-150 ${
+                  className={`  transition duration-150 ease-in ${
                     hovered ? " opacity-100" : "opacity-0 "
                   }`}
                   stroke="currentColor"
@@ -220,14 +220,14 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
               onMouseEnter={() => setHovered1(true)}
               onMouseLeave={() => setHovered1(false)}
               href="/onboarding"
-              className={`max-lg:w-full space-x-2 py-[1.40rem] ${cn(
+              className={`space-x-2 py-[1.40rem] max-lg:w-full ${cn(
                 buttonVariants({ variant: "outline", size: "lg" })
               )}`}
             >
               Create an account
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={` ml-2 transition ease-in duration-150 ${
+                className={` ml-2 transition duration-150 ease-in ${
                   hovered1 ? "translate-x-2 " : "-translate-x-0"
                 }`}
                 width="20"
@@ -240,7 +240,7 @@ const StickyNav: FC<StickyNavProps> = ({}) => {
                   d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
                 ></path>
                 <path
-                  className={` text-primary transition ease-in duration-150 origin-right ${
+                  className={` origin-right text-primary transition duration-150 ease-in ${
                     hovered1 ? " opacity-100" : "opacity-0 "
                   }`}
                   stroke="currentColor"

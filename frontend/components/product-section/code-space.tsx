@@ -63,9 +63,10 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             >
               <h2 className="mb-4 w-full text-2xl text-[#7d8590] max-lg:text-[20px] max-md:w-10/12 lg:w-full">
                 <span className="font-semibold text-primary">
-                  Build, Test, and Deploy
+                  Swift Shopping:
                 </span>{" "}
-                your company&apos;s product. Create anything, from anywhere.
+                Allow people to easily shop your own products you list for sale.
+                The easiest e-store to set up in the world.
               </h2>
               <Link
                 onMouseEnter={() => setHovered(true)}
@@ -73,7 +74,7 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
                 href="/"
                 className="inline-block py-1 text-xl font-semibold text-primary"
               >
-                Learn more
+                Create your store
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={` mb-[2px] ml-3 inline-block text-primary transition duration-300 ease-in  ${
@@ -174,10 +175,10 @@ const CodeSpace: FC<CodeSpaceProps> = ({}) => {
             />
 
             <h3 className="mb-2 mt-3 text-3xl font-medium text-[#3ba244] md:text-5xl lg:text-6xl">
-              Checkout our latest products
+              Upcoming launches
             </h3>
             <p className="mb-3 text-base font-medium text-primary md:text-xl">
-              Give us some feedback
+              Exciting new features in development
             </p>
           </div>
         </motion.div>

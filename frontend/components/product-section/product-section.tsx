@@ -71,12 +71,12 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             viewport={{ once: false }}
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
-            <span className="text-[#763791]">One account&nbsp;</span>
-            to run your business, sell your products, travel abroad, learn new
-            things, publish a book, or connect with friends.
+            <span className="text-[#763791]">One account&nbsp;</span>for
+            literally everything.
             <br />
             <br />
-            Anything is possible.
+            Want to travel? Sell your old clothes? Write a book? Teach yourself
+            nuclear physics?
           </motion.div>
         </div>
       </div>
@@ -102,7 +102,7 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
                   href="/air"
                   className=" inline-block font-semibold text-primary md:text-xl"
                 >
-                  Try Swift Air
+                  Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={` mb-[3px] ml-3 inline-block text-primary transition duration-300 ease-in ${
