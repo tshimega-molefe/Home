@@ -15,7 +15,7 @@ const Dashboard: FC<DashboardProps> = ({}) => {
         title="Test Title"
         description="Test Description"
       >
-        This is Sabrina's Store Dashboard
+        This is the user Dashboard
       </Modal>
     </div>
   )

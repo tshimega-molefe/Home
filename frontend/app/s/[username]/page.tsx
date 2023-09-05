@@ -11,14 +11,16 @@ interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <Modal
-      isOpen
-      onClose={() => {}}
-      title="Test Title"
-      description="Test Description"
-    >
-      You don't have an account
-    </Modal>
+    <div className="text-2xl flex flex-col gap-6">
+      <h1>This is one user's account</h1>
+      <Link
+        href="/s/angel/dashboard"
+        passHref
+        className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
+      >
+        Go to angelique's page
+      </Link>
+    </div>
   )
 }
 
