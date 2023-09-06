@@ -56,34 +56,21 @@ export async function getPost(
   }
 }
 // ============== Get Sliced Featured Posts ==============
-export async function getSlicedFeaturedPosts(
-  request: Request,
-  {
-    params,
-  }: {
-    params: { id: string; authorId: string; title: string; featured: boolean }
-  }
-) {
+export async function getSlicedFeaturedPosts() {
   try {
-    const id = params.id
-    const authorId = params.authorId
-    const title = params.title
     const featuredPosts = await prismadb.post.findMany({
-      where: {
-        id,
-        authorId,
-        title,
+      select: {
         published: true,
         featured: true,
+        author: true,
+        createdAt: true,
+        title: true,
+        authorId: true,
+        id: true,
       },
     })
-
     const slicedFeaturedPosts = featuredPosts.slice(-3, 0)
-
-    return new NextResponse(JSON.stringify({ slicedFeaturedPosts }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    })
+    return slicedFeaturedPosts
   } catch (error) {
     console.error("Failed to fetch featured posts:", getErrorMessage(error))
     return null

@@ -48,12 +48,8 @@ export function StoreModal() {
     mode: "onChange",
   })
   const { toast } = useToast()
-  const { user } = auth()
 
   async function onSubmit(data: StoreFormValues) {
-    if (!user) {
-      redirect("/sign-in")
-    }
     const { name: unformattedShopName } = data
     const formattedShopName = capitalizeFirstLetter(unformattedShopName)
     try {
@@ -62,12 +58,9 @@ export function StoreModal() {
       console.log(response.data)
       toast({
         title: "Store Created Successfully!",
-        description: `Congratulations ${user.firstName}, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        description: `Congratulations, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
         action: (
-          <ToastAction
-            altText="Go to Store"
-            onClick={redirect(`/${user.username}/dashboard`)}
-          >
+          <ToastAction altText="Go to Store" onClick={redirect(`/`)}>
             Go to Store
           </ToastAction>
         ),

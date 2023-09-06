@@ -2,31 +2,6 @@ import { notFound } from "next/navigation"
 import { auth } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb"
-import { getErrorMessage } from "@/lib/utils"
-
-export async function generateStaticParams() {
-  const { user } = auth()
-
-  if (user?.username) {
-    return user.username
-  }
-
-  try {
-    const users = await prismadb.user.findMany({
-      select: {
-        username: true,
-      },
-    })
-
-    return (
-      users?.map(({ username }) => ({
-        username,
-      })) || null
-    )
-  } catch (error: unknown) {
-    console.log(`[USER_PAGE]: ${getErrorMessage(error)}`)
-  }
-}
 
 export default async function UserLayout({
   children,

@@ -3,7 +3,6 @@
 import { FC, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { getFeaturedPosts } from "@/server/utils"
 import { motion } from "framer-motion"
 
 import { Post } from "@/types/Post"
