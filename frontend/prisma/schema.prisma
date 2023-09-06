@@ -82,6 +82,13 @@ enum BookingType {
   SERVICE
 }
 
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+}
+
 model User {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
@@ -113,6 +120,8 @@ model Product {
   updatedAt DateTime @updatedAt
   name      String
   type      ProductType
+  inventoryCount Int   
+  price     Float  
   store     Store    @relation(fields: [storeId], references: [id], onDelete: Cascade)
   storeId   String
   bookings  Booking[]
@@ -125,24 +134,28 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   published Boolean  @default(false)
+  featured  Boolean  @default(false)
   title     String   @db.VarChar(100)
   author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
   authorId  String
 
   @@index([authorId])
   @@index([published])
+  @@index([featured])
+
 }
 
 model Booking {
-  id          String   @id @default(uuid())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  bookingType BookingType @default(PRODUCT)
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id          String          @id @default(uuid())
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  bookingType BookingType     @default(PRODUCT)
+  status      BookingStatus   @default(PENDING)
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product     Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId   String
-  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  service     Service         @relation(fields: [serviceId], references: [id], onDelete: Cascade)
   serviceId   String
 
   @@index([userId])

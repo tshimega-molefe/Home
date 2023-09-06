@@ -5,6 +5,7 @@ export interface Post {
   createdAt: Date
   updatedAt: Date
   published: boolean
+  featured: boolean
   title: string
   author: User
   authorId: string

@@ -10,13 +10,13 @@ import { useStoreModal } from "@/hooks/use-store-modal"
 
 import { store } from "../../../../../lib/store"
 
-// This function runs at build time and generates static routes for each post.
+// This function runs at build time and generates static routes for each store.
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Fetch the list of posts from an API or some data source
+  // Fetch the list of stores from an API or some data source
   const stores = await fetch("https://.../posts").then((res) => res.json())
 
-  // Generate an array of paths based on the post slugs
+  // Generate an array of paths based on the store id's
   const paths = stores.map((store: Store) => ({
     params: { storeId: store.id },
   }))
@@ -27,10 +27,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-// This function fetches data for a single post based on its slug and runs at build time.
+// This function fetches data for a single store based on its id and runs at build time.
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id
-  // Fetch data for a single post based on its slug
+  // Fetch data for a single store based on its id
   const store = await fetch(`https://.../stores/${id}`).then((res) =>
     res.json()
   )

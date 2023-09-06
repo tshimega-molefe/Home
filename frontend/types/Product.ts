@@ -39,6 +39,8 @@ export interface Product {
   updatedAt: Date
   name: string
   type: ProductType
+  inventoryCount: Number
+  price: Number
   store: Store
   storeId: string
   bookings: Booking[]
