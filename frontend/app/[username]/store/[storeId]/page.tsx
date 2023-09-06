@@ -27,20 +27,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-// This function fetches data for a single store based on its id and runs at build time.
-export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context.params?.id
-  // Fetch data for a single store based on its id
-  const store = await fetch(`https://.../stores/${id}`).then((res) =>
-    res.json()
-  )
+// // This function fetches data for a single store based on its id and runs at build time.
+// export const getStaticProps: GetStaticProps = async (context) => {
+//   const id = context.params?.id
+//   // Fetch data for a single store based on its id
+//   const store = await fetch(`https://.../stores/${id}`).then((res) =>
+//     res.json()
+//   )
 
-  return {
-    props: {
-      store,
-    },
-  }
-}
+//   return {
+//     props: {
+//       store,
+//     },
+//   }
+// }
 
 interface StorePageProps {
   store: {
