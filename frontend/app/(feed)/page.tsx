@@ -13,7 +13,7 @@ const page: FC<pageProps> = ({}) => {
       <h1>This is a feed containing many accounts</h1>
 
       <Link
-        href="/angel"
+        href="/s/angel"
         passHref
         className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
       >

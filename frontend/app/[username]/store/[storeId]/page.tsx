@@ -8,7 +8,7 @@ import { Store } from "@/types/Store"
 import { User } from "@/types/User"
 import { useStoreModal } from "@/hooks/use-store-modal"
 
-import { store } from "../../../../../lib/store"
+import { store } from "../../../../lib/store"
 
 // This function runs at build time and generates static routes for each store.
 
@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-interface pageProps {
+interface StorePageProps {
   store: {
     id: string
     name: string
@@ -54,7 +54,7 @@ interface pageProps {
   }
 }
 
-const page: FC<pageProps> = ({ store }) => {
+const StorePage: FC<StorePageProps> = ({ store }) => {
   const onOpen = useStoreModal((state) => state.onOpen)
   const isOpen = useStoreModal((state) => state.isOpen)
 
@@ -69,4 +69,4 @@ const page: FC<pageProps> = ({ store }) => {
   )
 }
 
-export default page
+export default StorePage

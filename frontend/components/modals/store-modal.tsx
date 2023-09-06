@@ -110,7 +110,7 @@ export function StoreModal() {
                   </FormItem>
                 )}
               />
-              <div className="pt-6 space-x-2 flex items-center justify-end w-full">
+              <div className="flex w-full items-center justify-end space-x-2 pt-6">
                 <Button
                   disabled={loading}
                   variant="outline"
@@ -120,7 +120,7 @@ export function StoreModal() {
                 </Button>
                 <Button disabled={loading} type="submit">
                   {loading ? (
-                    <div className="h-4 w-4 mx-[1.40rem] animate-spin rounded-full border-b-2 border-primary-foreground"></div>
+                    <div className="mx-[1.40rem] h-4 w-4 animate-spin rounded-full border-b-2 border-primary-foreground"></div>
                   ) : (
                     <p>Continue</p>
                   )}

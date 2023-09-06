@@ -3,21 +3,17 @@
 import { FC, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ai, business, team } from "@/assets"
+import { business } from "@/assets"
 import { getFeaturedPosts } from "@/server/utils"
-import axios from "axios"
 
-import { Post } from "@/types/Post"
 import HoverCard from "@/components/product-section/hover-card"
 
 interface BlogProps {}
 
 const Blog: FC<BlogProps> = async ({}) => {
   const featuredPosts = await getFeaturedPosts()
-
   const [hovered, setHovered] = useState<boolean>(false)
-  const [hovered1, setHovered1] = useState<boolean>(false)
-  const [hovered2, setHovered2] = useState<boolean>(false)
+
   return (
     <div className="flex w-full flex-col">
       {featuredPosts ? (
