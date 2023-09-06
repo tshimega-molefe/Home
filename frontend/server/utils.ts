@@ -4,6 +4,8 @@ import axios from "axios"
 
 import { Post } from "@/types/Post"
 
+// ============== Get Featured Posts ==============
+
 export async function getFeaturedPosts(): Promise<Post[] | null> {
   try {
     const response = await axios.get("/api/posts")
