@@ -4,15 +4,21 @@ import { auth } from "@clerk/nextjs"
 import prismadb from "@/lib/prismadb"
 import { getErrorMessage } from "@/lib/utils"
 
-export async function POST(req: Request) {
+export async function GET(request: Request) {
+  const stores = await prismadb.store.findMany()
+  return NextResponse.json(stores)
+}
+
+export async function POST(request: Request) {
   try {
     const { userId: ownerId } = auth()
-    const body = await req.json()
 
-    const { name } = body
+    const json = await request.json()
+
+    const { name } = json
 
     if (!ownerId) {
-      return new NextResponse("Unauthorized", { status: 401 })
+      return new NextResponse("You are not authorized", { status: 401 })
     }
 
     if (!name) {
@@ -25,7 +31,8 @@ export async function POST(req: Request) {
         ownerId,
       },
     })
-    return new NextResponse(JSON.stringify({ store }), {
+
+    return new NextResponse(JSON.stringify(store), {
       status: 201,
       headers: { "Content-Type": "application/json" },
     })

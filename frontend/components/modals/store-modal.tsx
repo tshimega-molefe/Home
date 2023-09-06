@@ -1,6 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { redirect } from "next/navigation"
+import { getStores } from "@/server/utils"
+import { auth } from "@clerk/nextjs"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import { useForm } from "react-hook-form"
@@ -45,26 +48,29 @@ export function StoreModal() {
     mode: "onChange",
   })
   const { toast } = useToast()
+  const { user } = auth()
 
   async function onSubmit(data: StoreFormValues) {
+    if (!user) {
+      redirect("/sign-in")
+    }
     const { name: unformattedShopName } = data
     const formattedShopName = capitalizeFirstLetter(unformattedShopName)
     try {
       setLoading(true)
-      const response = await axios.post(`/api/stores`, data)
+      const response = await axios.post(`/api/createStore`, data)
       console.log(response.data)
       toast({
         title: "Store Created Successfully!",
-        description: `Congratulations, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
-        // Optional: Include action buttons or links for immediate next steps
-        // action: (
-        //   <ToastAction
-        //     altText="Go to Dashboard"
-        //     onClick={() => navigateToDashboard()}
-        //   >
-        //     Go to Dashboard
-        //   </ToastAction>
-        // ),
+        description: `Congratulations ${user.firstName}, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        action: (
+          <ToastAction
+            altText="Go to Store"
+            onClick={redirect(`/${user.username}/dashboard`)}
+          >
+            Go to Store
+          </ToastAction>
+        ),
       })
     } catch (error) {
       toast({

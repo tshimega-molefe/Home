@@ -1,26 +1,7 @@
-import { FC } from "react"
-import Link from "next/link"
-
-import { buttonVariants } from "@/components/ui/button"
-
-import { cn } from "../../lib/utils"
-
-interface pageProps {}
-
-const page: FC<pageProps> = ({}) => {
+export default async function Feed() {
   return (
-    <div className="flex flex-col gap-6 text-2xl">
-      <h1>This is a feed containing many accounts</h1>
-
-      <Link
-        href="/angel"
-        passHref
-        className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
-      >
-        Go to angelique&apos;s page
-      </Link>
+    <div className="min-h-screen flex items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
+      This is the home feed
     </div>
   )
 }
-
-export default page

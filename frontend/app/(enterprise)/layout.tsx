@@ -1,4 +1,4 @@
-export default async function FeedLayout({
+export default async function EnterpriseLayout({
   children,
 }: {
   children: React.ReactNode

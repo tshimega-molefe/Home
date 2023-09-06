@@ -1,10 +1,20 @@
-import { authMiddleware } from "@clerk/nextjs"
+import { NextResponse } from "next/server"
+import { authMiddleware, redirectToSignIn } from "@clerk/nextjs"
 
 export default authMiddleware({
-  // "/" will be accessible to all users
-  publicRoutes: ["/", "/about"],
+  afterAuth(auth, req, evt) {
+    // handle users who aren't authenticated
+    if (!auth.userId && !auth.isPublicRoute) {
+      return redirectToSignIn({ returnBackUrl: req.url })
+    }
+    // redirect them to organization selection page
+    if (
+      auth.userId &&
+      !auth.orgId &&
+      req.nextUrl.pathname !== "/org-selection"
+    ) {
+      const orgSelection = new URL("/org-selection", req.url)
+      return NextResponse.redirect(orgSelection)
+    }
+  },
 })
-
-export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-}
