@@ -1,25 +1,23 @@
-import { FC } from "react"
 import Link from "next/link"
 
+import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-import { cn } from "../../lib/utils"
-
-interface pageProps {}
-
-const page: FC<pageProps> = ({}) => {
+export default async function Feed() {
   return (
-    <div className="flex flex-col gap-6 text-2xl">
-      <h1>This is a feed containing many accounts</h1>
+    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500 gap-40">
       <Link
-        href="/s/angel"
-        passHref
-        className={`${cn(buttonVariants({ variant: "default", size: "lg" }))}`}
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/randomUrl`}
       >
-        Go to angelique&apos;s page
+        This is a {`randomUrl`}
+      </Link>
+      <Link
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/tshimega`}
+      >
+        To root page of {`tshimega`}
       </Link>
     </div>
   )
 }
-
-export default page

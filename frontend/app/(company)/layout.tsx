@@ -1,7 +1,9 @@
+import { ModalProvider } from "@/providers.tsx/modal-provider"
+
 import Footer from "@/components/footer/footer"
 import { SiteHeader } from "@/components/navbar/site-header"
 
-export default async function FeedLayout({
+export default async function CompanyLayout({
   children,
 }: {
   children: React.ReactNode
