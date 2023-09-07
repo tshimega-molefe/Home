@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
 import { ModalProvider } from "@/providers.tsx/modal-provider"
-import { ClerkProvider } from "@clerk/nextjs"
+import { ClerkProvider, auth } from "@clerk/nextjs"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -34,7 +34,7 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
@@ -48,12 +48,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Providers>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <div className="relative flex min-h-screen flex-col">
-                <SiteHeader />
                 <div className="flex-1">
                   <ModalProvider />
                   {children}
                 </div>
-                <Footer />
               </div>
             </ThemeProvider>
           </Providers>
