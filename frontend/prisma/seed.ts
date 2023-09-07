@@ -1,54 +1,73 @@
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient, Role } from "@prisma/client"
 
 const prisma = new PrismaClient()
+
 async function main() {
-  const alice = await prisma.user.upsert({
-    where: { email: "alice@prisma.io" },
-    update: {},
-    create: {
-      email: "alice@prisma.io",
-      username: "Alice",
-      name: "Alice",
-      posts: {
-        create: {
-          title: "Check out Prisma with Next.js",
-          featured: true,
-          published: true,
-        },
-      },
+  // Create two users
+  const user1 = await prisma.user.create({
+    data: {
+      email: "user1@example.com",
+      username: "user1",
+      name: "User One",
+      role: Role.USER,
     },
   })
-  const bob = await prisma.user.upsert({
-    where: { email: "bob@prisma.io" },
-    update: {},
-    create: {
-      email: "bob@prisma.io",
-      username: "Bob",
-      name: "Bob",
-      posts: {
-        create: [
-          {
-            title: "Follow Prisma on Twitter",
-            featured: true,
-            published: true,
-          },
-          {
-            title: "Follow Nexus on Twitter",
-            featured: true,
-            published: true,
-          },
-        ],
-      },
+
+  const user2 = await prisma.user.create({
+    data: {
+      email: "user2@example.com",
+      username: "user2",
+      name: "User Two",
+      role: Role.USER,
     },
   })
-  console.log({ alice, bob })
+
+  // Create a store for each user (without products)
+  const store1 = await prisma.store.create({
+    data: {
+      name: "Store 1",
+      ownerId: user1.id,
+    },
+  })
+
+  const store2 = await prisma.store.create({
+    data: {
+      name: "Store 2",
+      ownerId: user2.id,
+    },
+  })
+
+  // Create two posts for each user
+  await prisma.post.createMany({
+    data: [
+      {
+        title: "First Post by User One",
+        authorId: user1.id,
+        published: true,
+      },
+      {
+        title: "Second Post by User One",
+        authorId: user1.id,
+        published: true,
+      },
+      {
+        title: "First Post by User Two",
+        authorId: user2.id,
+        published: true,
+      },
+      {
+        title: "Second Post by User Two",
+        authorId: user2.id,
+        published: true,
+      },
+    ],
+  })
 }
+
 main()
-  .then(async () => {
-    await prisma.$disconnect()
+  .catch((e) => {
+    throw e
   })
-  .catch(async (e) => {
-    console.error(e)
+  .finally(async () => {
     await prisma.$disconnect()
-    process.exit(1)
   })

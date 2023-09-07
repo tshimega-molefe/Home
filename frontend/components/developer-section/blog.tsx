@@ -1,20 +1,40 @@
 "use client"
 
-import { FC, cache, use, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { business } from "@/assets"
-import { getSlicedFeaturedPosts } from "@/server/utils"
+import { getFeaturedPosts } from "@/server/utils"
 
 import HoverCard from "@/components/product-section/hover-card"
 
-export default async function Blog() {
-  const [hovered, setHovered] = useState<boolean>(false)
-  const featuredPosts = await getSlicedFeaturedPosts()
+interface BlogProps {}
 
+const Blog: FC<BlogProps> = async ({}) => {
+  const [hovered, setHovered] = useState<boolean>(false)
+  const [featuredPosts, setFeaturedPosts] = useState<any[] | null>(null)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true)
+        const posts = await getFeaturedPosts()
+        setFeaturedPosts(posts)
+      } catch (error) {
+        console.error("Error fetching posts:", error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  console.log("Rendering Blog component, featuredPosts:", featuredPosts)
   return (
     <div className="flex w-full flex-col">
-      {featuredPosts ? (
+      {featuredPosts && featuredPosts.length > 0 ? (
         featuredPosts.map((post) => (
           <HoverCard backgroundColor="#ffa28b" direction="" left="0">
             <div className="flex-1 flex-col justify-between p-8 sm:p-10 md:flex md:space-y-20 lg:py-16 lg:pl-16 lg:pr-32 ">
@@ -77,16 +97,16 @@ export default async function Blog() {
                 <div className="">
                   <div className="mb-0 overflow-x-auto p-2 ">
                     <Link
-                      href={`${post.author.username}/posts/${post.id}`}
+                      href={`${post}/posts/${post.id}`}
                       passHref
                       className="relative flex items-center overflow-hidden rounded-lg transition-transform duration-100 active:scale-95 max-sm:h-[60vw] sm:h-96 md:h-80"
                     >
-                      <Image
+                      {/* <Image
                         src={business}
                         alt="blog-image"
                         className="object-cover"
                         fill
-                      />
+                      /> */}
                     </Link>
                   </div>
                 </div>
@@ -100,3 +120,5 @@ export default async function Blog() {
     </div>
   )
 }
+
+export default Blog

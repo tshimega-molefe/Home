@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { redirect } from "next/navigation"
 import { getStores } from "@/server/utils"
-import { auth } from "@clerk/nextjs"
+import { auth, useUser } from "@clerk/nextjs"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import { useForm } from "react-hook-form"
@@ -48,6 +48,7 @@ export function StoreModal() {
     mode: "onChange",
   })
   const { toast } = useToast()
+  const { user } = useUser()
 
   async function onSubmit(data: StoreFormValues) {
     const { name: unformattedShopName } = data
@@ -58,7 +59,7 @@ export function StoreModal() {
       console.log(response.data)
       toast({
         title: "Store Created Successfully!",
-        description: `Congratulations, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        description: `Congratulations ${user?.firstName}, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
         action: (
           <ToastAction altText="Go to Store" onClick={redirect(`/`)}>
             Go to Store

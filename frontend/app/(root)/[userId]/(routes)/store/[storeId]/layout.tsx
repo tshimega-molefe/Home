@@ -1,26 +1,7 @@
 import { notFound, redirect } from "next/navigation"
-import { auth } from "@clerk/nextjs"
+import { auth, useUser } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb"
-import { getErrorMessage } from "@/lib/utils"
-
-export async function generateStaticParams() {
-  try {
-    const stores = await prismadb.store.findMany({
-      select: {
-        id: true,
-      },
-    })
-
-    return (
-      stores?.map(({ id }) => ({
-        id,
-      })) || null
-    )
-  } catch (error: unknown) {
-    console.log(`[STORE_PAGE]: ${getErrorMessage(error)}`)
-  }
-}
 
 export default async function StoreLayout({
   children,
@@ -29,23 +10,26 @@ export default async function StoreLayout({
   children: React.ReactNode
   params: { storeId: string }
 }) {
-  const { user } = auth()
+  const { userId } = auth()
+
+  if (!userId) {
+    redirect("/sign-in")
+  }
 
   const store = await prismadb.store.findFirst({
     where: {
       id: params.storeId,
+      ownerId: userId,
     },
   })
 
-  if (!user && !store) {
-    notFound()
+  if (!store) {
+    console.log("STORE DOES NOT EXIST")
+    redirect("/")
   }
 
-  if (user && !store) {
-    notFound()
-  }
-
-  if (!user && store) {
+  if (!userId && !store) {
+    console.log("STORE DOES EXIST, but its not yours")
     return (
       <>
         <div>This will be someone else's store page navbar</div>
@@ -54,7 +38,9 @@ export default async function StoreLayout({
     )
   }
 
-  if (user && store) {
+  if (userId && !store) {
+    console.log("STORE DOES EXIST, but you're signed in")
+
     return (
       <>
         <div>
@@ -66,7 +52,9 @@ export default async function StoreLayout({
     )
   }
 
-  if (user && store && user.id === store.ownerId) {
+  if (userId && store && store.ownerId === userId) {
+    console.log("STORE DOES EXIST, And its yours")
+
     return (
       <>
         <div>This will be the current user page navbar</div>
