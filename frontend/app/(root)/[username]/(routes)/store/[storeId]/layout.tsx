@@ -29,20 +29,20 @@ export default async function StoreLayout({
     console.log("STORE DOES EXIST, but its not yours")
     return (
       <>
-        <div>This will be someone else's store page navbar</div>
+        <div>This will be someone else store page navbar</div>
         {children}
       </>
     )
   }
 
   if (userId && !store) {
-    console.log("STORE DOES EXIST, but you're signed in")
+    console.log("STORE DOES EXIST, but youre signed in")
 
     return (
       <>
         <div>
-          This will be someone else's store page navbar && I can interact with
-          the store
+          This will be someone else store page navbar && I can interact with the
+          store
         </div>
         {children}
       </>

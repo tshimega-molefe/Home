@@ -30,8 +30,8 @@ export default async function UserLayout({
   if (!userId) {
     return (
       <>
-        <div className="bg-black w-full h-16 flex justify-between items-center">
-          <h1>You're not signed in - but here is someone's page</h1>
+        <div className="flex h-16 w-full items-center justify-between bg-black">
+          <h1>Youre not signed in - but here is someones page</h1>
           <Button>sign in</Button>
         </div>
         {children}
@@ -50,7 +50,7 @@ export default async function UserLayout({
   if (!user) {
     return (
       <>
-        <div className="bg-black w-full h-16 flex justify-between items-center">
+        <div className="flex h-16 w-full items-center justify-between bg-black">
           <h1>Error fetching your details</h1>
           <Button>sign in</Button>
         </div>
@@ -71,7 +71,7 @@ export default async function UserLayout({
     console.log("DEBUG: THIS IS NOT YOUR PAGE")
     return (
       <>
-        <div>This will be someone else's user page navbar</div>
+        <div>This will be someone elses user page navbar</div>
         {children}
       </>
     )
