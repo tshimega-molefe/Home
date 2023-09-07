@@ -19,6 +19,7 @@ export default async function StoreLayout({
   const store = await prismadb.store.findFirst({
     where: {
       id: params.storeId,
+      ownerId: userId,
     },
   })
 

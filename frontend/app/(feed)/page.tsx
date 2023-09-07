@@ -1,12 +1,9 @@
 import Link from "next/link"
-import { redirect } from "next/navigation"
 import { auth, useAuth } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb"
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
-
-import { store } from "../../lib/store"
 
 export default async function Feed({
   children,
@@ -15,11 +12,7 @@ export default async function Feed({
 }) {
   const { userId } = auth()
 
-  console.log(`DEBUG: The logged in userId is ${userId}`)
-
   if (!userId) {
-    console.log("DEBUG: You're not signed in")
-
     return (
       <div className="min-h-screen w-full flex flex-col justify-between py-96 items-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
         <Button variant="secondary" size="lg">
@@ -29,13 +22,29 @@ export default async function Feed({
     )
   }
 
+  const user = await prismadb.user.findFirst({
+    where: {
+      externalId: userId,
+    },
+  })
+
+  if (!user) {
+    return (
+      <div className="min-h-screen w-full flex flex-col justify-between py-96 items-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
+        <Button variant="secondary" size="lg">
+          Error fetching your account details
+        </Button>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen w-full flex flex-col justify-between py-96 items-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
       <Link
         className={cn(buttonVariants({ variant: "default", size: "lg" }))}
-        href={`/${userId}`}
+        href={`/${user.username}`}
       >
-        This is {`${userId}`} page
+        This is {`${user.username}`} page
       </Link>
       {/* <Link
         className={cn(buttonVariants({ variant: "default", size: "lg" }))}
