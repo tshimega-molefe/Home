@@ -1,16 +1,13 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
 import { ModalProvider } from "@/providers.tsx/modal-provider"
-import { ClerkProvider, auth } from "@clerk/nextjs"
+import { ClerkProvider } from "@clerk/nextjs"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
-import prismadb from "@/lib/prismadb"
 import { Providers } from "@/lib/provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
-import Footer from "@/components/footer/footer"
-import { SiteHeader } from "@/components/navbar/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {

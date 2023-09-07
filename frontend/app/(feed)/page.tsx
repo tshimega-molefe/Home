@@ -10,7 +10,7 @@ export default async function Feed() {
 
   if (!userId) {
     return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-between bg-[#01A8BC] bg-opacity-100 py-96 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
         <Link
           className={cn(buttonVariants({ variant: "default", size: "lg" }))}
           href={`/randomUrl`}
@@ -29,7 +29,7 @@ export default async function Feed() {
 
   if (!user) {
     return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-between bg-[#01A8BC] bg-opacity-100 py-96 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
         <Button variant="secondary" size="lg">
           Error fetching your account details
         </Button>

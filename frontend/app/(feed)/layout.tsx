@@ -1,5 +1,3 @@
-import { ModalProvider } from "@/providers.tsx/modal-provider"
-
 import Footer from "@/components/footer/footer"
 import { SiteHeader } from "@/components/navbar/site-header"
 
