@@ -90,24 +90,26 @@ enum BookingStatus {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  email     String   @unique
-  username  String   @unique
-  name      String
-  role      Role     @default(USER)
-  posts     Post[]
-  stores    Store[]
-  bookings  Booking[]
-  services  Service[]
+  id          String    @id @default(uuid())
+  externalId  String    @unique 
+  createdAt   DateTime  @default(now())
+  email       String    @unique
+  username    String    @unique
+  firstName   String
+  lastName    String
+  role        Role      @default(USER)
+  posts       Post[]
+  stores      Store[]
+  bookings    Booking[]
+  services    Service[]
 }
 
 model Store {
-  id        String    @id @default(uuid())
+  id        String      @id @default(uuid())
   name      String   
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  owner     User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  owner     User        @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId   String       
   products  Product[]
 
@@ -115,14 +117,14 @@ model Store {
 }
 
 model Product {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        String      @id @default(uuid())
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
   name      String
   type      ProductType
   inventoryCount Int   
   price     Float  
-  store     Store    @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  store     Store       @relation(fields: [storeId], references: [id], onDelete: Cascade)
   storeId   String
   bookings  Booking[]
 

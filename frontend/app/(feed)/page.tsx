@@ -1,16 +1,17 @@
 import Link from "next/link"
 import { redirect } from "next/navigation"
-import { auth } from "@clerk/nextjs"
+import { auth, useAuth } from "@clerk/nextjs"
 
+import prismadb from "@/lib/prismadb"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+
+import { store } from "../../lib/store"
 
 export default async function Feed({
   children,
-  params,
 }: {
   children: React.ReactNode
-  params: { userId: string }
 }) {
   const { userId } = auth()
 
@@ -21,12 +22,9 @@ export default async function Feed({
 
     return (
       <div className="min-h-screen w-full flex flex-col justify-between py-96 items-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
-        <Link
-          className={cn(buttonVariants({ variant: "default", size: "lg" }))}
-          href={`/user2`}
-        >
-          This is other users' link
-        </Link>
+        <Button variant="secondary" size="lg">
+          This is the signed out UI
+        </Button>
       </div>
     )
   }
@@ -37,8 +35,20 @@ export default async function Feed({
         className={cn(buttonVariants({ variant: "default", size: "lg" }))}
         href={`/${userId}`}
       >
-        This is tshimegas link
+        This is {`${userId}`} page
       </Link>
+      {/* <Link
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/${userId}/store/${storeId}`}
+      >
+        This is tshimegas store
+      </Link>
+      <Link
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/${userId}/posts/${postId}`}
+      >
+        This is tshimegas store
+      </Link> */}
     </div>
   )
 }

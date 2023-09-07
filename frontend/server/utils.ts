@@ -41,9 +41,7 @@ export async function getPosts(request: Request) {
 // ============== Get Post ==============
 export async function getPost(
   request: Request,
-  {
-    params,
-  }: { params: { id: string; authorId: string; title: string; author: string } }
+  { params }: { params: { id: string; authorId: string; title: string } }
 ) {
   try {
     console.log("Getting post with params:", params)
@@ -74,13 +72,7 @@ export async function getFeaturedPosts() {
     console.log("Getting featured posts...")
     const featuredPosts = await prismadb.post.findMany({
       select: {
-        published: true,
         featured: true,
-        author: true,
-        createdAt: true,
-        title: true,
-        authorId: true,
-        id: true,
       },
     })
     console.log("Featured posts fetched:", featuredPosts)

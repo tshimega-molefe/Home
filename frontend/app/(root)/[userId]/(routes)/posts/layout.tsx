@@ -3,7 +3,7 @@ import { auth, useUser } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb"
 
-export default async function StoreLayout({
+export default async function PostLayout({
   children,
   params,
 }: {
