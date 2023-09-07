@@ -5,11 +5,7 @@ import prismadb from "@/lib/prismadb"
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
 
-export default async function Feed({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default async function Feed() {
   const { userId } = auth()
 
   if (!userId) {
