@@ -11,7 +11,7 @@ import HoverCard from "@/components/product-section/hover-card"
 
 interface BlogProps {}
 
-const Blog: FC<BlogProps> = async ({}) => {
+export default function Blog() {
   const [hovered, setHovered] = useState<boolean>(false)
 
   return (
@@ -103,5 +103,3 @@ const Blog: FC<BlogProps> = async ({}) => {
     <div>nothing to see here</div>
   )
 }
-
-export default Blog

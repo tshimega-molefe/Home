@@ -1,9 +1,7 @@
 import Link from "next/link"
-import { auth, useAuth } from "@clerk/nextjs"
 
-import prismadb from "@/lib/prismadb"
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 export default async function Feed() {
   return (
