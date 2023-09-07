@@ -15,9 +15,12 @@ export default async function Feed({
   if (!userId) {
     return (
       <div className="min-h-screen w-full flex flex-col justify-between py-96 items-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
-        <Button variant="secondary" size="lg">
-          This is the signed out UI
-        </Button>
+        <Link
+          className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+          href={`/randomUrl`}
+        >
+          This is a {`randomUrl`}
+        </Link>
       </div>
     )
   }
@@ -45,6 +48,12 @@ export default async function Feed({
         href={`/${user.username}`}
       >
         This is {`${user.username}`} page
+      </Link>
+      <Link
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/randomUrl`}
+      >
+        This is a {`randomUrl`}
       </Link>
       {/* <Link
         className={cn(buttonVariants({ variant: "default", size: "lg" }))}
