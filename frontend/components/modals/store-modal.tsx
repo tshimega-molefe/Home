@@ -1,11 +1,15 @@
 "use client"
 
 import { useState } from "react"
+import { redirect } from "next/navigation"
+import { getStores } from "@/server/utils"
+import { auth, useUser } from "@clerk/nextjs"
 import { zodResolver } from "@hookform/resolvers/zod"
+import axios from "axios"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
-import { getErrorMessage } from "@/lib/utils"
+import { capitalizeFirstLetter, getErrorMessage } from "@/lib/utils"
 import { useStoreModal } from "@/hooks/use-store-modal"
 import { Button } from "@/components/ui/button"
 import {
@@ -23,8 +27,8 @@ import { ToastAction } from "../ui/toast"
 import { useToast } from "../ui/use-toast"
 
 const storeFormSchema = z.object({
-  name: z.string().min(5, {
-    message: "Shop name must be at least 5 characters.",
+  name: z.string().min(1, {
+    message: "Shop name must be at least 1 characters.",
   }),
 })
 
@@ -34,7 +38,7 @@ const defaultValues: Partial<StoreFormValues> = {}
 
 export function StoreModal() {
   const storeModal = useStoreModal()
-  const [loading, setloading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false)
 
   const form = useForm<StoreFormValues>({
     resolver: zodResolver(storeFormSchema),
@@ -44,13 +48,23 @@ export function StoreModal() {
     mode: "onChange",
   })
   const { toast } = useToast()
+  const { user } = useUser()
 
   async function onSubmit(data: StoreFormValues) {
+    const { name: unformattedShopName } = data
+    const formattedShopName = capitalizeFirstLetter(unformattedShopName)
     try {
-      setloading(true)
+      setLoading(true)
+      const response = await axios.post(`/api/createStore`, data)
+      console.log(response.data)
       toast({
-        title: `New Store Created`,
-        description: `You can now add products to your ${data.name} shop.`,
+        title: "Store Created Successfully!",
+        description: `Congratulations ${user?.firstName}, your ${formattedShopName} shop is now live! Add products to attract customers. You can also customize your store settings for a personalized touch.`,
+        action: (
+          <ToastAction altText="Go to Store" onClick={redirect(`/`)}>
+            Go to Store
+          </ToastAction>
+        ),
       })
     } catch (error) {
       toast({
@@ -64,7 +78,7 @@ export function StoreModal() {
         ),
       })
     } finally {
-      setloading(false)
+      setLoading(false)
     }
   }
 
@@ -86,12 +100,32 @@ export function StoreModal() {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your store name" {...field} />
+                      <Input
+                        disabled={loading}
+                        placeholder="e.g. Sneakers"
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+              <div className="flex w-full items-center justify-end space-x-2 pt-6">
+                <Button
+                  disabled={loading}
+                  variant="outline"
+                  onClick={storeModal.onClose}
+                >
+                  Cancel
+                </Button>
+                <Button disabled={loading} type="submit">
+                  {loading ? (
+                    <div className="mx-[1.40rem] h-4 w-4 animate-spin rounded-full border-b-2 border-primary-foreground"></div>
+                  ) : (
+                    <p>Continue</p>
+                  )}
+                </Button>
+              </div>
             </form>
           </Form>
         </div>

@@ -47,8 +47,8 @@ const MainNav: FC<MainNavProps> = ({}) => {
         <div className="mb-3 items-center px-3 text-left max-lg:flex-col lg:mb-0 lg:flex lg:space-x-4 lg:px-0">
           <div className="relative mb-2 max-lg:ml-2 max-lg:mr-4 lg:mb-0 lg:flex">
             <Input
-              placeholder="Search Swift Stack"
-              className="glass border-primary bg-primary/20 text-primary placeholder:text-muted placeholder:dark:text-primary/60 max-lg:h-10 max-lg:bg-background max-lg:text-primary  lg:pr-8"
+              placeholder="Search..."
+              className="glass border-primary bg-primary/20 text-primary placeholder:dark:text-primary/60 max-lg:h-10 max-lg:bg-background max-lg:text-primary max-lg:placeholder:text-muted-foreground lg:pr-8  lg:placeholder:text-muted"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
