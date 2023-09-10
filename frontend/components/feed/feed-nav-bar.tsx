@@ -7,9 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-interface FeedNavBarProps {}
-
-const FeedNavBar: FC<FeedNavBarProps> = async ({}) => {
+const FeedNavBar = async () => {
   return (
     <div className="fixed top-0 inset-x-0 h-fit border-b z-10 border-muted py-5 shadow-xl bg-background">
       <div className="flex h-16 items-center px-[2rem] justify-between">
