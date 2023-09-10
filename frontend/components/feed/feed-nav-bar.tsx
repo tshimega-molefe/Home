@@ -10,12 +10,9 @@ import { ThemeToggle } from "@/components/theme-toggle"
 const FeedNavBar = () => {
   return (
     <div className="fixed top-0 inset-x-0 h-fit border-b z-10 border-muted py-5 shadow-xl bg-background">
-      <div className="flex h-16 items-center px-[2rem] justify-between">
-        <div className="flex flex-row space-x-4 items-center">
-          <Link
-            href="/"
-            className="flex items-center space-x-2 active:scale-95"
-          >
+      <div className="flex h-16 items-center px-[2rem] justify-between max-md:space-x-6">
+        <div className="flex flex-row md:space-x-4 space-x-3 items-center">
+          <Link href="/" className="flex items-center active:scale-95">
             <Icons.logo className="h-10 w-40 transition-all max-lg:hidden max-lg:h-10 max-lg:w-28 max-md:active:scale-95" />
             <Icons.icon className="h-10 w-10 transition-all max-md:active:scale-95 lg:hidden" />
           </Link>
@@ -42,7 +39,7 @@ const FeedNavBar = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-row md:space-x-4">
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
@@ -53,8 +50,9 @@ const FeedNavBar = () => {
               </Button>
             </SignInButton>
           </SignedOut>
-
-          <ThemeToggle />
+          <div className="max-md:hidden">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </div>
