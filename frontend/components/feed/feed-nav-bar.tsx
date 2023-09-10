@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-const FeedNavBar = async () => {
+const FeedNavBar = () => {
   return (
     <div className="fixed top-0 inset-x-0 h-fit border-b z-10 border-muted py-5 shadow-xl bg-background">
       <div className="flex h-16 items-center px-[2rem] justify-between">
@@ -48,7 +48,7 @@ const FeedNavBar = async () => {
           </SignedIn>
           <SignedOut>
             <SignInButton afterSignInUrl="/">
-              <Button variant="default" size="sm">
+              <Button variant="default" size="sm" className="whitespace-nowrap">
                 Sign In
               </Button>
             </SignInButton>
