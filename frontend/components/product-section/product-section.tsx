@@ -72,11 +72,11 @@ const ProductSection: FC<ProductSectionProps> = ({}) => {
             className="mb-7 text-[28px] font-medium max-lg:leading-10 max-md:leading-8 md:text-[40px] lg:text-5xl"
           >
             <span className="text-[#763791]">One account&nbsp;</span>for
-            literally everything.
+            everything.
             <br />
             <br />
-            Want to travel? Sell your old clothes? Write a book? Teach yourself
-            nuclear physics?
+            Want to travel? Sell old clothes? Write a book? Use AI to learn
+            anything?
           </motion.div>
         </div>
       </div>

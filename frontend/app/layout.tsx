@@ -8,8 +8,6 @@ import { fontSans } from "@/lib/fonts"
 import { Providers } from "@/lib/provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
-import Footer from "@/components/footer/footer"
-import { SiteHeader } from "@/components/navbar/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
@@ -33,32 +31,30 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          "relative min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <ClerkProvider>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body
+          className={cn(
+            "relative min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased",
+            fontSans.variable
+          )}
+        >
           <Providers>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <div className="relative flex min-h-screen flex-col">
-                <SiteHeader />
                 <div className="flex-1">
                   <ModalProvider />
                   {children}
                 </div>
-                <Footer />
               </div>
             </ThemeProvider>
           </Providers>
           <Toaster />
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

@@ -1,11 +1,14 @@
-export default function FeedLayout({
+import FeedNavBar from "@/components/feed/feed-nav-bar"
+
+export default async function FeedLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#01A8BC] bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500">
-      {children}
+    <div className="min-h-screen pt-12 antialiased">
+      <FeedNavBar />
+      <div className="container max-w-7xl mx-auto h-full pt-20">{children}</div>
     </div>
   )
 }

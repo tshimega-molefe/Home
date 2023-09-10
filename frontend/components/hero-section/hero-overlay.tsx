@@ -20,7 +20,7 @@ const HeroOverlay: FC<HeroOverlayProps> = ({}) => {
       className="absolute z-40 flex w-full flex-col gap-4 max-lg:bottom-[30rem] max-lg:items-start max-lg:pr-10 md:items-center md:gap-12 lg:bottom-1/2 lg:left-1/2 lg:max-w-fit lg:-translate-x-1/2 lg:gap-20"
     >
       <Link
-        href="/dashboard"
+        href="/s/username/shop"
         className="copilot inline-block rounded-full border-[1px] border-primary transition-all duration-150 hover:scale-105 active:scale-95 dark:border-neutral-500 max-md:mr-4"
       >
         <div className="flex items-center px-10 py-2">
