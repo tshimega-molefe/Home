@@ -1,5 +1,5 @@
-import { notFound, redirect } from "next/navigation"
-import { auth, useUser } from "@clerk/nextjs"
+import { redirect } from "next/navigation"
+import { auth } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb"
 
@@ -19,6 +19,10 @@ export default async function StoreLayout({
       ownerId: userId,
     },
   })
+
+  if (store) {
+    redirect(`/`)
+  }
 
   if (!store) {
     console.log("STORE DOES NOT EXIST")

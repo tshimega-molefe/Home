@@ -1,5 +1,4 @@
-import Footer from "@/components/footer/footer"
-import { SiteHeader } from "@/components/navbar/site-header"
+import FeedNavBar from "@/components/feed/feed-nav-bar"
 
 export default async function FeedLayout({
   children,
@@ -7,10 +6,9 @@ export default async function FeedLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative flex min-h-screen flex-col">
-      <SiteHeader />
-      <div className="flex-1">{children}</div>
-      <Footer />
+    <div className="min-h-screen pt-12 antialiased">
+      <FeedNavBar />
+      <div className="container max-w-7xl mx-auto h-full pt-12">{children}</div>
     </div>
   )
 }

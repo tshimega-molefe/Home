@@ -2,10 +2,9 @@ import Link from "next/link"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
 import { Button } from "@/components/ui/button"
+import Hamburger from "@/components/hamburger"
 import { Icons } from "@/components/icons"
-
-import Hamburger from "../hamburger"
-import MainNav from "./main-nav"
+import MainNav from "@/components/navbar/main-nav"
 
 export function SiteHeader() {
   return (

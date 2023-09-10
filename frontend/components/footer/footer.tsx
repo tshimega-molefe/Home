@@ -10,7 +10,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <div className="footer relative break-words pt-14 ">
+    <div className="footer relative break-words pt-14 -z-50">
       <div className="relative z-[2] mx-auto max-w-[1280px] overflow-hidden">
         <div className="mb-8 flex flex-col space-x-6 px-4 py-10 lg:flex-row">
           <div className="mb-12 px-2">
