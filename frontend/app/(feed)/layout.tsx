@@ -8,7 +8,7 @@ export default async function FeedLayout({
   return (
     <div className="min-h-screen pt-12 antialiased">
       <FeedNavBar />
-      <div className="container max-w-7xl mx-auto h-full pt-12">{children}</div>
+      <div className="container max-w-7xl mx-auto h-full pt-20">{children}</div>
     </div>
   )
 }
