@@ -20,10 +20,6 @@ export default async function StoreLayout({
     },
   })
 
-  if (store) {
-    redirect(`/`)
-  }
-
   if (!store) {
     console.log("STORE DOES NOT EXIST")
     redirect("/")
@@ -53,7 +49,7 @@ export default async function StoreLayout({
     )
   }
 
-  if (userId && store && store.ownerId === userId) {
+  if (store && store.ownerId === userId) {
     console.log("STORE DOES EXIST, And its yours")
 
     return (
