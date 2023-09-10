@@ -6,38 +6,33 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default async function Feed() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500 items-center">
-      {/* Row of filters */}
-
-      <Tabs defaultValue="foryou">
-        <TabsList className="py-7 max-md:px-12 md:px-10">
-          <TabsTrigger
-            value="foryou"
-            className="text-2xl md:text-3xl font-bold"
-          >
+    <div className="flex min-h-screen w-full flex-col bg-opacity-100 dark:bg-opacity-30 dark:transition-opacity dark:duration-500 items-center overflow-x-hidden">
+      <Tabs defaultValue="foryou" className="max-sm:max-w-xs">
+        <TabsList className="md:py-6 max-md:py-6 max-md:px-2 md:px-2">
+          <TabsTrigger value="foryou" className="text-xl md:text-2xl font-bold">
             For You
           </TabsTrigger>
           <TabsTrigger
             value="trending"
-            className="text-2xl md:text-3xl font-bold"
+            className="text-xl md:text-2xl font-bold"
           >
-            Trending
+            Discover
           </TabsTrigger>
           <TabsTrigger
             value="verified"
-            className="text-2xl md:text-3xl font-bold"
+            className="text-xl md:text-2xl font-bold"
           >
             Verified
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="foryou" className="min-w-max">
-          Feed of users/enterprises relevant to you
+        <TabsContent value="foryou" className="max-sm:max-w-xs">
+          Feed relevant to you
         </TabsContent>
-        <TabsContent value="trending" className="min-w-max">
-          Feed of users/enterprises you might want to know about
+        <TabsContent value="trending" className="max-sm:max-w-xs">
+          Discover new people
         </TabsContent>
-        <TabsContent value="verified" className="min-w-max">
-          Feed of verified users/enterprises recommened by stack
+        <TabsContent value="verified" className="max-sm:max-w-xs">
+          Feed recommended for you
         </TabsContent>
       </Tabs>
     </div>
