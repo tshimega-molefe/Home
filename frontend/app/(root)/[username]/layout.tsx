@@ -13,7 +13,6 @@ export default async function UserLayout({
 }) {
   const { userId } = auth()
 
-  // Fetch all usernames from the database
   const usernames = await prismadb.user
     .findMany({
       select: {
@@ -22,7 +21,6 @@ export default async function UserLayout({
     })
     .then((users) => users.map((u) => u.username))
 
-  // Check if the username from params is in the database
   if (!usernames.includes(params.username)) {
     return notFound()
   }

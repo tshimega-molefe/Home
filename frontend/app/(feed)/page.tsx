@@ -14,9 +14,15 @@ export default async function Feed() {
       </Link>
       <Link
         className={cn(buttonVariants({ variant: "default", size: "lg" }))}
-        href={`/tshimega`}
+        href={`/tshimegabelmont`}
       >
-        To root page of {`tshimega`}
+        To root page of {`tshimegabelmont`}
+      </Link>
+      <Link
+        className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+        href={`/tshimegamolefe`}
+      >
+        To root page of {`tshimegamolefe`}
       </Link>
     </div>
   )
